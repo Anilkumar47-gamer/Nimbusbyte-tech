@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRightIcon } from '../components/Icons.jsx';
 
 const caseStudies = [
   {
@@ -216,7 +217,7 @@ function WorkPage() {
                       to={`/contact?service=${encodeURIComponent(work.category)}`}
                       className="btn-link"
                     >
-                      Have a similar project? Talk to us →
+                      Have a similar project? Talk to us <ArrowRightIcon size={12} className="btn-arrow" />
                     </Link>
                   </div>
                 </div>
@@ -260,7 +261,7 @@ function WorkPage() {
                 <p>Let's review your stack and define clear milestones for lower spend and guaranteed uptime.</p>
               </div>
               <Link to="/contact" className="btn" style={{ background: 'var(--navy-900)', color: '#fff' }}>
-                Start Consultation <span className="btn-arrow">→</span>
+                Start Consultation <ArrowRightIcon size={14} className="btn-arrow" />
               </Link>
             </div>
           </div>

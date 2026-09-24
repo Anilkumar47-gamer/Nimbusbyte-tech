@@ -1,5 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
   <defs>
+    <style type="text/css"><![CDATA[
+      @keyframes svgFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes svgFloatAlt {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-5px) rotate(0.4deg); }
+      }
+      @keyframes svgPulse {
+        0%, 100% { transform: scale(1); opacity: 0.85; }
+        50% { transform: scale(1.08); opacity: 1; }
+      }
+      @keyframes svgGlow {
+        0%, 100% { opacity: 0.12; transform: scale(1); }
+        50% { opacity: 0.28; transform: scale(1.1); }
+      }
+      @keyframes svgBlink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.25; }
+      }
+      @keyframes svgDashFlow {
+        from { stroke-dashoffset: 80; }
+        to { stroke-dashoffset: 0; }
+      }
+      .svg-anim-glow { animation: svgGlow 5s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .svg-anim-float { animation: svgFloat 6s ease-in-out infinite; }
+      .svg-anim-float-delayed { animation: svgFloatAlt 7s ease-in-out -3.5s infinite; }
+      .svg-anim-pulse { animation: svgPulse 3s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .svg-anim-blink { animation: svgBlink 2.2s ease-in-out infinite; }
+      .svg-anim-dash { stroke-dasharray: 6 4; animation: svgDashFlow 12s linear infinite; }
+      @media (prefers-reduced-motion: reduce) {
+        *, .svg-anim-glow, .svg-anim-float, .svg-anim-float-delayed, .svg-anim-pulse, .svg-anim-blink, .svg-anim-dash {
+          animation: none !important;
+        }
+      }
+    ]]></style>
     <linearGradient id="csBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#050e1b" />
       <stop offset="50%" stop-color="#08172c" />
@@ -17,8 +54,8 @@
 
   <rect width="960" height="540" fill="url(#csBg)" />
 
-  <circle cx="260" cy="180" r="160" fill="#3fa9f5" opacity="0.14" filter="url(#csGlow)" />
-  <circle cx="740" cy="340" r="170" fill="#6ee7c4" opacity="0.12" filter="url(#csGlow)" />
+  <circle cx="260" cy="180" r="160" fill="#3fa9f5" opacity="0.14" filter="url(#csGlow)" class="svg-anim-glow" />
+  <circle cx="740" cy="340" r="170" fill="#6ee7c4" opacity="0.12" filter="url(#csGlow)" class="svg-anim-glow" />
 
   <g transform="translate(48, 36)">
     <rect width="864" height="468" rx="14" fill="#081426" stroke="#1d3d6a" stroke-width="1.6" fill-opacity="0.95" />

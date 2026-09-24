@@ -1,5 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
   <defs>
+    <style type="text/css"><![CDATA[
+      @keyframes svgFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes svgFloatAlt {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-5px) rotate(0.4deg); }
+      }
+      @keyframes svgPulse {
+        0%, 100% { transform: scale(1); opacity: 0.85; }
+        50% { transform: scale(1.08); opacity: 1; }
+      }
+      @keyframes svgGlow {
+        0%, 100% { opacity: 0.12; transform: scale(1); }
+        50% { opacity: 0.28; transform: scale(1.1); }
+      }
+      @keyframes svgBlink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.25; }
+      }
+      @keyframes svgDashFlow {
+        from { stroke-dashoffset: 80; }
+        to { stroke-dashoffset: 0; }
+      }
+      .svg-anim-glow { animation: svgGlow 5s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .svg-anim-float { animation: svgFloat 6s ease-in-out infinite; }
+      .svg-anim-float-delayed { animation: svgFloatAlt 7s ease-in-out -3.5s infinite; }
+      .svg-anim-pulse { animation: svgPulse 3s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .svg-anim-blink { animation: svgBlink 2.2s ease-in-out infinite; }
+      .svg-anim-dash { stroke-dasharray: 6 4; animation: svgDashFlow 12s linear infinite; }
+      @media (prefers-reduced-motion: reduce) {
+        *, .svg-anim-glow, .svg-anim-float, .svg-anim-float-delayed, .svg-anim-pulse, .svg-anim-blink, .svg-anim-dash {
+          animation: none !important;
+        }
+      }
+    ]]></style>
     <linearGradient id="stratBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#050d1a" />
       <stop offset="50%" stop-color="#091629" />
@@ -21,7 +58,7 @@
 
   <rect width="960" height="540" fill="url(#stratBg)" />
 
-  <circle cx="200" cy="180" r="160" fill="#3fa9f5" opacity="0.14" filter="url(#stratGlow)" />
+  <circle cx="200" cy="180" r="160" fill="#3fa9f5" opacity="0.14" filter="url(#stratGlow)" class="svg-anim-glow" />
   <circle cx="780" cy="360" r="180" fill="#6ee7c4" opacity="0.1" filter="url(#stratGlow)" />
 
   <!-- Main Architecture Container -->
@@ -39,7 +76,7 @@
       <!-- Pillar 1: Architecture Audit -->
       <g transform="translate(0, 0)">
         <rect width="260" height="150" rx="10" fill="#0b172a" stroke="#1c3658" />
-        <circle cx="32" cy="32" r="14" fill="#3fa9f5" opacity="0.15" />
+        <circle cx="32" cy="32" r="14" fill="#3fa9f5" opacity="0.15" class="svg-anim-glow" />
         <text x="32" y="37" text-anchor="middle" fill="#3fa9f5" font-size="14" font-weight="bold">01</text>
         <text x="58" y="36" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">Full Stack Audit</text>
         
@@ -52,7 +89,7 @@
       <!-- Pillar 2: Cloud Modernization -->
       <g transform="translate(276, 0)">
         <rect width="260" height="150" rx="10" fill="#0b172a" stroke="#1c3658" />
-        <circle cx="32" cy="32" r="14" fill="#6ee7c4" opacity="0.15" />
+        <circle cx="32" cy="32" r="14" fill="#6ee7c4" opacity="0.15" class="svg-anim-glow" />
         <text x="32" y="37" text-anchor="middle" fill="#6ee7c4" font-size="14" font-weight="bold">02</text>
         <text x="58" y="36" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">Cloud Migration</text>
         
@@ -65,7 +102,7 @@
       <!-- Pillar 3: Cost Optimization -->
       <g transform="translate(552, 0)">
         <rect width="264" height="150" rx="10" fill="#0b172a" stroke="#1c3658" />
-        <circle cx="32" cy="32" r="14" fill="#a855f7" opacity="0.15" />
+        <circle cx="32" cy="32" r="14" fill="#a855f7" opacity="0.15" class="svg-anim-glow" />
         <text x="32" y="37" text-anchor="middle" fill="#a855f7" font-size="14" font-weight="bold">03</text>
         <text x="58" y="36" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">Cost FinOps</text>
         
@@ -88,7 +125,7 @@
         <text x="65" y="32" text-anchor="middle" fill="#3fa9f5" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">Global Edge</text>
         <text x="65" y="52" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">Cloudflare WAF</text>
         <text x="65" y="70" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">DDoS Shield</text>
-        <circle cx="65" cy="84" r="4" fill="#6ee7c4" />
+        <circle cx="65" cy="84" r="4" fill="#6ee7c4" class="svg-anim-blink" />
       </g>
 
       <!-- Connect line 1 -->
@@ -100,7 +137,7 @@
         <text x="70" y="32" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">ALB / Ingress</text>
         <text x="70" y="52" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">SSL Termination</text>
         <text x="70" y="70" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">Canary Routing</text>
-        <circle cx="70" cy="84" r="4" fill="#6ee7c4" />
+        <circle cx="70" cy="84" r="4" fill="#6ee7c4" class="svg-anim-blink" />
       </g>
 
       <!-- Connect line 2 -->
@@ -112,7 +149,7 @@
         <text x="85" y="32" text-anchor="middle" fill="#3fa9f5" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">Kubernetes EKS</text>
         <text x="85" y="52" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">Microservices Pods</text>
         <text x="85" y="70" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">HPA Auto-scaling</text>
-        <circle cx="85" cy="84" r="4" fill="#6ee7c4" />
+        <circle cx="85" cy="84" r="4" fill="#6ee7c4" class="svg-anim-blink" />
       </g>
 
       <!-- Connect line 3 -->
@@ -124,7 +161,7 @@
         <text x="73" y="32" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">Aurora Multi-AZ</text>
         <text x="73" y="52" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">PostgreSQL Engine</text>
         <text x="73" y="70" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">Encrypted KMS</text>
-        <circle cx="73" cy="84" r="4" fill="#6ee7c4" />
+        <circle cx="73" cy="84" r="4" fill="#6ee7c4" class="svg-anim-blink" />
       </g>
     </g>
   </g>

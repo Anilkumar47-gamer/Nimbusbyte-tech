@@ -1,5 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
+import {
+  CheckIcon,
+  ArrowRightIcon,
+  MailIcon,
+  PhoneIcon,
+  LocationIcon,
+  TelemetryIcon
+} from '../components/Icons.jsx';
 
 const quickAnswers = [
   { question: 'What software platforms and languages do you support?', answer: 'We build native and cross-platform Mobile apps (Flutter, React Native, Swift, Kotlin), modern Web platforms (Next.js, React, Node.js, Python FastAPI), Desktop software (Tauri/Rust, Electron, .NET 8), and multi-language automated QA test suites (Python, Java, TypeScript, C#).' },
@@ -157,7 +165,7 @@ function ContactPage() {
             {submitted ? (
               <div className="submission-success-card">
                 <div className="icon-node" style={{ margin: '0 auto 16px' }}>
-                  ✓
+                  <CheckIcon size={24} className="svg-anim-pulse" />
                 </div>
                 <h3>Consultation Request Confirmed</h3>
                 <p>
@@ -250,7 +258,7 @@ function ContactPage() {
                 </div>
                 <p className="form-note">Guaranteed reply under 24 hours. All information is protected under mutual non-disclosure.</p>
                 <button type="submit" className="btn btn-primary">
-                  Request Free Technical Consultation <span className="btn-arrow">→</span>
+                  Request Free Technical Consultation <ArrowRightIcon size={14} className="btn-arrow" />
                 </button>
               </form>
             )}
@@ -258,24 +266,45 @@ function ContactPage() {
 
           <div className="reveal">
             <div className="eyebrow">Direct Contact Channels</div>
-            {[
-              { title: 'Email Support', value: 'support@nimbusbyte.com', href: 'mailto:support@nimbusbyte.com', icon: 'M3 6l9 7 9-7M3 6v12h18V6H3z' },
-              { title: 'Direct Engineering Hotline', value: '+91 9169681462 (Mon–Fri, 10am–7pm IST)', href: 'tel:+919169681462', icon: 'M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z' },
-              { title: 'Headquarters & Studio', value: 'Sector 62, Noida, Uttar Pradesh, India — Client visits by appointment', icon: 'M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z M12 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z' },
-              { title: 'Multi-Language QA & Delivery SLA', value: 'Under 24 hours on standard inquiries. Dedicated on-call priority triage active 24/7 for retained clients.', icon: 'M12 12m-9 0a9 9 0 1 0 18 0 9 9 0 1 0-18 0 M12 7v5l3 3' },
-            ].map(item => (
-              <div key={item.title} className="contact-card">
-                <div className="icon-node">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <path d={item.icon} />
-                  </svg>
-                </div>
-                <div>
-                  <h4>{item.title}</h4>
-                  <p>{item.href ? <a href={item.href} style={{ color: 'var(--sky-soft)' }}>{item.value}</a> : item.value}</p>
-                </div>
+            <div className="contact-card">
+              <div className="icon-node">
+                <MailIcon size={20} className="svg-anim-pulse" />
               </div>
-            ))}
+              <div>
+                <h4>Email Support</h4>
+                <p><a href="mailto:support@nimbusbyte.com" style={{ color: 'var(--sky-soft)' }}>support@nimbusbyte.com</a></p>
+              </div>
+            </div>
+
+            <div className="contact-card">
+              <div className="icon-node">
+                <PhoneIcon size={20} className="svg-anim-pulse" />
+              </div>
+              <div>
+                <h4>Direct Engineering Hotline</h4>
+                <p><a href="tel:+919169681462" style={{ color: 'var(--sky-soft)' }}>+91 9169681462 (Mon–Fri, 10am–7pm IST)</a></p>
+              </div>
+            </div>
+
+            <div className="contact-card">
+              <div className="icon-node">
+                <LocationIcon size={20} className="svg-anim-float" />
+              </div>
+              <div>
+                <h4>Headquarters &amp; Studio</h4>
+                <p>Sector 62, Noida, Uttar Pradesh, India — Client visits by appointment</p>
+              </div>
+            </div>
+
+            <div className="contact-card">
+              <div className="icon-node">
+                <TelemetryIcon size={20} className="svg-anim-dash" />
+              </div>
+              <div>
+                <h4>Multi-Language QA &amp; Delivery SLA</h4>
+                <p>Under 24 hours on standard inquiries. Dedicated on-call priority triage active 24/7 for retained clients.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

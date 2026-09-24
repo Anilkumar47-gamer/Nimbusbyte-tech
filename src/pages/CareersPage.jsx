@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { UsersIcon, CpuIcon, RocketIcon, MailIcon, ArrowRightIcon } from '../components/Icons.jsx';
 
 const openRoles = [
   { title: 'Senior Mobile Application Engineer', description: 'Full-time · Remote (India) · Flutter / React Native / Swift / Kotlin · 4+ years exp', badge: 'Mobile Engineering' },
@@ -47,21 +48,21 @@ function CareersPage() {
           <div className="grid grid-3">
             <div className="card reveal">
               <div className="icon-node">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" /></svg>
+                <UsersIcon size={22} className="svg-anim-float" />
               </div>
               <h3>Remote-first</h3>
               <p>Work from anywhere in India, with quarterly in-person team offsites. We hire for engineering output, not desk hours.</p>
             </div>
             <div className="card reveal">
               <div className="icon-node">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 2v20M2 12h20" /></svg>
+                <CpuIcon size={22} className="svg-anim-pulse" />
               </div>
               <h3>Direct Architecture Impact</h3>
               <p>Small senior squads mean your name is directly on technical designs, test frameworks, and client deliverables.</p>
             </div>
             <div className="card reveal">
               <div className="icon-node">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 20V10M18 20V4M6 20v-4" /></svg>
+                <RocketIcon size={22} className="svg-anim-dash" />
               </div>
               <h3>Growth &amp; Tooling Budget</h3>
               <p>Annual stipend for certifications (AWS, CKA, ISTQB), premium hardware, and any technical tool that makes you faster.</p>
@@ -96,8 +97,8 @@ function CareersPage() {
                 <h2>Ready to build high-impact software with us?</h2>
                 <p>Send your resume, GitHub profile, and a summary of systems you are proud of shipping.</p>
               </div>
-              <a href="mailto:support@nimbusbyte.com" className="btn" style={{ background: 'var(--navy-900)', color: '#fff' }}>
-                support@nimbusbyte.com
+              <a href="mailto:support@nimbusbyte.com" className="btn" style={{ background: 'var(--navy-900)', color: '#fff', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                <MailIcon size={16} /> support@nimbusbyte.com
               </a>
             </div>
           </div>

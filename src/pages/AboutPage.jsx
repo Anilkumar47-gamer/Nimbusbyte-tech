@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { QaIcon, ShieldCheckIcon, UsersIcon, TelemetryIcon, ArrowRightIcon } from '../components/Icons.jsx';
 
 function AboutPage() {
   return (
@@ -24,6 +25,14 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
+      <svg className="trace-divider" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,30 L220,30 L260,10 L440,10 L480,30 L720,30 L760,50 L980,50 L1020,30 L1200,30" />
+        <path className="live" d="M0,30 L220,30 L260,10 L440,10 L480,30 L720,30 L760,50 L980,50 L1020,30 L1200,30" />
+        <circle cx="260" cy="10" r="4" />
+        <circle cx="760" cy="50" r="4" className="node-mint" />
+        <circle cx="1020" cy="30" r="4" />
+      </svg>
 
       <section className="section">
         <div className="wrap story-grid">
@@ -85,21 +94,33 @@ function AboutPage() {
           </div>
           <div className="values-grid">
             <div className="value-card reveal">
+              <div className="icon-node">
+                <QaIcon size={22} className="svg-anim-pulse" />
+              </div>
               <span className="value-num">01</span>
               <h3>Full Automated QA Built-in</h3>
               <p>No feature ships without automated test suites in Python, Java, TypeScript, or C#. We protect you from regression bugs.</p>
             </div>
             <div className="value-card reveal">
+              <div className="icon-node">
+                <ShieldCheckIcon size={22} className="svg-anim-pulse" />
+              </div>
               <span className="value-num">02</span>
               <h3>Total Source Ownership</h3>
               <p>You own 100% of your source code, CI/CD configs, and architecture documentation. Zero proprietary vendor lock-in.</p>
             </div>
             <div className="value-card reveal">
+              <div className="icon-node">
+                <UsersIcon size={22} className="svg-anim-float" />
+              </div>
               <span className="value-num">03</span>
               <h3>Senior Hands on Every Build</h3>
               <p>No junior bait-and-switch. The engineers who architect your systems are the ones writing your code and reviewing your PRs.</p>
             </div>
             <div className="value-card reveal">
+              <div className="icon-node">
+                <TelemetryIcon size={22} className="svg-anim-dash" />
+              </div>
               <span className="value-num">04</span>
               <h3>Observable &amp; Measurable</h3>
               <p>We instrument real-time telemetry, crash reporting, and load profiling from day one so performance is verified by data.</p>
@@ -208,7 +229,7 @@ function AboutPage() {
             <h2>Ready to put a world-class team on your next project?</h2>
             <p>Tell us what you're building — our senior engineers will review your requirements and reply with a tailored roadmap within 24 hours.</p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">Start a project <span className="btn-arrow">→</span></Link>
+              <Link to="/contact" className="btn btn-primary">Start a project <ArrowRightIcon size={14} className="btn-arrow" /></Link>
               <Link to="/work" className="btn btn-ghost">Explore case studies</Link>
             </div>
           </div>

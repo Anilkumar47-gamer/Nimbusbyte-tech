@@ -1,5 +1,42 @@
 <svg width="640" height="520" viewBox="0 0 640 520" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <style type="text/css"><![CDATA[
+      @keyframes svgFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes svgFloatAlt {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-5px) rotate(0.4deg); }
+      }
+      @keyframes svgPulse {
+        0%, 100% { transform: scale(1); opacity: 0.85; }
+        50% { transform: scale(1.08); opacity: 1; }
+      }
+      @keyframes svgGlow {
+        0%, 100% { opacity: 0.12; transform: scale(1); }
+        50% { opacity: 0.28; transform: scale(1.1); }
+      }
+      @keyframes svgBlink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.25; }
+      }
+      @keyframes svgDashFlow {
+        from { stroke-dashoffset: 80; }
+        to { stroke-dashoffset: 0; }
+      }
+      .svg-anim-glow { animation: svgGlow 5s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .svg-anim-float { animation: svgFloat 6s ease-in-out infinite; }
+      .svg-anim-float-delayed { animation: svgFloatAlt 7s ease-in-out -3.5s infinite; }
+      .svg-anim-pulse { animation: svgPulse 3s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .svg-anim-blink { animation: svgBlink 2.2s ease-in-out infinite; }
+      .svg-anim-dash { stroke-dasharray: 6 4; animation: svgDashFlow 12s linear infinite; }
+      @media (prefers-reduced-motion: reduce) {
+        *, .svg-anim-glow, .svg-anim-float, .svg-anim-float-delayed, .svg-anim-pulse, .svg-anim-blink, .svg-anim-dash {
+          animation: none !important;
+        }
+      }
+    ]]></style>
     <linearGradient id="bg" x1="80" y1="60" x2="560" y2="460" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#102544"/>
       <stop offset="1" stop-color="#07111F"/>
@@ -17,7 +54,7 @@
   <rect x="40" y="40" width="560" height="440" rx="28" fill="url(#bg)"/>
   <rect x="60" y="60" width="520" height="400" rx="24" stroke="rgba(110,231,196,0.24)" stroke-width="1"/>
 
-  <circle cx="500" cy="120" r="78" fill="#3FA9F5" fill-opacity="0.12"/>
+  <circle cx="500" cy="120" r="78" fill="#3FA9F5" fill-opacity="0.12" class="svg-anim-glow" />
   <circle cx="520" cy="430" r="110" fill="#6EE7C4" fill-opacity="0.08"/>
 
   <g opacity="0.95">
@@ -57,7 +94,7 @@
 
   <g opacity="0.8">
     <circle cx="180" cy="102" r="4" fill="#7CC4F8"/>
-    <circle cx="468" cy="104" r="4" fill="#6EE7C4"/>
+    <circle cx="468" cy="104" r="4" fill="#6EE7C4" class="svg-anim-blink" />
     <circle cx="154" cy="414" r="4" fill="#7CC4F8"/>
   </g>
 
@@ -67,7 +104,7 @@
   </g>
 
   <g>
-    <circle cx="244" cy="376" r="8" fill="#6EE7C4"/>
+    <circle cx="244" cy="376" r="8" fill="#6EE7C4" class="svg-anim-blink" />
     <circle cx="472" cy="344" r="8" fill="#7CC4F8"/>
     <animateTransform attributeName="transform" type="translate" values="0 0; 0 -6; 0 0" dur="3s" repeatCount="indefinite"/>
   </g>

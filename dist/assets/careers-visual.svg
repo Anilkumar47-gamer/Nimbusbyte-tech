@@ -1,7 +1,44 @@
-<svg width="720" height="520" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="720" height="520" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg"><defs>
+    <style type="text/css"><![CDATA[
+      @keyframes svgFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes svgFloatAlt {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-5px) rotate(0.4deg); }
+      }
+      @keyframes svgPulse {
+        0%, 100% { transform: scale(1); opacity: 0.85; }
+        50% { transform: scale(1.08); opacity: 1; }
+      }
+      @keyframes svgGlow {
+        0%, 100% { opacity: 0.12; transform: scale(1); }
+        50% { opacity: 0.28; transform: scale(1.1); }
+      }
+      @keyframes svgBlink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.25; }
+      }
+      @keyframes svgDashFlow {
+        from { stroke-dashoffset: 80; }
+        to { stroke-dashoffset: 0; }
+      }
+      .svg-anim-glow { animation: svgGlow 5s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .svg-anim-float { animation: svgFloat 6s ease-in-out infinite; }
+      .svg-anim-float-delayed { animation: svgFloatAlt 7s ease-in-out -3.5s infinite; }
+      .svg-anim-pulse { animation: svgPulse 3s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .svg-anim-blink { animation: svgBlink 2.2s ease-in-out infinite; }
+      .svg-anim-dash { stroke-dasharray: 6 4; animation: svgDashFlow 12s linear infinite; }
+      @media (prefers-reduced-motion: reduce) {
+        *, .svg-anim-glow, .svg-anim-float, .svg-anim-float-delayed, .svg-anim-pulse, .svg-anim-blink, .svg-anim-dash {
+          animation: none !important;
+        }
+      }
+    ]]></style></defs>
   <rect width="720" height="520" rx="32" fill="#07111F"/>
   <rect x="42" y="42" width="636" height="436" rx="28" stroke="#1E3355" stroke-width="1.4"/>
-  <circle cx="560" cy="152" r="88" fill="#3FA9F5" fill-opacity="0.12"/>
+  <circle cx="560" cy="152" r="88" fill="#3FA9F5" fill-opacity="0.12" class="svg-anim-glow" />
   <circle cx="194" cy="404" r="104" fill="#6EE7C4" fill-opacity="0.08"/>
   <rect x="146" y="132" width="212" height="154" rx="24" fill="#112544" stroke="#2B5288" stroke-width="1.2"/>
   <rect x="174" y="168" width="156" height="16" rx="8" fill="#7CC4F8"/>

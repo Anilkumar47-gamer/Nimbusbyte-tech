@@ -1,10 +1,23 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import {
+  MobileIcon,
+  WebIcon,
+  DesktopIcon,
+  QaIcon,
+  CloudIcon,
+  CheckIcon,
+  ArrowRightIcon,
+  RocketIcon,
+  TelemetryIcon,
+  SecurityIcon
+} from '../components/Icons.jsx';
 
 const disciplines = [
   {
     id: 'mobile',
     title: 'Mobile Applications',
+    icon: MobileIcon,
     tag: 'iOS · ANDROID · FLUTTER',
     heading: 'High-Performance Mobile Apps Built for Retention & Speed',
     description: 'From cross-platform Flutter and React Native apps to pure Swift and Kotlin native builds. Engineered with offline-first SQLite caching, biometric security, and fluid 60 FPS interfaces.',
@@ -15,6 +28,7 @@ const disciplines = [
   {
     id: 'web',
     title: 'Web Applications',
+    icon: WebIcon,
     tag: 'NEXT.JS · REACT · NODE · PYTHON',
     heading: 'Enterprise Web SaaS & Scalable Cloud Platforms',
     description: 'Modern, edge-rendered web applications built with Next.js 15, TypeScript, and microservice backends. Designed to handle massive traffic spikes with sub-second response times.',
@@ -25,6 +39,7 @@ const disciplines = [
   {
     id: 'desktop',
     title: 'Desktop Software',
+    icon: DesktopIcon,
     tag: 'TAURI · ELECTRON · .NET · C++',
     heading: 'Cross-Platform Native Desktop Applications',
     description: 'Blazing fast desktop software for Windows, macOS, and Linux built using Tauri (Rust), Electron, .NET 8, and C++/Qt. Direct hardware communication, serial I/O, and low memory footprints.',
@@ -35,6 +50,7 @@ const disciplines = [
   {
     id: 'qa',
     title: 'Automation Testing',
+    icon: QaIcon,
     tag: 'PYTHON · JAVA · TYPESCRIPT · C#',
     heading: 'Multi-Language QA & End-to-End Test Automation',
     description: 'Eliminate regression bugs with automated test suites written in Python, Java, TypeScript, or C#. Automated coverage for Mobile (Appium), Web (Playwright/Selenium/Cypress), Desktop, and APIs.',
@@ -45,6 +61,7 @@ const disciplines = [
   {
     id: 'consulting',
     title: 'IT & Cloud Consulting',
+    icon: CloudIcon,
     tag: 'AWS · AZURE · GCP · KUBERNETES',
     heading: 'Enterprise Architecture & Strategic Cloud Infrastructure',
     description: 'Comprehensive system audits, zero-downtime cloud migrations, and FinOps cost optimization that lower infrastructure bills by 25–40% while raising uptime SLAs.',
@@ -67,7 +84,7 @@ function HomePage() {
             <h1>Software engineered to <span className="grad">scale cleanly</span> across all devices.</h1>
             <p className="lead">NimbusByte builds custom mobile applications, enterprise web platforms, high-performance desktop software, and multi-language QA automation suites backed by senior IT consulting.</p>
             <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary">Start your project <span className="btn-arrow">→</span></Link>
+              <Link to="/contact" className="btn btn-primary">Start your project <ArrowRightIcon size={14} className="btn-arrow" /></Link>
               <Link to="/services" className="btn btn-ghost">Explore all capabilities</Link>
             </div>
             <div className="hero-stats">
@@ -111,16 +128,20 @@ function HomePage() {
 
           {/* Tab Navigation */}
           <div className="discipline-tab-nav reveal">
-            {disciplines.map(item => (
-              <button
-                key={item.id}
-                type="button"
-                className={`discipline-tab-btn ${activeTab === item.id ? 'active' : ''}`}
-                onClick={() => setActiveTab(item.id)}
-              >
-                {item.title}
-              </button>
-            ))}
+            {disciplines.map(item => {
+              const TabIcon = item.icon;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  className={`discipline-tab-btn ${activeTab === item.id ? 'active' : ''}`}
+                  onClick={() => setActiveTab(item.id)}
+                >
+                  <TabIcon size={16} />
+                  <span>{item.title}</span>
+                </button>
+              );
+            })}
           </div>
 
           {/* Active Discipline Feature Panel */}
@@ -138,14 +159,16 @@ function HomePage() {
                 <h4>Core Standards:</h4>
                 <ul>
                   {currentDiscipline.highlights.map(hl => (
-                    <li key={hl}>✓ {hl}</li>
+                    <li key={hl} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <CheckIcon size={15} /> {hl}
+                    </li>
                   ))}
                 </ul>
               </div>
 
               <div style={{ marginTop: 24 }}>
                 <Link to={currentDiscipline.link} className="btn btn-primary btn-sm">
-                  View Full {currentDiscipline.title} Specifications <span className="btn-arrow">→</span>
+                  View Full {currentDiscipline.title} Specifications <ArrowRightIcon size={14} className="btn-arrow" />
                 </Link>
               </div>
             </div>
@@ -177,7 +200,7 @@ function HomePage() {
               </div>
               <div style={{ marginTop: 24 }}>
                 <Link to="/services#automation-testing" className="btn btn-primary btn-sm">
-                  Explore Automation Test Matrix <span className="btn-arrow">→</span>
+                  Explore Automation Test Matrix <ArrowRightIcon size={14} className="btn-arrow" />
                 </Link>
               </div>
             </div>
@@ -212,7 +235,7 @@ function HomePage() {
               </div>
               <div style={{ marginTop: 24 }}>
                 <Link to="/about" className="btn btn-ghost btn-sm">
-                  Meet Our Engineering Team <span className="btn-arrow">→</span>
+                  Meet Our Engineering Team <ArrowRightIcon size={14} className="btn-arrow" />
                 </Link>
               </div>
             </div>
@@ -230,16 +253,25 @@ function HomePage() {
           </div>
           <div className="trust-grid">
             <div className="trust-card reveal">
+              <div className="icon-node">
+                <RocketIcon size={22} className="svg-anim-float" />
+              </div>
               <span className="value-num">01 clear planning</span>
               <h3>We diagnose before we build</h3>
               <p>Every engagement starts with a thorough architecture assessment, timeline, and fixed scope quote.</p>
             </div>
             <div className="trust-card reveal">
+              <div className="icon-node">
+                <QaIcon size={22} className="svg-anim-pulse" />
+              </div>
               <span className="value-num">02 multi-stack excellence</span>
               <h3>End-to-end software ownership</h3>
               <p>Whether Web, Mobile, Desktop or QA Automation, you get senior specialists who write clean, maintainable code.</p>
             </div>
             <div className="trust-card reveal">
+              <div className="icon-node">
+                <TelemetryIcon size={22} className="svg-anim-dash" />
+              </div>
               <span className="value-num">03 long-term support</span>
               <h3>We stay involved after launch</h3>
               <p>Continuous monitoring, automated regression suites, and 24/7 SRE on-call support keep your stack healthy.</p>
@@ -253,7 +285,7 @@ function HomePage() {
             <div className="mini-cta-card reveal">
               <h3>Need a practical next step?</h3>
               <p>Tell us about your upcoming project or current bottlenecks and we’ll recommend the best approach.</p>
-              <Link to="/contact" className="btn btn-primary">Start the conversation <span className="btn-arrow">→</span></Link>
+              <Link to="/contact" className="btn btn-primary">Start the conversation <ArrowRightIcon size={14} className="btn-arrow" /></Link>
             </div>
           </div>
         </div>
@@ -269,22 +301,31 @@ function HomePage() {
           </div>
           <div className="grid grid-3">
             <div className="card reveal">
+              <div className="icon-node">
+                <MobileIcon size={22} className="svg-anim-pulse" />
+              </div>
               <span className="tag">MOBILE &amp; FINTECH</span>
               <h3>Cross-Platform Investment App</h3>
               <p>Shipped Flutter &amp; React Native app with biometric auth and offline-first ledger syncing.</p>
-              <Link to="/work" className="btn btn-ghost" style={{ marginTop: 18 }}>See case study</Link>
+              <Link to="/work" className="btn btn-ghost" style={{ marginTop: 18 }}>See case study <ArrowRightIcon size={12} className="btn-arrow" /></Link>
             </div>
             <div className="card reveal">
+              <div className="icon-node">
+                <DesktopIcon size={22} className="svg-anim-float" />
+              </div>
               <span className="tag">DESKTOP SOFTWARE</span>
               <h3>Hardware Telemetry &amp; IoT Console</h3>
               <p>High-throughput Tauri &amp; C# desktop app processing 10,000+ sensor metrics per second.</p>
-              <Link to="/work" className="btn btn-ghost" style={{ marginTop: 18 }}>See case study</Link>
+              <Link to="/work" className="btn btn-ghost" style={{ marginTop: 18 }}>See case study <ArrowRightIcon size={12} className="btn-arrow" /></Link>
             </div>
             <div className="card reveal">
+              <div className="icon-node">
+                <QaIcon size={22} className="svg-anim-dash" />
+              </div>
               <span className="tag">QA AUTOMATION</span>
               <h3>Multi-Language E2E Pipeline</h3>
               <p>Replaced flaky manual tests with automated Python &amp; Java suites running across 12 CI workers.</p>
-              <Link to="/work" className="btn btn-ghost" style={{ marginTop: 18 }}>See case study</Link>
+              <Link to="/work" className="btn btn-ghost" style={{ marginTop: 18 }}>See case study <ArrowRightIcon size={12} className="btn-arrow" /></Link>
             </div>
           </div>
         </div>
@@ -300,7 +341,7 @@ function HomePage() {
                 <p>Book a direct 30-minute consultation with our senior engineering leads — get clear technical answers and realistic estimates.</p>
               </div>
               <div className="hero-actions">
-                <Link to="/contact" className="btn" style={{ background: 'var(--navy-900)', color: '#fff' }}>Book the call <span className="btn-arrow">→</span></Link>
+                <Link to="/contact" className="btn" style={{ background: 'var(--navy-900)', color: '#fff' }}>Book the call <ArrowRightIcon size={14} className="btn-arrow" /></Link>
                 <Link to="/work" className="btn btn-ghost">View our work</Link>
               </div>
             </div>

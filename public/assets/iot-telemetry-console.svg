@@ -1,5 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
   <defs>
+    <style type="text/css"><![CDATA[
+      @keyframes svgFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes svgFloatAlt {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-5px) rotate(0.4deg); }
+      }
+      @keyframes svgPulse {
+        0%, 100% { transform: scale(1); opacity: 0.85; }
+        50% { transform: scale(1.08); opacity: 1; }
+      }
+      @keyframes svgGlow {
+        0%, 100% { opacity: 0.12; transform: scale(1); }
+        50% { opacity: 0.28; transform: scale(1.1); }
+      }
+      @keyframes svgBlink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.25; }
+      }
+      @keyframes svgDashFlow {
+        from { stroke-dashoffset: 80; }
+        to { stroke-dashoffset: 0; }
+      }
+      .svg-anim-glow { animation: svgGlow 5s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .svg-anim-float { animation: svgFloat 6s ease-in-out infinite; }
+      .svg-anim-float-delayed { animation: svgFloatAlt 7s ease-in-out -3.5s infinite; }
+      .svg-anim-pulse { animation: svgPulse 3s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .svg-anim-blink { animation: svgBlink 2.2s ease-in-out infinite; }
+      .svg-anim-dash { stroke-dasharray: 6 4; animation: svgDashFlow 12s linear infinite; }
+      @media (prefers-reduced-motion: reduce) {
+        *, .svg-anim-glow, .svg-anim-float, .svg-anim-float-delayed, .svg-anim-pulse, .svg-anim-blink, .svg-anim-dash {
+          animation: none !important;
+        }
+      }
+    ]]></style>
     <linearGradient id="iotBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#08101e" />
       <stop offset="60%" stop-color="#0c182c" />
@@ -56,7 +93,7 @@
   <g transform="translate(60, 85)">
     <!-- Main Oscilloscope Display -->
     <rect x="0" y="0" width="460" height="200" rx="8" fill="#050c18" stroke="#162e52" stroke-width="1.5" />
-    <text x="16" y="24" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">> REAL-TIME SENSOR BUS TELEMETRY (10k SAMPLES/SEC)</text>
+    <text x="16" y="24" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">&gt; REAL-TIME SENSOR BUS TELEMETRY (10k SAMPLES/SEC)</text>
     
     <!-- Waveform 1 (Cyan) -->
     <path d="M 20 120 Q 50 40, 80 120 T 140 120 T 200 60 T 260 160 T 320 80 T 380 140 T 440 90" fill="none" stroke="url(#neonCyan)" stroke-width="2.2" />
@@ -99,9 +136,9 @@
   <!-- Bottom Terminal Log Stream -->
   <g transform="translate(60, 298)">
     <rect x="0" y="0" width="680" height="105" rx="8" fill="#060e1c" stroke="#183154" stroke-width="1" />
-    <text x="16" y="22" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="10">> [2026-08-31T16:20:01.402Z] Tauri Core Daemon initialized. Direct OS Windows Win32 / macOS Cocoa driver ready.</text>
-    <text x="16" y="42" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">> [2026-08-31T16:20:01.890Z] Serial packet stream validated. CRC32 checksum match 100% (4,180,290 frames parsed).</text>
-    <text x="16" y="62" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">> [2026-08-31T16:20:02.110Z] Local SQLite database WAL mode active. Background sync service worker standing by.</text>
-    <text x="16" y="84" fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="10">> [2026-08-31T16:20:02.500Z] Delta auto-updater signed with Ed25519 public certificate key verified.</text>
+    <text x="16" y="22" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="10">&gt; [2026-08-31T16:20:01.402Z] Tauri Core Daemon initialized. Direct OS Windows Win32 / macOS Cocoa driver ready.</text>
+    <text x="16" y="42" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">&gt; [2026-08-31T16:20:01.890Z] Serial packet stream validated. CRC32 checksum match 100% (4,180,290 frames parsed).</text>
+    <text x="16" y="62" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">&gt; [2026-08-31T16:20:02.110Z] Local SQLite database WAL mode active. Background sync service worker standing by.</text>
+    <text x="16" y="84" fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="10">&gt; [2026-08-31T16:20:02.500Z] Delta auto-updater signed with Ed25519 public certificate key verified.</text>
   </g>
 </svg>

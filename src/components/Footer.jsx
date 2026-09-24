@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { LinkedInIcon, MailIcon, PhoneIcon, LocationIcon } from './Icons.jsx';
 
 function Footer() {
   return (
@@ -15,9 +16,15 @@ function Footer() {
             </Link>
             <p>Software engineering &amp; IT consulting studio building mobile apps, web SaaS, desktop software, and multi-language automated QA suites.</p>
             <div className="social-row" style={{ marginTop: 20 }}>
-              <a href="https://www.linkedin.com/company/109881245" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-              <a href="mailto:support@nimbusbyte.com" aria-label="Email">em</a>
-              <a href="tel:+919169681462" aria-label="Phone">ph</a>
+              <a href="https://www.linkedin.com/company/109881245" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <LinkedInIcon size={16} />
+              </a>
+              <a href="mailto:support@nimbusbyte.com" aria-label="Email support" title="Email">
+                <MailIcon size={16} />
+              </a>
+              <a href="tel:+919169681462" aria-label="Call NimbusByte" title="Phone">
+                <PhoneIcon size={16} />
+              </a>
             </div>
           </div>
           <div className="footer-col">
@@ -38,9 +45,15 @@ function Footer() {
           </div>
           <div className="footer-col">
             <h4>Get in Touch</h4>
-            <a href="mailto:support@nimbusbyte.com">support@nimbusbyte.com</a>
-            <a href="tel:+919169681462">+91 9169681462</a>
-            <Link to="/contact">Sector 62, Noida, UP, India</Link>
+            <a href="mailto:support@nimbusbyte.com" style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+              <MailIcon size={14} /> support@nimbusbyte.com
+            </a>
+            <a href="tel:+919169681462" style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+              <PhoneIcon size={14} /> +91 9169681462
+            </a>
+            <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+              <LocationIcon size={14} /> Sector 62, Noida, UP, India
+            </Link>
           </div>
         </div>
         <div className="footer-bottom">

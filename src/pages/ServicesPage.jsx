@@ -1,5 +1,17 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import {
+  MobileIcon,
+  WebIcon,
+  DesktopIcon,
+  QaIcon,
+  CloudIcon,
+  SecurityIcon,
+  RocketIcon,
+  TerminalIcon,
+  CheckIcon,
+  ArrowRightIcon
+} from '../components/Icons.jsx';
 
 const qaCodeSnippets = {
   python: {
@@ -407,6 +419,9 @@ function ServicesPage() {
           </div>
           <div className="grid grid-3">
             <div className="card reveal">
+              <div className="icon-node">
+                <RocketIcon size={22} className="svg-anim-float" />
+              </div>
               <span className="tag">TURNKEY BUILD</span>
               <h3>End-to-End Delivery</h3>
               <p>Full software development lifecycle from initial architecture and UI to code execution and deployment across Web, Mobile, or Desktop.</p>
@@ -416,6 +431,9 @@ function ServicesPage() {
               </div>
             </div>
             <div className="card reveal">
+              <div className="icon-node">
+                <QaIcon size={22} className="svg-anim-pulse" />
+              </div>
               <span className="tag">QA &amp; RELIABILITY</span>
               <h3>Automation Testing Lab</h3>
               <p>Automate your regression testing in Python, Java, TypeScript, or C#. Includes API contract validation and CI/CD integration.</p>
@@ -425,6 +443,9 @@ function ServicesPage() {
               </div>
             </div>
             <div className="card reveal">
+              <div className="icon-node">
+                <CloudIcon size={22} className="svg-anim-dash" />
+              </div>
               <span className="tag">MANAGED IT &amp; SRE</span>
               <h3>Cloud &amp; SRE Retainer</h3>
               <p>Senior engineers on call 24/7 with SLA guarantees, automated backups, cost optimization, and proactive performance tuning.</p>
@@ -516,7 +537,7 @@ function ServicesPage() {
                   className="btn btn-primary"
                   style={{ width: '100%', justifyContent: 'center' }}
                 >
-                  Request Detailed Project Proposal <span className="btn-arrow">→</span>
+                  Request Detailed Project Proposal <ArrowRightIcon size={14} className="btn-arrow" />
                 </Link>
               </div>
             </div>
@@ -527,38 +548,39 @@ function ServicesPage() {
       {/* Multi-Language QA Automation Interactive Matrix Lab */}
       <section className="section-tight" id="qa-matrix">
         <div className="wrap">
-          <div className="qa-spotlight-box reveal">
-            <div className="qa-spotlight-header">
-              <div>
-                <div className="eyebrow">QA Engineering Matrix</div>
-                <h2>Interactive Multi-Language Automation Suite</h2>
-                <p>Inspect our live automation testing patterns across Python, Java, TypeScript, and C#.</p>
+          <div className="qa-code-window reveal">
+            <div className="qa-window-header">
+              <div className="qa-window-dots">
+                <span className="qa-dot red"></span>
+                <span className="qa-dot yellow"></span>
+                <span className="qa-dot green"></span>
+                <span style={{ fontSize: 11, color: 'var(--slate-dim)', marginLeft: 8 }}>test_runner_{activeQaLang}.nimbusbyte — {qaCodeSnippets[activeQaLang]?.filename}</span>
               </div>
-              <div className="qa-lang-tabs">
+              <div className="qa-lang-switcher">
                 <button
                   type="button"
-                  className={`qa-lang-tab ${activeQaLang === 'python' ? 'active' : ''}`}
+                  className={`qa-lang-btn ${activeQaLang === 'python' ? 'active' : ''}`}
                   onClick={() => setActiveQaLang('python')}
                 >
                   Python (PyTest)
                 </button>
                 <button
                   type="button"
-                  className={`qa-lang-tab ${activeQaLang === 'java' ? 'active' : ''}`}
+                  className={`qa-lang-btn ${activeQaLang === 'java' ? 'active' : ''}`}
                   onClick={() => setActiveQaLang('java')}
                 >
                   Java (TestNG)
                 </button>
                 <button
                   type="button"
-                  className={`qa-lang-tab ${activeQaLang === 'typescript' ? 'active' : ''}`}
+                  className={`qa-lang-btn ${activeQaLang === 'typescript' ? 'active' : ''}`}
                   onClick={() => setActiveQaLang('typescript')}
                 >
-                  TypeScript (Cypress)
+                  TypeScript (Playwright)
                 </button>
                 <button
                   type="button"
-                  className={`qa-lang-tab ${activeQaLang === 'csharp' ? 'active' : ''}`}
+                  className={`qa-lang-btn ${activeQaLang === 'csharp' ? 'active' : ''}`}
                   onClick={() => setActiveQaLang('csharp')}
                 >
                   C# (SpecFlow)
@@ -566,30 +588,17 @@ function ServicesPage() {
               </div>
             </div>
 
-            <div className="qa-terminal-window">
-              <div className="qa-terminal-bar">
-                <div className="qa-terminal-dots">
-                  <span className="dot red"></span>
-                  <span className="dot yellow"></span>
-                  <span className="dot green"></span>
-                </div>
-                <div className="qa-terminal-title">
-                  <span>test_runner_{activeQaLang}.nimbusbyte — {qaCodeSnippets[activeQaLang]?.filename}</span>
-                </div>
-                <div className="qa-terminal-badge">PASSED 42/42</div>
+            <div className="qa-code-content">
+              <pre>{qaCodeSnippets[activeQaLang]?.code}</pre>
+            </div>
+            <div className="qa-runner-footer">
+              <div className="qa-status-pill">
+                <span className="qa-status-dot"></span>
+                <span>{qaCodeSnippets[activeQaLang]?.metrics}</span>
               </div>
-              <div className="qa-code-content">
-                <pre>{qaCodeSnippets[activeQaLang]?.code}</pre>
-              </div>
-              <div className="qa-runner-footer">
-                <div className="qa-status-pill">
-                  <span className="qa-status-dot"></span>
-                  <span>{qaCodeSnippets[activeQaLang]?.metrics}</span>
-                </div>
-                <Link to="/contact?service=qa-automation" className="btn-link" style={{ fontSize: 13 }}>
-                  Need an automated QA suite built? Talk to us →
-                </Link>
-              </div>
+              <Link to="/contact?service=qa-automation" className="btn-link" style={{ fontSize: 13 }}>
+                Need an automated QA suite built? Talk to us <ArrowRightIcon size={12} className="btn-arrow" />
+              </Link>
             </div>
           </div>
         </div>
@@ -648,7 +657,7 @@ function ServicesPage() {
 
               <div style={{ marginTop: 20 }}>
                 <Link to={`/contact?service=${encodeURIComponent(currentSpotlight.consultTopic)}`} className="btn btn-primary btn-sm">
-                  Schedule {activeTechFilter} Technical Consultation <span className="btn-arrow">→</span>
+                  Schedule {activeTechFilter} Technical Consultation <ArrowRightIcon size={14} className="btn-arrow" />
                 </Link>
               </div>
             </div>
@@ -692,14 +701,16 @@ function ServicesPage() {
                   <h4>Key Deliverables:</h4>
                   <ul>
                     {service.deliverables.map(del => (
-                      <li key={del}>✓ {del}</li>
+                      <li key={del} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                        <CheckIcon size={14} /> {del}
+                      </li>
                     ))}
                   </ul>
                 </div>
 
                 <div style={{ marginTop: 24 }}>
                   <Link to={`/contact?service=${encodeURIComponent(service.title)}`} className="btn btn-primary btn-sm">
-                    Consult on {service.title} <span className="btn-arrow">→</span>
+                    Consult on {service.title} <ArrowRightIcon size={14} className="btn-arrow" />
                   </Link>
                 </div>
               </div>
@@ -751,7 +762,7 @@ function ServicesPage() {
                 <p>Tell us about your product goals — our senior engineers will diagnose your technical requirements and provide an actionable blueprint.</p>
               </div>
               <Link to="/contact" className="btn" style={{ background: 'var(--navy-900)', color: '#fff' }}>
-                Schedule Technical Call <span className="btn-arrow">→</span>
+                Schedule Technical Call <ArrowRightIcon size={14} className="btn-arrow" />
               </Link>
             </div>
           </div>

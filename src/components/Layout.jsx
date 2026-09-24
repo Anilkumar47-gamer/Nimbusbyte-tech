@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import Footer from './Footer.jsx';
+import { PhoneIcon, ArrowUpIcon, ArrowRightIcon } from './Icons.jsx';
 
 const navItems = [
   { label: 'Home', path: '/' },
@@ -152,7 +153,7 @@ function Layout() {
 
           <div className="nav-cta">
             <Link to="/contact" className="btn btn-primary btn-sm" onClick={closeNav}>
-              Start a project <span className="btn-arrow">→</span>
+              Start a project <ArrowRightIcon size={14} className="btn-arrow" />
             </Link>
             <button
               className={`nav-toggle ${navOpen ? 'open' : ''}`}
@@ -168,6 +169,13 @@ function Layout() {
         </nav>
       </header>
 
+      {/* Mobile nav backdrop */}
+      <div
+        className={`nav-backdrop ${navOpen ? 'active' : ''}`}
+        onClick={closeNav}
+        aria-hidden="true"
+      />
+
       <main>
         <Outlet />
       </main>
@@ -175,13 +183,15 @@ function Layout() {
       <Footer />
 
       <div className="fab-actions" aria-label="Quick actions">
-        <Link to="/contact" className="fab-btn fab-primary" aria-label="Book a call">✆</Link>
+        <Link to="/contact" className="fab-btn fab-primary" aria-label="Book a consultation call">
+          <PhoneIcon size={20} className="svg-anim-pulse" />
+        </Link>
         <button
           className="fab-btn"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           aria-label="Scroll to top"
         >
-          ↑
+          <ArrowUpIcon size={20} />
         </button>
       </div>
     </>
