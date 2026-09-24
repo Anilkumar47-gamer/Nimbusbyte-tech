@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="deskBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060f1e" />
+      <stop offset="50%" stop-color="#0b172a" />
+      <stop offset="100%" stop-color="#112544" />
+    </linearGradient>
+    <linearGradient id="accentG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#0e4fa8" />
+    </linearGradient>
+    <linearGradient id="neonMint" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6ee7c4" />
+      <stop offset="100%" stop-color="#3fa9f5" />
+    </linearGradient>
+    <linearGradient id="windowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#142642" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0a1526" stop-opacity="0.98" />
+    </linearGradient>
+    <filter id="glowD" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#deskBg)" />
+
+  <!-- Ambient background glow -->
+  <circle cx="200" cy="140" r="160" fill="#3fa9f5" opacity="0.12" filter="url(#glowD)" />
+  <circle cx="780" cy="380" r="180" fill="#6ee7c4" opacity="0.1" filter="url(#glowD)" />
+
+  <!-- Desktop App Window (Cross-Platform Electron / Tauri / .NET) -->
+  <g transform="translate(60, 40)">
+    <!-- Main Window Outer Frame -->
+    <rect width="840" height="460" rx="14" fill="url(#windowGrad)" stroke="#224068" stroke-width="1.8" />
+
+    <!-- Window Titlebar -->
+    <rect width="840" height="42" rx="14" fill="#0b1626" />
+    <rect y="28" width="840" height="14" fill="#0b1626" />
+    <circle cx="24" cy="21" r="6" fill="#ef4444" opacity="0.85" />
+    <circle cx="44" cy="21" r="6" fill="#f59e0b" opacity="0.85" />
+    <circle cx="64" cy="21" r="6" fill="#10b981" opacity="0.85" />
+
+    <text x="94" y="26" fill="#eaf3fc" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Nimbus Pro Desktop Studio v3.4 — [macOS / Windows x64 / Linux]</text>
+
+    <!-- Platform Badges in Titlebar -->
+    <g transform="translate(620, 10)">
+      <rect width="64" height="22" rx="4" fill="#193356" />
+      <text x="32" y="15" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Windows</text>
+
+      <rect x="72" width="64" height="22" rx="4" fill="#193356" />
+      <text x="104" y="15" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10" font-weight="600">macOS</text>
+
+      <rect x="144" width="64" height="22" rx="4" fill="#193356" />
+      <text x="176" y="15" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Linux</text>
+    </g>
+
+    <!-- Left Sidebar Menu -->
+    <g transform="translate(18, 56)">
+      <rect width="180" height="388" rx="8" fill="#091322" stroke="#162c4a" />
+      
+      <!-- Nav Items -->
+      <rect x="8" y="12" width="164" height="34" rx="6" fill="#18365f" />
+      <text x="24" y="34" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="12" font-weight="bold">◈ Live Monitor</text>
+
+      <text x="24" y="78" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="12">⚙ Hardware I/O</text>
+      <text x="24" y="118" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="12">▦ Serial Bus Drivers</text>
+      <text x="24" y="158" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="12">📊 Local SQLite DB</text>
+      <text x="24" y="198" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="12">🔒 Offline Crypto</text>
+      <text x="24" y="238" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="12">🚀 Native IPC Tunnel</text>
+
+      <!-- System Telemetry Box in Sidebar -->
+      <g transform="translate(10, 290)">
+        <rect width="160" height="84" rx="6" fill="#050c18" stroke="#142640" />
+        <text x="12" y="20" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="10">CPU CORE USAGE</text>
+        <text x="12" y="38" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold">2.4% (Tauri Rust)</text>
+        <text x="12" y="58" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="10">RAM CONSUMPTION</text>
+        <text x="12" y="74" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold">38 MB Footprint</text>
+      </g>
+    </g>
+
+    <!-- Main Content Area -->
+    <g transform="translate(212, 56)">
+      <!-- Top Metrics Row -->
+      <g transform="translate(0, 0)">
+        <rect width="190" height="74" rx="8" fill="#0d1b30" stroke="#1e3a60" />
+        <text x="16" y="24" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">Throughput Rate</text>
+        <text x="16" y="52" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">1.28 GB/s</text>
+        <text x="120" y="52" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="11">▲ Native</text>
+
+        <rect x="204" width="190" height="74" rx="8" fill="#0d1b30" stroke="#1e3a60" />
+        <text x="220" y="24" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">Native OS Latency</text>
+        <text x="220" y="52" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">&lt; 0.8 ms</text>
+        <text x="328" y="52" fill="#3fa9f5" font-family="'Inter', sans-serif" font-size="11">C++ / Rust</text>
+
+        <rect x="408" width="198" height="74" rx="8" fill="#0d1b30" stroke="#1e3a60" />
+        <text x="424" y="24" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">Offline Resilience</text>
+        <text x="424" y="52" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">100% Zero-Loss</text>
+      </g>
+
+      <!-- Center Waveform / High Speed Graph Area -->
+      <g transform="translate(0, 88)">
+        <rect width="606" height="190" rx="8" fill="#081220" stroke="#162e4e" />
+        <text x="18" y="24" fill="#eaf3fc" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Real-Time Data Processing Stream</text>
+        <text x="460" y="24" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="10">60 FPS Hardware Render</text>
+
+        <!-- Waveform Path -->
+        <path d="M 20,110 Q 70,30 120,90 T 220,130 T 320,50 T 420,100 T 520,40 T 586,85" fill="none" stroke="url(#neonMint)" stroke-width="2.5" />
+        
+        <!-- Fill under waveform -->
+        <path d="M 20,110 Q 70,30 120,90 T 220,130 T 320,50 T 420,100 T 520,40 T 586,85 L 586,170 L 20,170 Z" fill="url(#neonMint)" opacity="0.08" />
+
+        <!-- Grid lines inside graph -->
+        <line x1="20" y1="60" x2="586" y2="60" stroke="#162e4e" stroke-dasharray="3 3" />
+        <line x1="20" y1="100" x2="586" y2="100" stroke="#162e4e" stroke-dasharray="3 3" />
+        <line x1="20" y1="140" x2="586" y2="140" stroke="#162e4e" stroke-dasharray="3 3" />
+      </g>
+
+      <!-- Bottom Tech Stack Chip Strip -->
+      <g transform="translate(0, 292)">
+        <rect width="606" height="96" rx="8" fill="#0b172a" stroke="#183358" />
+        <text x="18" y="24" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="bold" letter-spacing="1">DESKTOP FRAMEWORKS SUPPORTED</text>
+        
+        <g transform="translate(18, 40)">
+          <rect width="105" height="34" rx="6" fill="#132744" stroke="#254a7c" />
+          <text x="52" y="21" text-anchor="middle" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Tauri / Rust</text>
+
+          <rect x="115" width="105" height="34" rx="6" fill="#132744" stroke="#254a7c" />
+          <text x="167" y="21" text-anchor="middle" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Electron.js</text>
+
+          <rect x="230" width="105" height="34" rx="6" fill="#132744" stroke="#254a7c" />
+          <text x="282" y="21" text-anchor="middle" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11" font-weight="600">.NET 8 / WPF</text>
+
+          <rect x="345" width="105" height="34" rx="6" fill="#132744" stroke="#254a7c" />
+          <text x="397" y="21" text-anchor="middle" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11" font-weight="600">C++ / Qt 6</text>
+
+          <rect x="460" width="112" height="34" rx="6" fill="#132744" stroke="#254a7c" />
+          <text x="516" y="21" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Auto-Updater</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="finOpsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071224" />
+      <stop offset="50%" stop-color="#0a1932" />
+      <stop offset="100%" stop-color="#040a14" />
+    </linearGradient>
+    <linearGradient id="costGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#finOpsBg)" />
+
+  <rect x="30" y="24" width="740" height="402" rx="12" fill="#091424" stroke="#1c385c" stroke-width="1.5" />
+  
+  <!-- Header -->
+  <rect x="30" y="24" width="740" height="38" rx="12" fill="#0e213a" />
+  <circle cx="54" cy="43" r="4.5" fill="#ef4444" />
+  <circle cx="70" cy="43" r="4.5" fill="#f59e0b" />
+  <circle cx="86" cy="43" r="4.5" fill="#10b981" />
+  <text x="110" y="47" fill="#cbd5e1" font-family="'Space Grotesk', sans-serif" font-size="11.5" font-weight="600">Zero-Downtime AWS Multi-Region Migration &amp; FinOps Case Study</text>
+  <rect x="640" y="34" width="115" height="18" rx="4" fill="#0f342c" />
+  <text x="697" y="46" text-anchor="middle" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9.5">-41% SPEND</text>
+
+  <!-- Left: Cost Reduction & Latency Chart -->
+  <g transform="translate(60, 78)">
+    <rect width="320" height="324" rx="8" fill="#050c18" stroke="#162e50" />
+    <text x="16" y="24" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">MONTHLY CLOUD SPEND (BEFORE VS AFTER)</text>
+
+    <!-- Before / After Bar Chart -->
+    <g transform="translate(24, 48)">
+      <!-- Before Bar -->
+      <text x="30" y="15" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">Legacy Stack</text>
+      <rect x="30" y="25" width="60" height="150" rx="4" fill="#ef4444" opacity="0.8" />
+      <text x="60" y="200" text-anchor="middle" fill="#ef4444" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">$34,800/mo</text>
+
+      <!-- After Bar -->
+      <text x="170" y="15" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">Nimbus AWS</text>
+      <rect x="170" y="85" width="60" height="90" rx="4" fill="url(#costGrad)" />
+      <text x="200" y="200" text-anchor="middle" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">$20,500/mo</text>
+    </g>
+
+    <!-- Savings Callout -->
+    <g transform="translate(16, 260)">
+      <rect width="288" height="48" rx="6" fill="#0c231c" stroke="#10b981" />
+      <text x="14" y="20" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">-$14,300/MONTH SAVINGS</text>
+      <text x="14" y="38" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="9.5">41% hosting reduction + 99.98% SLA delivered</text>
+    </g>
+  </g>
+
+  <!-- Right: Architecture Migration Specs -->
+  <g transform="translate(400, 78)">
+    <g transform="translate(0, 0)">
+      <rect width="165" height="74" rx="8" fill="#0e213b" stroke="#1c3b64" />
+      <text x="14" y="22" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">Migration Downtime</text>
+      <text x="14" y="48" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700">0.0 sec</text>
+      <text x="14" y="64" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="8.5">Live DB replication</text>
+
+      <rect x="180" width="170" height="74" rx="8" fill="#0e213b" stroke="#1c3b64" />
+      <text x="194" y="22" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">Multi-Region Uptime</text>
+      <text x="194" y="48" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700">99.98%</text>
+      <text x="194" y="64" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8.5">Verified SLA</text>
+    </g>
+
+    <!-- Architecture Box -->
+    <g transform="translate(0, 88)">
+      <rect width="350" height="150" rx="8" fill="#081426" stroke="#162e50" />
+      <text x="16" y="24" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">INFRASTRUCTURE DETAILS</text>
+      
+      <g transform="translate(16, 42)" font-family="'Inter', sans-serif" font-size="11">
+        <text y="14" fill="#eaf3fc">✓ Multi-Region AWS Kubernetes ECS cluster</text>
+        <text y="38" fill="#eaf3fc">✓ Aurora Multi-AZ PostgreSQL with cross-region read sync</text>
+        <text y="62" fill="#eaf3fc">✓ 100% Terraform Infrastructure as Code repository</text>
+        <text y="86" fill="#6ee7c4" font-weight="600">✓ Automated disaster recovery promotion runbooks</text>
+      </g>
+    </g>
+
+    <!-- Tech Chips -->
+    <g transform="translate(0, 252)">
+      <rect width="80" height="26" rx="4" fill="#132a48" />
+      <text x="40" y="17" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">AWS ECS</text>
+
+      <rect x="90" width="90" height="26" rx="4" fill="#132a48" />
+      <text x="135" y="17" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">Terraform</text>
+
+      <rect x="190" width="150" height="26" rx="4" fill="#132a48" />
+      <text x="265" y="17" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="10">Aurora PostgreSQL</text>
+    </g>
+  </g>
+</svg>

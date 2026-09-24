@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="abtBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050e1c" />
+      <stop offset="50%" stop-color="#09172e" />
+      <stop offset="100%" stop-color="#0d2448" />
+    </linearGradient>
+    <linearGradient id="abtGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+    <filter id="abtGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#abtBg)" />
+
+  <circle cx="280" cy="180" r="160" fill="#3fa9f5" opacity="0.13" filter="url(#abtGlow)" />
+  <circle cx="720" cy="340" r="170" fill="#6ee7c4" opacity="0.11" filter="url(#abtGlow)" />
+
+  <g transform="translate(48, 36)">
+    <rect width="864" height="468" rx="14" fill="#081426" stroke="#1d3d6a" stroke-width="1.6" fill-opacity="0.95" />
+
+    <!-- Top Bar -->
+    <g transform="translate(24, 20)">
+      <text y="16" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold" letter-spacing="1.5">ENGINEERING HERITAGE &amp; SENIOR CRAFTSMANSHIP</text>
+      <text y="42" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">Built by Senior Practitioners · Zero Technical Debt · 40+ Systems Shipped</text>
+    </g>
+
+    <!-- Engineering Principles Matrix -->
+    <g transform="translate(24, 76)">
+      <!-- Principle 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="190" height="240" rx="10" fill="#0c1b33" stroke="#1c385c" />
+        <circle cx="36" cy="36" r="16" fill="#3fa9f5" opacity="0.15" />
+        <text x="36" y="42" text-anchor="middle" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold">01</text>
+        <text x="18" y="80" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="bold">Multi-Language QA</text>
+        <text x="18" y="104" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">Automated parallel tests across Python, Java, TS, and C# on every single commit.</text>
+        <rect x="18" y="180" width="154" height="32" rx="4" fill="#122744" />
+        <text x="28" y="200" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ 100% CI Gates</text>
+      </g>
+
+      <!-- Principle 2 -->
+      <g transform="translate(206, 0)">
+        <rect width="190" height="240" rx="10" fill="#0c1b33" stroke="#1c385c" />
+        <circle cx="36" cy="36" r="16" fill="#6ee7c4" opacity="0.15" />
+        <text x="36" y="42" text-anchor="middle" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold">02</text>
+        <text x="18" y="80" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="bold">Full Source Ownership</text>
+        <text x="18" y="104" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">You own 100% of your source code, CI/CD, and Terraform configs. No lock-in.</text>
+        <rect x="18" y="180" width="154" height="32" rx="4" fill="#122744" />
+        <text x="28" y="200" fill="#7cc4f8" font-family="'JetBrains Mono', monospace" font-size="10">✓ 100% Client IP</text>
+      </g>
+
+      <!-- Principle 3 -->
+      <g transform="translate(412, 0)">
+        <rect width="190" height="240" rx="10" fill="#0c1b33" stroke="#1c385c" />
+        <circle cx="36" cy="36" r="16" fill="#a855f7" opacity="0.15" />
+        <text x="36" y="42" text-anchor="middle" fill="#a855f7" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold">03</text>
+        <text x="18" y="80" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="bold">Senior Hands Only</text>
+        <text x="18" y="104" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">Architects and domain leads write and review your pull requests. No junior handoffs.</text>
+        <rect x="18" y="180" width="154" height="32" rx="4" fill="#122744" />
+        <text x="28" y="200" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="10">✓ Elite Architects</text>
+      </g>
+
+      <!-- Principle 4 -->
+      <g transform="translate(618, 0)">
+        <rect width="198" height="240" rx="10" fill="#0c1b33" stroke="#1c385c" />
+        <circle cx="36" cy="36" r="16" fill="#f59e0b" opacity="0.15" />
+        <text x="36" y="42" text-anchor="middle" fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold">04</text>
+        <text x="18" y="80" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="bold">Data-Driven SLA</text>
+        <text x="18" y="104" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">Real-time telemetry, crash telemetry, and guaranteed 99.9%+ uptime SLAs.</text>
+        <rect x="18" y="180" width="162" height="32" rx="4" fill="#122744" />
+        <text x="28" y="200" fill="#fcd34d" font-family="'JetBrains Mono', monospace" font-size="10">✓ 99.99% Delivered</text>
+      </g>
+    </g>
+
+    <!-- Engineering Timeline Strip -->
+    <g transform="translate(24, 332)">
+      <rect width="816" height="112" rx="8" fill="#071222" stroke="#152e4e" />
+      <text x="20" y="24" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="bold" letter-spacing="1">ENGINEERING TIMELINE &amp; MILESTONES</text>
+
+      <g transform="translate(20, 44)">
+        <g transform="translate(0, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">2024 · Foundation</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Cloud architecture &amp; agile pods</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">Launched studio</text>
+        </g>
+        <g transform="translate(200, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">2025 · Multi-Platform</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Mobile, Tauri Desktop &amp; QA Lab</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">25+ Apps Shipped</text>
+        </g>
+        <g transform="translate(410, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">2026 · Global Scale</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Multi-Region AWS &amp; FinOps</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">40+ Systems Live</text>
+        </g>
+        <g transform="translate(620, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Now · Accountable</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Senior engineering partnership</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">24h Response SLA</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

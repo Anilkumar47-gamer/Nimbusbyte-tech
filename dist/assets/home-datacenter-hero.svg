@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040b17" />
+      <stop offset="50%" stop-color="#08152b" />
+      <stop offset="100%" stop-color="#0d2446" />
+    </linearGradient>
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+    <linearGradient id="cardGradHero" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#122744" stop-opacity="0.92" />
+      <stop offset="100%" stop-color="#081426" stop-opacity="0.98" />
+    </linearGradient>
+    <filter id="heroGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#heroBg)" />
+
+  <!-- Circuit grid pattern -->
+  <g stroke="#162e50" stroke-width="1" opacity="0.45">
+    <line x1="0" y1="60" x2="960" y2="60" />
+    <line x1="0" y1="120" x2="960" y2="120" />
+    <line x1="0" y1="180" x2="960" y2="180" />
+    <line x1="0" y1="240" x2="960" y2="240" />
+    <line x1="0" y1="300" x2="960" y2="300" />
+    <line x1="0" y1="360" x2="960" y2="360" />
+    <line x1="0" y1="420" x2="960" y2="420" />
+    <line x1="0" y1="480" x2="960" y2="480" />
+    <line x1="120" y1="0" x2="120" y2="540" />
+    <line x1="240" y1="0" x2="240" y2="540" />
+    <line x1="360" y1="0" x2="360" y2="540" />
+    <line x1="480" y1="0" x2="480" y2="540" />
+    <line x1="600" y1="0" x2="600" y2="540" />
+    <line x1="720" y1="0" x2="720" y2="540" />
+    <line x1="840" y1="0" x2="840" y2="540" />
+  </g>
+
+  <!-- Glowing background light sources -->
+  <circle cx="280" cy="180" r="180" fill="#3fa9f5" opacity="0.16" filter="url(#heroGlow)" />
+  <circle cx="740" cy="340" r="190" fill="#6ee7c4" opacity="0.14" filter="url(#heroGlow)" />
+
+  <g transform="translate(48, 36)">
+    <rect width="864" height="468" rx="14" fill="url(#cardGradHero)" stroke="#1d3d6a" stroke-width="1.6" />
+
+    <!-- Top Command Bar -->
+    <rect width="864" height="44" rx="14" fill="#091424" />
+    <rect y="30" width="864" height="14" fill="#091424" />
+    <circle cx="24" cy="22" r="5.5" fill="#ef4444" opacity="0.85" />
+    <circle cx="42" cy="22" r="5.5" fill="#f59e0b" opacity="0.85" />
+    <circle cx="60" cy="22" r="5.5" fill="#10b981" opacity="0.85" />
+    <text x="88" y="26" fill="#cbd5e1" font-family="'Space Grotesk', sans-serif" font-size="12.5" font-weight="600">NimbusByte Enterprise Cloud &amp; Multi-Platform Hub [Active Telemetry Cluster]</text>
+    
+    <rect x="710" y="10" width="130" height="24" rx="5" fill="#122d4f" stroke="#2b5a96" stroke-width="1" />
+    <text x="775" y="26" text-anchor="middle" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10.5">● 99.99% UPTIME</text>
+
+    <!-- Main Hero Matrix -->
+    <g transform="translate(24, 60)">
+      <!-- Left: Multi-Platform Architecture Grid (Web, Mobile, Desktop, QA) -->
+      <g transform="translate(0, 0)">
+        <rect width="470" height="260" rx="10" fill="#06101e" stroke="#18345c" />
+        
+        <!-- Live System Nodes -->
+        <g transform="translate(18, 18)">
+          <!-- Node 1: Mobile iOS / Android -->
+          <g transform="translate(0, 0)">
+            <rect width="206" height="104" rx="8" fill="#0b1c34" stroke="#1e4474" />
+            <text x="14" y="24" fill="#7cc4f8" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">📱 Mobile Apps</text>
+            <text x="14" y="44" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">Flutter · Swift · Kotlin</text>
+            <text x="14" y="62" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">60 FPS · SQLite Sync</text>
+            <rect x="14" y="74" width="178" height="18" rx="3" fill="#11294a" />
+            <text x="22" y="87" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="8.5">LATENCY: 12ms // 0% LOSS</text>
+          </g>
+
+          <!-- Node 2: Web SaaS Next.js -->
+          <g transform="translate(226, 0)">
+            <rect width="206" height="104" rx="8" fill="#0b1c34" stroke="#1e4474" />
+            <text x="14" y="24" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">🌐 Web SaaS Platform</text>
+            <text x="14" y="44" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">Next.js 15 · Python · Node</text>
+            <text x="14" y="62" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="10">SSR Edge · Sub-Second</text>
+            <rect x="14" y="74" width="178" height="18" rx="3" fill="#11294a" />
+            <text x="22" y="87" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8.5">428k USERS // 18k RPS</text>
+          </g>
+
+          <!-- Node 3: Desktop Software -->
+          <g transform="translate(0, 118)">
+            <rect width="206" height="104" rx="8" fill="#0b1c34" stroke="#1e4474" />
+            <text x="14" y="24" fill="#f59e0b" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">💻 Desktop Software</text>
+            <text x="14" y="44" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">Tauri (Rust) · .NET · C++</text>
+            <text x="14" y="62" fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="10">&lt; 38MB RAM · Hardware I/O</text>
+            <rect x="14" y="74" width="178" height="18" rx="3" fill="#11294a" />
+            <text x="22" y="87" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="8.5">0.8ms SERIAL COM // WIN/MAC</text>
+          </g>
+
+          <!-- Node 4: Multi-Language QA -->
+          <g transform="translate(226, 118)">
+            <rect width="206" height="104" rx="8" fill="#0b1c34" stroke="#1e4474" />
+            <text x="14" y="24" fill="#a855f7" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">🧪 Automation QA Lab</text>
+            <text x="14" y="44" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">PyTest · TestNG · Playwright</text>
+            <text x="14" y="62" fill="#a855f7" font-family="'JetBrains Mono', monospace" font-size="10">1,863 Tests · 100% Pass</text>
+            <rect x="14" y="74" width="178" height="18" rx="3" fill="#11294a" />
+            <text x="22" y="87" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8.5">CI/CD PARALLEL MATRIX OK</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Right: Live Real-Time Throughput & Performance Stream -->
+      <g transform="translate(490, 0)">
+        <rect width="326" height="260" rx="10" fill="#06101e" stroke="#18345c" />
+        <text x="18" y="26" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="bold">Live Multi-Region Telemetry</text>
+        <text x="18" y="42" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">Global Edge + Kubernetes Autoscaler</text>
+
+        <!-- Waveform Graph -->
+        <g transform="translate(18, 56)">
+          <rect width="290" height="120" rx="6" fill="#040b16" stroke="#142a4a" />
+          <path d="M 10 80 Q 40 20, 80 65 T 150 30 T 220 70 T 280 25" fill="none" stroke="url(#neonGradient)" stroke-width="2.5" />
+          <path d="M 10 80 Q 40 20, 80 65 T 150 30 T 220 70 T 280 25 L 280 110 L 10 110 Z" fill="url(#neonGradient)" opacity="0.1" />
+          
+          <line x1="10" y1="40" x2="280" y2="40" stroke="#142a4a" stroke-dasharray="3 3" />
+          <line x1="10" y1="75" x2="280" y2="75" stroke="#142a4a" stroke-dasharray="3 3" />
+        </g>
+
+        <!-- Metrics under chart -->
+        <g transform="translate(18, 190)">
+          <rect width="138" height="54" rx="6" fill="#0c1a2f" stroke="#1b3a62" />
+          <text x="12" y="18" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">API Latency (p99)</text>
+          <text x="12" y="42" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="bold">18 ms</text>
+
+          <rect x="150" width="140" height="54" rx="6" fill="#0c1a2f" stroke="#1b3a62" />
+          <text x="162" y="18" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">Monthly Cost Savings</text>
+          <text x="162" y="42" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="bold">35% Avg</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Bottom Engineering Principles Bar -->
+    <g transform="translate(24, 334)">
+      <rect width="816" height="110" rx="8" fill="#081426" stroke="#162e4e" />
+      <text x="20" y="24" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="bold" letter-spacing="1">NIMBUSBYTE DELIVERY COMMITMENTS</text>
+
+      <g transform="translate(20, 42)">
+        <g transform="translate(0, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Senior Hands Only</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Architects code every PR</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ Zero Junior Handoffs</text>
+        </g>
+        <g transform="translate(200, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Automated QA Built-In</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">PyTest, Java, TS &amp; C# suites</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ 100% CI/CD Coverage</text>
+        </g>
+        <g transform="translate(410, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Full Source Ownership</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">100% IP, code &amp; configs</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ Zero Vendor Lock-in</text>
+        </g>
+        <g transform="translate(620, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Enterprise SLA Backed</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Under 24h triage guarantee</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ 24/7 Priority Support</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1526" />
+      <stop offset="50%" stop-color="#0d1f38" />
+      <stop offset="100%" stop-color="#070f1c" />
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="rgba(63, 169, 245, 0.1)" />
+      <stop offset="100%" stop-color="rgba(110, 231, 196, 0.4)" />
+    </linearGradient>
+    <linearGradient id="barGrad1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0e4fa8" />
+      <stop offset="100%" stop-color="#3fa9f5" />
+    </linearGradient>
+    <linearGradient id="barGrad2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0d7a64" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+  <g stroke="#1a2e4c" stroke-width="1" opacity="0.6">
+    <line x1="0" y1="90" x2="800" y2="90" />
+    <line x1="0" y1="180" x2="800" y2="180" />
+    <line x1="0" y1="270" x2="800" y2="270" />
+    <line x1="0" y1="360" x2="800" y2="360" />
+    <line x1="160" y1="0" x2="160" y2="450" />
+    <line x1="320" y1="0" x2="320" y2="450" />
+    <line x1="480" y1="0" x2="480" y2="450" />
+    <line x1="640" y1="0" x2="640" y2="450" />
+  </g>
+
+  <!-- Window Frame -->
+  <rect x="40" y="30" width="720" height="390" rx="12" fill="#0b172a" stroke="#223d66" stroke-width="1.5" />
+  <rect x="40" y="30" width="720" height="42" rx="12" fill="#0f213d" />
+  
+  <!-- Window Controls -->
+  <circle cx="65" cy="51" r="5" fill="#ef4444" />
+  <circle cx="82" cy="51" r="5" fill="#f59e0b" />
+  <circle cx="99" cy="51" r="5" fill="#10b981" />
+  <text x="125" y="55" fill="#93a8c6" font-family="'Space Grotesk', system-ui, sans-serif" font-size="12" font-weight="500">NimbusByte Enterprise SaaS — Logistics &amp; Real-Time Inventory Hub</text>
+  <rect x="630" y="42" width="110" height="18" rx="4" fill="#152b4d" stroke="#2b4b7a" stroke-width="1" />
+  <text x="642" y="55" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">● LIVE SYNC</text>
+
+  <!-- Left Sidebar Nav -->
+  <rect x="40" y="72" width="140" height="348" fill="#091424" />
+  <rect x="52" y="90" width="116" height="26" rx="6" fill="#132b4f" />
+  <text x="64" y="107" fill="#7cc4f8" font-family="system-ui, sans-serif" font-size="11" font-weight="600">📊 Overview</text>
+  <text x="64" y="137" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">📦 Inventory (14k)</text>
+  <text x="64" y="167" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">🚚 Live Shipments</text>
+  <text x="64" y="197" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">⚡ Automations</text>
+  <text x="64" y="227" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">⚙️ System API</text>
+
+  <!-- Top Metric Cards -->
+  <g transform="translate(195, 88)">
+    <!-- Card 1 -->
+    <rect x="0" y="0" width="168" height="68" rx="8" fill="#0f223f" stroke="#1d375e" stroke-width="1" />
+    <text x="12" y="20" fill="#93a8c6" font-family="system-ui, sans-serif" font-size="10">TOTAL THROUGHPUT</text>
+    <text x="12" y="44" fill="#ffffff" font-family="'Space Grotesk', system-ui, sans-serif" font-size="18" font-weight="700">1.48M req/s</text>
+    <text x="12" y="60" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9">↑ 28.4% this week</text>
+
+    <!-- Card 2 -->
+    <rect x="180" y="0" width="168" height="68" rx="8" fill="#0f223f" stroke="#1d375e" stroke-width="1" />
+    <text x="192" y="20" fill="#93a8c6" font-family="system-ui, sans-serif" font-size="10">SUB-SECOND LATENCY</text>
+    <text x="192" y="44" fill="#ffffff" font-family="'Space Grotesk', system-ui, sans-serif" font-size="18" font-weight="700">42 ms p99</text>
+    <text x="192" y="60" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="9">Global Edge CDN</text>
+
+    <!-- Card 3 -->
+    <rect x="360" y="0" width="180" height="68" rx="8" fill="#0f223f" stroke="#1d375e" stroke-width="1" />
+    <text x="372" y="20" fill="#93a8c6" font-family="system-ui, sans-serif" font-size="10">RECONCILED ORDERS</text>
+    <text x="372" y="44" fill="#ffffff" font-family="'Space Grotesk', system-ui, sans-serif" font-size="18" font-weight="700">99.998%</text>
+    <text x="372" y="60" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9">0 Failed Webhooks</text>
+  </g>
+
+  <!-- Big Area Chart Panel -->
+  <g transform="translate(195, 170)">
+    <rect x="0" y="0" width="348" height="235" rx="8" fill="#0e1d35" stroke="#1d375e" stroke-width="1" />
+    <text x="16" y="24" fill="#ffffff" font-family="'Space Grotesk', system-ui, sans-serif" font-size="13" font-weight="600">Real-Time Event Ingestion Stream</text>
+    <text x="16" y="38" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">PostgreSQL + Redis Timeseries Analytics</text>
+
+    <!-- Grid lines -->
+    <line x1="16" y1="80" x2="332" y2="80" stroke="#192d4c" stroke-dasharray="3 3" />
+    <line x1="16" y1="130" x2="332" y2="130" stroke="#192d4c" stroke-dasharray="3 3" />
+    <line x1="16" y1="180" x2="332" y2="180" stroke="#192d4c" stroke-dasharray="3 3" />
+
+    <!-- Gradient Wave Line -->
+    <path d="M 16 170 Q 50 140, 80 155 T 140 100 T 200 120 T 260 70 T 332 55 L 332 205 L 16 205 Z" fill="url(#accentGrad)" opacity="0.7" />
+    <path d="M 16 170 Q 50 140, 80 155 T 140 100 T 200 120 T 260 70 T 332 55" fill="none" stroke="url(#primaryGrad)" stroke-width="2.5" filter="url(#glow)" />
+    
+    <!-- Data points -->
+    <circle cx="140" cy="100" r="4" fill="#3fa9f5" stroke="#ffffff" stroke-width="1.5" />
+    <circle cx="260" cy="70" r="4" fill="#6ee7c4" stroke="#ffffff" stroke-width="1.5" />
+    <circle cx="332" cy="55" r="4" fill="#6ee7c4" stroke="#ffffff" stroke-width="1.5" />
+    
+    <!-- Marker label -->
+    <rect x="235" y="38" width="80" height="20" rx="4" fill="#122b50" stroke="#3fa9f5" stroke-width="1" />
+    <text x="242" y="52" fill="#eaf3fc" font-family="'JetBrains Mono', monospace" font-size="9">+4,820 msg/s</text>
+  </g>
+
+  <!-- Right Distribution Bars Panel -->
+  <g transform="translate(555, 170)">
+    <rect x="0" y="0" width="188" height="235" rx="8" fill="#0e1d35" stroke="#1d375e" stroke-width="1" />
+    <text x="14" y="24" fill="#ffffff" font-family="'Space Grotesk', system-ui, sans-serif" font-size="13" font-weight="600">Stock Velocity</text>
+    <text x="14" y="38" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Hub Multi-Zone Sync</text>
+
+    <!-- Bars -->
+    <g transform="translate(14, 55)">
+      <rect x="0" y="0" width="160" height="8" rx="4" fill="#13243f" />
+      <rect x="0" y="0" width="138" height="8" rx="4" fill="url(#barGrad1)" />
+      <text x="0" y="22" fill="#93a8c6" font-family="system-ui, sans-serif" font-size="9">Zone A (North America)</text>
+      <text x="135" y="22" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="9">86%</text>
+
+      <rect x="0" y="36" width="160" height="8" rx="4" fill="#13243f" />
+      <rect x="0" y="36" width="150" height="8" rx="4" fill="url(#barGrad2)" />
+      <text x="0" y="58" fill="#93a8c6" font-family="system-ui, sans-serif" font-size="9">Zone B (Europe EU-West)</text>
+      <text x="135" y="58" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9">94%</text>
+
+      <rect x="0" y="72" width="160" height="8" rx="4" fill="#13243f" />
+      <rect x="0" y="72" width="115" height="8" rx="4" fill="url(#barGrad1)" />
+      <text x="0" y="94" fill="#93a8c6" font-family="system-ui, sans-serif" font-size="9">Zone C (Asia-Pacific)</text>
+      <text x="135" y="94" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="9">72%</text>
+
+      <!-- System Status Pill -->
+      <rect x="0" y="112" width="160" height="34" rx="6" fill="#102647" stroke="#22497d" stroke-width="1" />
+      <text x="10" y="126" fill="#7cc4f8" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Zero Stockout Trigger</text>
+      <text x="10" y="139" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8">Auto-Reorder Webhook OK</text>
+    </g>
+  </g>
+</svg>

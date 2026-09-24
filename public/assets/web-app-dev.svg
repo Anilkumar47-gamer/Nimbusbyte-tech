@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="webBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060e1d" />
+      <stop offset="50%" stop-color="#091830" />
+      <stop offset="100%" stop-color="#0d2448" />
+    </linearGradient>
+    <linearGradient id="blueG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#0e4fa8" />
+    </linearGradient>
+    <linearGradient id="mintCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6ee7c4" />
+      <stop offset="100%" stop-color="#3fa9f5" />
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#142846" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0c1a30" stop-opacity="0.98" />
+    </linearGradient>
+    <filter id="webGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#webBg)" />
+
+  <!-- Background Grid and Glows -->
+  <circle cx="240" cy="160" r="160" fill="#3fa9f5" opacity="0.14" filter="url(#webGlow)" />
+  <circle cx="760" cy="360" r="170" fill="#6ee7c4" opacity="0.1" filter="url(#webGlow)" />
+
+  <!-- Browser Frame -->
+  <g transform="translate(50, 40)">
+    <rect width="860" height="460" rx="12" fill="url(#panelGrad)" stroke="#1e3e68" stroke-width="1.6" />
+    
+    <!-- Browser Top Bar -->
+    <rect width="860" height="44" rx="12" fill="#0b172a" />
+    <rect y="30" width="860" height="14" fill="#0b172a" />
+    <circle cx="24" cy="22" r="5" fill="#ef4444" opacity="0.8" />
+    <circle cx="42" cy="22" r="5" fill="#f59e0b" opacity="0.8" />
+    <circle cx="60" cy="22" r="5" fill="#10b981" opacity="0.8" />
+
+    <!-- Address Bar -->
+    <rect x="90" y="10" width="460" height="24" rx="6" fill="#13243c" stroke="#213b5e" />
+    <text x="105" y="26" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="11">🔒 https://app.enterprise-cloud.io/dashboard/v2</text>
+
+    <!-- Tech Stack in Header -->
+    <g transform="translate(680, 10)">
+      <rect width="70" height="24" rx="4" fill="#193356" />
+      <text x="35" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Next.js 15</text>
+      <rect x="78" width="82" height="24" rx="4" fill="#193356" />
+      <text x="119" y="16" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="11" font-weight="600">PostgreSQL</text>
+    </g>
+
+    <!-- Web App Dashboard Content -->
+    <!-- Top KPI Cards -->
+    <g transform="translate(24, 64)">
+      <rect width="186" height="84" rx="8" fill="#0d1f38" stroke="#1f3d66" />
+      <text x="16" y="24" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">Active Cloud Users</text>
+      <text x="16" y="56" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="700">428,910</text>
+      <text x="120" y="56" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="11">▲ +24.8%</text>
+
+      <rect x="206" width="186" height="84" rx="8" fill="#0d1f38" stroke="#1f3d66" />
+      <text x="222" y="24" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">API Microservice RPS</text>
+      <text x="222" y="56" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="700">18.4k/s</text>
+      <text x="330" y="56" fill="#3fa9f5" font-family="'Inter', sans-serif" font-size="11">99.99%</text>
+
+      <rect x="412" width="186" height="84" rx="8" fill="#0d1f38" stroke="#1f3d66" />
+      <text x="428" y="24" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">Avg Response Latency</text>
+      <text x="428" y="56" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="700">18 ms</text>
+      <text x="510" y="56" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">Global Edge</text>
+
+      <rect x="618" width="194" height="84" rx="8" fill="#0d1f38" stroke="#1f3d66" />
+      <text x="634" y="24" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">SSR TTFB Speed</text>
+      <text x="634" y="56" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="700">0.08 s</text>
+      <text x="736" y="56" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="11">Ultra Fast</text>
+    </g>
+
+    <!-- Main Chart & Architecture Section -->
+    <g transform="translate(24, 164)">
+      <!-- Left: Real-time Traffic Graph -->
+      <rect width="520" height="210" rx="8" fill="#081426" stroke="#183458" />
+      <text x="20" y="28" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">Enterprise High-Throughput Request Velocity</text>
+      
+      <!-- Graph Bars / Area -->
+      <path d="M 20,160 Q 90,60 160,110 T 300,50 T 430,90 T 500,40" fill="none" stroke="url(#mintCyan)" stroke-width="3" />
+      <path d="M 20,160 Q 90,60 160,110 T 300,50 T 430,90 T 500,40 L 500,190 L 20,190 Z" fill="url(#mintCyan)" opacity="0.1" />
+
+      <!-- Grid lines -->
+      <line x1="20" y1="70" x2="500" y2="70" stroke="#173154" stroke-dasharray="3 3" />
+      <line x1="20" y1="120" x2="500" y2="120" stroke="#173154" stroke-dasharray="3 3" />
+      <line x1="20" y1="170" x2="500" y2="170" stroke="#173154" />
+
+      <!-- Right: Real-time Event Feed & Architecture -->
+      <g transform="translate(536, 0)">
+        <rect width="276" height="210" rx="8" fill="#081426" stroke="#183458" />
+        <text x="16" y="26" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold" letter-spacing="1">FULL-STACK CAPABILITIES</text>
+        
+        <g transform="translate(16, 44)" font-family="'Inter', sans-serif" font-size="11.5">
+          <text y="14" fill="#eaf3fc">✓ Server-Side Rendered (SSR) Next.js</text>
+          <text y="42" fill="#eaf3fc">✓ Python FastAPI &amp; Node.js Microservices</text>
+          <text y="70" fill="#eaf3fc">✓ Real-time WebSockets &amp; GraphQL</text>
+          <text y="98" fill="#eaf3fc">✓ Multi-Tenant Database Architecture</text>
+          <text y="126" fill="#eaf3fc">✓ Stripe, OAuth &amp; ERP Integrations</text>
+          <text y="154" fill="#6ee7c4" font-weight="600">✓ Production CI/CD &amp; Zero-Downtime Rollouts</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Bottom Technology Pill Bar -->
+    <g transform="translate(24, 390)">
+      <rect width="812" height="52" rx="6" fill="#0a182c" stroke="#19365c" />
+      <g transform="translate(18, 12)">
+        <rect width="90" height="28" rx="4" fill="#142c4c" />
+        <text x="45" y="18" text-anchor="middle" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11">React / Next.js</text>
+
+        <rect x="100" width="85" height="28" rx="4" fill="#142c4c" />
+        <text x="142" y="18" text-anchor="middle" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11">TypeScript</text>
+
+        <rect x="195" width="80" height="28" rx="4" fill="#142c4c" />
+        <text x="235" y="18" text-anchor="middle" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11">Node.js</text>
+
+        <rect x="285" width="85" height="28" rx="4" fill="#142c4c" />
+        <text x="327" y="18" text-anchor="middle" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11">Python / AI</text>
+
+        <rect x="380" width="95" height="28" rx="4" fill="#142c4c" />
+        <text x="427" y="18" text-anchor="middle" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11">PostgreSQL</text>
+
+        <rect x="485" width="80" height="28" rx="4" fill="#142c4c" />
+        <text x="525" y="18" text-anchor="middle" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11">GraphQL</text>
+
+        <rect x="575" width="80" height="28" rx="4" fill="#142c4c" />
+        <text x="615" y="18" text-anchor="middle" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11">Redis</text>
+
+        <rect x="665" width="110" height="28" rx="4" fill="#183c68" stroke="#3fa9f5" />
+        <text x="720" y="18" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Cloud-Native</text>
+      </g>
+    </g>
+  </g>
+</svg>

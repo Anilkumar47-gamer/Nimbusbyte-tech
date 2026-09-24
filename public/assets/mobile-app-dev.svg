@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mobBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050e1c" />
+      <stop offset="50%" stop-color="#09172e" />
+      <stop offset="100%" stop-color="#0e2344" />
+    </linearGradient>
+    <linearGradient id="phoneG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#142846" />
+      <stop offset="100%" stop-color="#091322" />
+    </linearGradient>
+    <linearGradient id="screenG1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1f38" />
+      <stop offset="100%" stop-color="#081426" />
+    </linearGradient>
+    <linearGradient id="cyanMint" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+    <linearGradient id="purpleG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <filter id="mobGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#mobBg)" />
+
+  <!-- Ambient background glow -->
+  <circle cx="280" cy="180" r="160" fill="#3fa9f5" opacity="0.13" filter="url(#mobGlow)" />
+  <circle cx="720" cy="340" r="170" fill="#6ee7c4" opacity="0.1" filter="url(#mobGlow)" />
+
+  <!-- Container Frame -->
+  <g transform="translate(50, 36)">
+    <rect width="860" height="468" rx="14" fill="#09162a" stroke="#1d3b66" stroke-width="1.6" fill-opacity="0.95" />
+
+    <!-- Top Bar -->
+    <g transform="translate(24, 20)">
+      <text y="16" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold" letter-spacing="1.5">NATIVE &amp; CROSS-PLATFORM MOBILE ENGINEERING</text>
+      <text y="42" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">iOS &amp; Android Apps · Flutter · Swift · Kotlin · 60 FPS UX</text>
+    </g>
+
+    <!-- Left: Dual Mobile Device Mockups -->
+    <!-- iPhone Device 1 -->
+    <g transform="translate(36, 80)">
+      <!-- Outer Phone Body -->
+      <rect width="190" height="348" rx="28" fill="url(#phoneG)" stroke="#224574" stroke-width="2.5" />
+      <!-- Notch / Dynamic Island -->
+      <rect x="65" y="10" width="60" height="12" rx="6" fill="#050a14" />
+      
+      <!-- Screen Content -->
+      <rect x="12" y="30" width="166" height="302" rx="18" fill="url(#screenG1)" />
+      
+      <!-- Screen Top Bar -->
+      <text x="24" y="52" fill="#93a8c6" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="600">NimbusPay</text>
+      <circle cx="156" cy="49" r="6" fill="#6ee7c4" />
+      
+      <!-- Balance Card -->
+      <rect x="22" y="66" width="146" height="74" rx="10" fill="#132a4a" stroke="#254d7e" />
+      <text x="32" y="84" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9">Total Balance (USD)</text>
+      <text x="32" y="106" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="700">$128,450.00</text>
+      <text x="32" y="126" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8.5">▲ +14.2% · 60 FPS Sync</text>
+      
+      <!-- Mini Chart -->
+      <path d="M 28 178 Q 50 150, 75 165 T 120 142 T 156 130" fill="none" stroke="url(#cyanMint)" stroke-width="2" />
+      
+      <!-- Action Buttons -->
+      <rect x="22" y="196" width="68" height="26" rx="6" fill="#1a3b68" />
+      <text x="56" y="213" text-anchor="middle" fill="#ffffff" font-family="'Inter', sans-serif" font-size="9" font-weight="600">Send</text>
+      
+      <rect x="100" y="196" width="68" height="26" rx="6" fill="#112948" stroke="#1f4474" />
+      <text x="134" y="213" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="9" font-weight="600">Receive</text>
+
+      <!-- Security / Biometrics Tag -->
+      <rect x="22" y="234" width="146" height="42" rx="8" fill="#081426" stroke="#183256" />
+      <text x="32" y="250" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8.5">🔒 Face ID Biometrics</text>
+      <text x="32" y="265" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="8">Offline SQLite Encrypted</text>
+      
+      <!-- Home Indicator -->
+      <rect x="65" y="320" width="60" height="4" rx="2" fill="#93a8c6" opacity="0.6" />
+    </g>
+
+    <!-- Android Device 2 (Slanted / Overlapping) -->
+    <g transform="translate(244, 110)">
+      <rect width="180" height="318" rx="22" fill="url(#phoneG)" stroke="#224574" stroke-width="2" />
+      <!-- Punch Hole Camera -->
+      <circle cx="90" cy="12" r="4" fill="#050a14" />
+      
+      <!-- Screen Content -->
+      <rect x="10" y="24" width="160" height="280" rx="14" fill="url(#screenG1)" />
+      <text x="20" y="44" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="bold">Portfolio Analytics</text>
+      
+      <!-- List of transactions -->
+      <g transform="translate(18, 56)">
+        <rect width="144" height="34" rx="6" fill="#10243e" />
+        <text x="10" y="16" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600">Apple Inc. (AAPL)</text>
+        <text x="10" y="27" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="7.5">10 Shares · Executed</text>
+        <text x="134" y="21" text-anchor="end" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold">+$2,240</text>
+      </g>
+      
+      <g transform="translate(18, 98)">
+        <rect width="144" height="34" rx="6" fill="#10243e" />
+        <text x="10" y="16" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600">NVIDIA Corp. (NVDA)</text>
+        <text x="10" y="27" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="7.5">25 Shares · Executed</text>
+        <text x="134" y="21" text-anchor="end" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold">+$3,180</text>
+      </g>
+      
+      <g transform="translate(18, 140)">
+        <rect width="144" height="34" rx="6" fill="#10243e" />
+        <text x="10" y="16" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600">Instant Ledger Sync</text>
+        <text x="10" y="27" fill="#3fa9f5" font-family="'Inter', sans-serif" font-size="7.5">SQLite Cipher Zero Loss</text>
+        <text x="134" y="21" text-anchor="end" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold">100%</text>
+      </g>
+      
+      <rect x="18" y="190" width="144" height="74" rx="8" fill="#081426" stroke="#183256" />
+      <text x="26" y="208" fill="#eaf3fc" font-family="'Space Grotesk', sans-serif" font-size="9.5" font-weight="600">Fastlane App Store CI/CD</text>
+      <text x="26" y="224" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8">✓ iOS TestFlight Auto-Deploy</text>
+      <text x="26" y="238" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8">✓ Google Play Production</text>
+      <text x="26" y="252" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="8">✓ Appium Regression Suite</text>
+    </g>
+
+    <!-- Right: Architecture & Tech Specifications -->
+    <g transform="translate(450, 80)">
+      <!-- Feature Card 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="380" height="96" rx="8" fill="#0b182d" stroke="#1d385e" />
+        <circle cx="28" cy="28" r="14" fill="#3fa9f5" opacity="0.15" />
+        <text x="28" y="33" text-anchor="middle" fill="#3fa9f5" font-size="12" font-weight="bold">FL</text>
+        <text x="52" y="28" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Flutter &amp; React Native Velocity</text>
+        <text x="52" y="44" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">Single codebase for iOS &amp; Android without compromising 60 FPS performance.</text>
+        <g transform="translate(52, 60)">
+          <rect width="80" height="20" rx="4" fill="#142c4c" />
+          <text x="40" y="14" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="9.5">Flutter 3.x</text>
+          <rect x="88" width="94" height="20" rx="4" fill="#142c4c" />
+          <text x="135" y="14" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="9.5">React Native 0.76</text>
+        </g>
+      </g>
+
+      <!-- Feature Card 2 -->
+      <g transform="translate(0, 108)">
+        <rect width="380" height="96" rx="8" fill="#0b182d" stroke="#1d385e" />
+        <circle cx="28" cy="28" r="14" fill="#6ee7c4" opacity="0.15" />
+        <text x="28" y="33" text-anchor="middle" fill="#6ee7c4" font-size="12" font-weight="bold">NT</text>
+        <text x="52" y="28" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Native Swift &amp; Kotlin Modules</text>
+        <text x="52" y="44" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">Direct access to Bluetooth LE, camera hardware, and native GPU shaders.</text>
+        <g transform="translate(52, 60)">
+          <rect width="80" height="20" rx="4" fill="#142c4c" />
+          <text x="40" y="14" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="9.5">Swift 6 (iOS)</text>
+          <rect x="88" width="94" height="20" rx="4" fill="#142c4c" />
+          <text x="135" y="14" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="9.5">Kotlin 2.0 (Android)</text>
+        </g>
+      </g>
+
+      <!-- Feature Card 3 -->
+      <g transform="translate(0, 216)">
+        <rect width="380" height="132" rx="8" fill="#0b182d" stroke="#1d385e" />
+        <circle cx="28" cy="28" r="14" fill="#a855f7" opacity="0.15" />
+        <text x="28" y="33" text-anchor="middle" fill="#a855f7" font-size="12" font-weight="bold">QA</text>
+        <text x="52" y="28" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Automated Appium &amp; Maestro QA</text>
+        <text x="52" y="44" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11">Every pull request runs through a real-device test matrix to prevent regressions.</text>
+        
+        <g transform="translate(18, 64)">
+          <rect width="344" height="52" rx="6" fill="#071222" stroke="#152b48" />
+          <text x="14" y="20" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ 0% Offline Data Loss Guaranteed</text>
+          <text x="14" y="38" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="10">✓ Sub-400ms Cold App Startup Time</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

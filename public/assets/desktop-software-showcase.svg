@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="deskSrvBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040d1a" />
+      <stop offset="50%" stop-color="#08172c" />
+      <stop offset="100%" stop-color="#0d2344" />
+    </linearGradient>
+    <linearGradient id="deskGradS" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+    <filter id="deskSrvGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#deskSrvBg)" />
+
+  <circle cx="260" cy="180" r="160" fill="#3fa9f5" opacity="0.14" filter="url(#deskSrvGlow)" />
+  <circle cx="740" cy="340" r="170" fill="#f59e0b" opacity="0.11" filter="url(#deskSrvGlow)" />
+
+  <g transform="translate(48, 36)">
+    <rect width="864" height="468" rx="14" fill="#081426" stroke="#1d3d6a" stroke-width="1.6" fill-opacity="0.95" />
+
+    <!-- Top Bar -->
+    <g transform="translate(24, 20)">
+      <text y="16" fill="#f59e0b" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold" letter-spacing="1.5">SERVICE 03 — CROSS-PLATFORM NATIVE DESKTOP SOFTWARE</text>
+      <text y="42" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">Tauri (Rust) · .NET 8 / WPF · C++ Qt · Low RAM &lt; 38MB Footprint</text>
+    </g>
+
+    <!-- Main Content -->
+    <g transform="translate(24, 76)">
+      <!-- Left: Desktop Application Window -->
+      <g transform="translate(0, 0)">
+        <rect width="360" height="348" rx="10" fill="#06101e" stroke="#162e50" />
+        
+        <!-- Window Titlebar -->
+        <rect width="360" height="34" rx="10" fill="#0b1a2e" />
+        <circle cx="18" cy="17" r="4.5" fill="#ef4444" />
+        <circle cx="32" cy="17" r="4.5" fill="#f59e0b" />
+        <circle cx="46" cy="17" r="4.5" fill="#10b981" />
+        <text x="64" y="21" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="10">Nimbus Desktop Studio [Win/macOS/Linux]</text>
+
+        <!-- Metrics Grid -->
+        <g transform="translate(16, 48)">
+          <rect width="156" height="54" rx="6" fill="#0d1f38" stroke="#1c4270" />
+          <text x="10" y="18" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9">RAM Footprint</text>
+          <text x="10" y="40" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="bold">&lt; 38 MB</text>
+
+          <rect x="170" width="156" height="54" rx="6" fill="#0d1f38" stroke="#1c4270" />
+          <text x="180" y="18" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9">Hardware I/O Latency</text>
+          <text x="180" y="40" fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="bold">0.8 ms</text>
+        </g>
+
+        <!-- Waveform Chart inside Desktop App -->
+        <g transform="translate(16, 114)">
+          <rect width="326" height="116" rx="6" fill="#040c18" stroke="#122744" />
+          <path d="M 10 75 Q 50 25, 90 60 T 170 30 T 250 55 T 316 20" fill="none" stroke="url(#deskGradS)" stroke-width="2.2" />
+          <path d="M 10 75 Q 50 25, 90 60 T 170 30 T 250 55 T 316 20 L 316 106 L 10 106 Z" fill="url(#deskGradS)" opacity="0.1" />
+          <line x1="10" y1="45" x2="316" y2="45" stroke="#122744" stroke-dasharray="2 3" />
+          <line x1="10" y1="75" x2="316" y2="75" stroke="#122744" stroke-dasharray="2 3" />
+        </g>
+
+        <!-- Hardware & Serial Ticker -->
+        <g transform="translate(16, 242)">
+          <rect width="326" height="88" rx="6" fill="#0c1f36" stroke="#1a4270" />
+          <text x="12" y="22" fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold">◈ HARDWARE SERIAL / USB BUS ACTIVE</text>
+          <text x="12" y="42" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="9">Native Direct OS Win32 / macOS Cocoa Interop</text>
+          <text x="12" y="62" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9">Delta Auto-Updater Signed with Notarized Key</text>
+        </g>
+      </g>
+
+      <!-- Right: Desktop Deliverables -->
+      <g transform="translate(380, 0)">
+        <rect width="436" height="348" rx="10" fill="#06101e" stroke="#162e50" />
+        
+        <g transform="translate(20, 20)">
+          <text y="14" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">DESKTOP SOFTWARE ARCHITECTURE</text>
+          
+          <g transform="translate(0, 34)" font-family="'Inter', sans-serif" font-size="11">
+            <text y="14" fill="#ffffff" font-weight="600">1. Tauri (Rust) Lightweight Performance</text>
+            <text y="30" fill="#93a8c6">Near-instant startup and minimal memory footprint (&lt;40MB RAM).</text>
+
+            <text y="62" fill="#ffffff" font-weight="600">2. .NET 8 / WPF &amp; C++ Qt Workstations</text>
+            <text y="78" fill="#93a8c6">Direct hardware communication, serial I/O, and GPU-accelerated rendering.</text>
+
+            <text y="110" fill="#ffffff" font-weight="600">3. Secure Standalone Offline Operation</text>
+            <text y="126" fill="#93a8c6">Encrypted local SQLite databases with automated background cloud syncing.</text>
+
+            <text y="158" fill="#ffffff" font-weight="600">4. Code Signing &amp; Apple Notarization</text>
+            <text y="174" fill="#93a8c6">Signed Windows (.msi/.exe) and notarized macOS (.dmg) distribution packages.</text>
+          </g>
+
+          <!-- Badges -->
+          <g transform="translate(0, 240)">
+            <rect width="85" height="24" rx="4" fill="#112744" />
+            <text x="42" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">Tauri (Rust)</text>
+
+            <rect x="93" width="80" height="24" rx="4" fill="#112744" />
+            <text x="133" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">Electron</text>
+
+            <rect x="181" width="90" height="24" rx="4" fill="#112744" />
+            <text x="226" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">.NET 8 / C#</text>
+
+            <rect x="279" width="105" height="24" rx="4" fill="#112744" />
+            <text x="331" y="16" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="10">Auto-Updater</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

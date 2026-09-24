@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mobSrvBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040d1a" />
+      <stop offset="50%" stop-color="#08172c" />
+      <stop offset="100%" stop-color="#0d2344" />
+    </linearGradient>
+    <linearGradient id="mobGradP" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+    <filter id="mobSrvGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#mobSrvBg)" />
+
+  <circle cx="260" cy="180" r="160" fill="#3fa9f5" opacity="0.14" filter="url(#mobSrvGlow)" />
+  <circle cx="740" cy="340" r="170" fill="#6ee7c4" opacity="0.11" filter="url(#mobSrvGlow)" />
+
+  <g transform="translate(48, 36)">
+    <rect width="864" height="468" rx="14" fill="#081426" stroke="#1d3d6a" stroke-width="1.6" fill-opacity="0.95" />
+
+    <!-- Top Bar -->
+    <g transform="translate(24, 20)">
+      <text y="16" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold" letter-spacing="1.5">SERVICE 01 — MOBILE APPLICATION ENGINEERING</text>
+      <text y="42" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">Native iOS / Android &amp; Cross-Platform Flutter / React Native</text>
+    </g>
+
+    <!-- Content Row -->
+    <g transform="translate(24, 76)">
+      <!-- Left: Mobile Device Mockup Frame -->
+      <g transform="translate(0, 0)">
+        <rect width="260" height="348" rx="20" fill="#050d18" stroke="#1f4474" stroke-width="2" />
+        
+        <!-- Screen Area -->
+        <rect x="14" y="20" width="232" height="308" rx="12" fill="#0a192e" />
+        <rect x="24" y="32" width="100" height="14" rx="4" fill="#152d4c" />
+        <text x="74" y="43" text-anchor="middle" fill="#7cc4f8" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="bold">Nimbus Mobile</text>
+
+        <!-- KPI Widget in Screen -->
+        <rect x="24" y="56" width="212" height="74" rx="8" fill="#0f2646" stroke="#235086" />
+        <text x="34" y="74" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9">Real-Time Data Engine</text>
+        <text x="34" y="96" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="700">60 FPS Fluid UX</text>
+        <text x="34" y="114" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="8.5">Offline-First SQLite Cache</text>
+
+        <!-- Wave Graph -->
+        <path d="M 28 175 Q 60 140, 95 160 T 160 135 T 228 120" fill="none" stroke="url(#mobGradP)" stroke-width="2.2" />
+
+        <!-- Feature List Inside Screen -->
+        <g transform="translate(24, 195)">
+          <rect width="212" height="28" rx="4" fill="#0d1f36" />
+          <text x="10" y="18" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="8.5">🔒 Biometrics (Face ID / Touch ID)</text>
+
+          <rect y="36" width="212" height="28" rx="4" fill="#0d1f36" />
+          <text x="10" y="18" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="8.5">⚡ Fastlane App Store Automation</text>
+
+          <rect y="72" width="212" height="28" rx="4" fill="#0d1f36" />
+          <text x="10" y="18" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8.5">✓ 0% Offline Data Loss</text>
+        </g>
+      </g>
+
+      <!-- Right: Mobile Architecture Standards -->
+      <g transform="translate(280, 0)">
+        <rect width="536" height="348" rx="10" fill="#06101e" stroke="#162e50" />
+        
+        <g transform="translate(20, 20)">
+          <text y="14" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">CORE MOBILE CAPABILITIES &amp; DELIVERABLES</text>
+          
+          <g transform="translate(0, 32)" font-family="'Inter', sans-serif" font-size="11">
+            <text y="14" fill="#ffffff" font-weight="600">1. Dual-Release Velocity (Flutter &amp; React Native)</text>
+            <text y="30" fill="#93a8c6">Single shared codebase for iOS &amp; Android, cutting release cycles in half with zero jank.</text>
+
+            <text y="62" fill="#ffffff" font-weight="600">2. Pure Native Swift &amp; Kotlin Modules</text>
+            <text y="78" fill="#93a8c6">Direct integration with CoreBluetooth, Metal shaders, Neural Engine &amp; background location.</text>
+
+            <text y="110" fill="#ffffff" font-weight="600">3. Offline-First Resilience &amp; Encryption</text>
+            <text y="126" fill="#93a8c6">SQLite Cipher encryption ensures user data remains secure and accessible with zero connection.</text>
+
+            <text y="158" fill="#ffffff" font-weight="600">4. Automated CI/CD &amp; Real-Device Appium Testing</text>
+            <text y="174" fill="#93a8c6">TestFlight and Google Play Internal deployments triggered automatically on every PR.</text>
+          </g>
+
+          <!-- Badges -->
+          <g transform="translate(0, 240)">
+            <rect width="80" height="24" rx="4" fill="#112744" />
+            <text x="40" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">Flutter 3</text>
+
+            <rect x="88" width="100" height="24" rx="4" fill="#112744" />
+            <text x="138" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">React Native</text>
+
+            <rect x="196" width="90" height="24" rx="4" fill="#112744" />
+            <text x="241" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">Swift 6 (iOS)</text>
+
+            <rect x="294" width="96" height="24" rx="4" fill="#112744" />
+            <text x="342" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">Kotlin 2.0</text>
+
+            <rect x="398" width="96" height="24" rx="4" fill="#112744" />
+            <text x="446" y="16" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="10">Appium QA</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

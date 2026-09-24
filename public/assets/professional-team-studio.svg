@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="teamBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060e1c" />
+      <stop offset="50%" stop-color="#0a192e" />
+      <stop offset="100%" stop-color="#0f2648" />
+    </linearGradient>
+    <linearGradient id="avatarG1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#0e4fa8" />
+    </linearGradient>
+    <linearGradient id="avatarG2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6ee7c4" />
+      <stop offset="100%" stop-color="#0e8a75" />
+    </linearGradient>
+    <linearGradient id="avatarG3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <linearGradient id="avatarG4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="teamCardG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#142844" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0b172a" stop-opacity="0.98" />
+    </linearGradient>
+    <filter id="teamGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#teamBg)" />
+
+  <circle cx="260" cy="180" r="170" fill="#3fa9f5" opacity="0.12" filter="url(#teamGlow)" />
+  <circle cx="740" cy="360" r="180" fill="#6ee7c4" opacity="0.1" filter="url(#teamGlow)" />
+
+  <g transform="translate(48, 40)">
+    <rect width="864" height="460" rx="14" fill="url(#teamCardG)" stroke="#1e3e68" stroke-width="1.6" />
+
+    <!-- Top Team Header -->
+    <g transform="translate(24, 20)">
+      <text y="18" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold" letter-spacing="1.5">PROFESSIONAL ENGINEERING TEAM</text>
+      <text y="44" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">Senior Hands Across Architecture, Mobile, Web, Desktop &amp; QA</text>
+    </g>
+
+    <!-- 4 Team Pillars & Disciplines -->
+    <g transform="translate(24, 82)">
+      <!-- Member / Role 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="194" height="230" rx="10" fill="#091526" stroke="#1c375c" />
+        <circle cx="97" cy="50" r="28" fill="url(#avatarG1)" />
+        <text x="97" y="56" text-anchor="middle" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="bold">AK</text>
+        
+        <text x="97" y="100" text-anchor="middle" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">Anil Kumar</text>
+        <text x="97" y="118" text-anchor="middle" fill="#3fa9f5" font-family="'Inter', sans-serif" font-size="11" font-weight="500">Founder &amp; Principal Architect</text>
+
+        <rect x="18" y="136" width="158" height="24" rx="4" fill="#132742" />
+        <text x="97" y="152" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">Cloud / DevOps / Infra</text>
+
+        <g transform="translate(18, 172)" font-family="'Inter', sans-serif" font-size="10" fill="#93a8c6">
+          <text y="0">AWS Certified Solutions</text>
+          <text y="16">10+ Yrs Systems Eng.</text>
+          <text y="32" fill="#6ee7c4">✓ 40+ Systems Shipped</text>
+        </g>
+      </g>
+
+      <!-- Member / Role 2 -->
+      <g transform="translate(206, 0)">
+        <rect width="194" height="230" rx="10" fill="#091526" stroke="#1c375c" />
+        <circle cx="97" cy="50" r="28" fill="url(#avatarG2)" />
+        <text x="97" y="56" text-anchor="middle" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="bold">MS</text>
+        
+        <text x="97" y="100" text-anchor="middle" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">Man Singh</text>
+        <text x="97" y="118" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="11" font-weight="500">Co-Founder, Mobile Eng.</text>
+
+        <rect x="18" y="136" width="158" height="24" rx="4" fill="#132742" />
+        <text x="97" y="152" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="10">iOS, Android, Flutter</text>
+
+        <g transform="translate(18, 172)" font-family="'Inter', sans-serif" font-size="10" fill="#93a8c6">
+          <text y="0">React Native / Swift / Kotlin</text>
+          <text y="16">High-Performance Apps</text>
+          <text y="32" fill="#6ee7c4">✓ 25+ Mobile Apps Live</text>
+        </g>
+      </g>
+
+      <!-- Member / Role 3 -->
+      <g transform="translate(412, 0)">
+        <rect width="194" height="230" rx="10" fill="#091526" stroke="#1c375c" />
+        <circle cx="97" cy="50" r="28" fill="url(#avatarG3)" />
+        <text x="97" y="56" text-anchor="middle" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="bold">QA</text>
+        
+        <text x="97" y="100" text-anchor="middle" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">QA Automation Team</text>
+        <text x="97" y="118" text-anchor="middle" fill="#a855f7" font-family="'Inter', sans-serif" font-size="11" font-weight="500">Multi-Language Test Leads</text>
+
+        <rect x="18" y="136" width="158" height="24" rx="4" fill="#132742" />
+        <text x="97" y="152" text-anchor="middle" fill="#c084fc" font-family="'Inter', sans-serif" font-size="10">PyTest, Selenium, Cypress</text>
+
+        <g transform="translate(18, 172)" font-family="'Inter', sans-serif" font-size="10" fill="#93a8c6">
+          <text y="0">ISTQB Advanced Test Lead</text>
+          <text y="16">Java, Python, TS, C#</text>
+          <text y="32" fill="#6ee7c4">✓ 100k+ Tests Executed</text>
+        </g>
+      </g>
+
+      <!-- Member / Role 4 -->
+      <g transform="translate(618, 0)">
+        <rect width="198" height="230" rx="10" fill="#091526" stroke="#1c375c" />
+        <circle cx="99" cy="50" r="28" fill="url(#avatarG4)" />
+        <text x="99" y="56" text-anchor="middle" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="bold">FS</text>
+        
+        <text x="99" y="100" text-anchor="middle" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">Full-Stack &amp; Desktop</text>
+        <text x="99" y="118" text-anchor="middle" fill="#f59e0b" font-family="'Inter', sans-serif" font-size="11" font-weight="500">Software Engineering Lead</text>
+
+        <rect x="18" y="136" width="162" height="24" rx="4" fill="#132742" />
+        <text x="99" y="152" text-anchor="middle" fill="#fcd34d" font-family="'Inter', sans-serif" font-size="10">Next.js / Tauri / .NET</text>
+
+        <g transform="translate(18, 172)" font-family="'Inter', sans-serif" font-size="10" fill="#93a8c6">
+          <text y="0">Modern Web &amp; Desktop C++</text>
+          <text y="16">Microservices &amp; SQLite</text>
+          <text y="32" fill="#6ee7c4">✓ Enterprise Portals</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Engineering Delivery Standards Bar -->
+    <g transform="translate(24, 328)">
+      <rect width="816" height="106" rx="8" fill="#071324" stroke="#173152" />
+      <text x="20" y="24" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="bold" letter-spacing="1">TEAM DELIVERY GUARANTEES</text>
+
+      <g transform="translate(20, 42)">
+        <g transform="translate(0, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Senior Hands Only</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">No junior bait-and-switch</text>
+        </g>
+        <g transform="translate(190, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Rigorous Automated QA</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Automated test suites in CI</text>
+        </g>
+        <g transform="translate(390, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Full Source Ownership</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Clean docs, no vendor lock-in</text>
+        </g>
+        <g transform="translate(590, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">24/7 SLA Backing</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Direct incident escalation</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

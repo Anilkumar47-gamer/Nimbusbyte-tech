@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cloudBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050e1b" />
+      <stop offset="50%" stop-color="#08172c" />
+      <stop offset="100%" stop-color="#0c2242" />
+    </linearGradient>
+    <linearGradient id="cloudCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#122744" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#091526" stop-opacity="0.98" />
+    </linearGradient>
+    <filter id="cloudGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#cloudBg)" />
+
+  <!-- Background grid -->
+  <g stroke="#162b48" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="90" x2="960" y2="90" />
+    <line x1="0" y1="180" x2="960" y2="180" />
+    <line x1="0" y1="270" x2="960" y2="270" />
+    <line x1="0" y1="360" x2="960" y2="360" />
+    <line x1="0" y1="450" x2="960" y2="450" />
+    <line x1="160" y1="0" x2="160" y2="540" />
+    <line x1="320" y1="0" x2="320" y2="540" />
+    <line x1="480" y1="0" x2="480" y2="540" />
+    <line x1="640" y1="0" x2="640" y2="540" />
+    <line x1="800" y1="0" x2="800" y2="540" />
+  </g>
+
+  <!-- Glows -->
+  <circle cx="240" cy="180" r="160" fill="#3fa9f5" opacity="0.14" filter="url(#cloudGlow)" />
+  <circle cx="720" cy="340" r="180" fill="#6ee7c4" opacity="0.1" filter="url(#cloudGlow)" />
+
+  <g transform="translate(48, 36)">
+    <rect width="864" height="468" rx="14" fill="#09162a" stroke="#1d3b66" stroke-width="1.6" fill-opacity="0.95" />
+
+    <!-- Top Header -->
+    <g transform="translate(24, 20)">
+      <text y="16" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold" letter-spacing="1.5">MULTI-REGION CLOUD INFRASTRUCTURE &amp; TERRAFORM IAC</text>
+      <text y="42" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">AWS / GCP / Azure Architecture · Kubernetes EKS · FinOps 35% Savings</text>
+    </g>
+
+    <!-- Cloud Topology Network Diagram -->
+    <g transform="translate(24, 80)">
+      <!-- Region 1: US-East Primary -->
+      <g transform="translate(0, 0)">
+        <rect width="400" height="240" rx="10" fill="#081426" stroke="#1a355a" stroke-width="1.2" />
+        <rect x="14" y="12" width="130" height="22" rx="4" fill="#122a4a" />
+        <text x="79" y="27" text-anchor="middle" fill="#7cc4f8" font-family="'Space Grotesk', sans-serif" font-size="10.5" font-weight="bold">AWS US-EAST-1 (Primary)</text>
+
+        <!-- Subnets inside Region 1 -->
+        <!-- Public Ingress ALB -->
+        <g transform="translate(18, 48)">
+          <rect width="170" height="80" rx="6" fill="#0d1f38" stroke="#1f4474" />
+          <text x="12" y="20" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="10.5" font-weight="bold">Cloudflare WAF / ALB</text>
+          <text x="12" y="36" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9">SSL / TLS Termination</text>
+          <text x="12" y="52" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9">DDoS Layer 7 Shield</text>
+          <text x="12" y="68" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8.5">● 100% HEALTHY</text>
+        </g>
+
+        <!-- EKS Cluster 1 -->
+        <g transform="translate(200, 48)">
+          <rect width="182" height="80" rx="6" fill="#0d1f38" stroke="#1f4474" />
+          <text x="12" y="20" fill="#3fa9f5" font-family="'Inter', sans-serif" font-size="10.5" font-weight="bold">Kubernetes EKS Pods</text>
+          <text x="12" y="36" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9">Auto-scaling Microservices</text>
+          <text x="12" y="52" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9">ArgoCD GitOps Sync</text>
+          <text x="12" y="68" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="8.5">● 32 WORKERS ACTIVE</text>
+        </g>
+
+        <!-- Aurora Multi-AZ Primary DB -->
+        <g transform="translate(18, 142)">
+          <rect width="364" height="84" rx="6" fill="#0c1a2f" stroke="#1d3f6d" />
+          <text x="14" y="22" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="bold">Amazon Aurora PostgreSQL Multi-AZ (Write Replica)</text>
+          <text x="14" y="40" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">AWS KMS Envelope Encryption · Automated 15-Minute Snapshots · Sub-5ms Read Latency</text>
+          
+          <g transform="translate(14, 54)">
+            <rect width="90" height="20" rx="4" fill="#142c4c" />
+            <text x="45" y="14" text-anchor="middle" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9">Active-Sync</text>
+            <rect x="98" width="110" height="20" rx="4" fill="#142c4c" />
+            <text x="153" y="14" text-anchor="middle" fill="#7cc4f8" font-family="'JetBrains Mono', monospace" font-size="9">Zero Data Loss</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Region 2: EU-Central Secondary Failover -->
+      <g transform="translate(416, 0)">
+        <rect width="400" height="240" rx="10" fill="#081426" stroke="#1a355a" stroke-width="1.2" />
+        <rect x="14" y="12" width="144" height="22" rx="4" fill="#122a4a" />
+        <text x="86" y="27" text-anchor="middle" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="10.5" font-weight="bold">AWS EU-CENTRAL-1 (Failover)</text>
+
+        <!-- Ingress ALB 2 -->
+        <g transform="translate(18, 48)">
+          <rect width="170" height="80" rx="6" fill="#0d1f38" stroke="#1f4474" />
+          <text x="12" y="20" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="10.5" font-weight="bold">Geo-DNS Ingress</text>
+          <text x="12" y="36" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9">Anycast Route 53</text>
+          <text x="12" y="52" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9">Automatic Failover Health</text>
+          <text x="12" y="68" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8.5">● STANDBY READY</text>
+        </g>
+
+        <!-- EKS Cluster 2 -->
+        <g transform="translate(200, 48)">
+          <rect width="182" height="80" rx="6" fill="#0d1f38" stroke="#1f4474" />
+          <text x="12" y="20" fill="#3fa9f5" font-family="'Inter', sans-serif" font-size="10.5" font-weight="bold">Kubernetes Secondary</text>
+          <text x="12" y="36" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9">Disaster Recovery Warm</text>
+          <text x="12" y="52" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9">Horizontal Elasticity</text>
+          <text x="12" y="68" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="8.5">● 16 WORKERS READY</text>
+        </g>
+
+        <!-- Aurora Multi-AZ Read Replica -->
+        <g transform="translate(18, 142)">
+          <rect width="364" height="84" rx="6" fill="#0c1a2f" stroke="#1d3f6d" />
+          <text x="14" y="22" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="bold">Amazon Aurora PostgreSQL (Cross-Region Read Replica)</text>
+          <text x="14" y="40" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">Global Database Cluster · Sub-1s Global Lag · Instant Promotion Disaster Recovery</text>
+          
+          <g transform="translate(14, 54)">
+            <rect width="90" height="20" rx="4" fill="#142c4c" />
+            <text x="45" y="14" text-anchor="middle" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9">Global DB</text>
+            <rect x="98" width="110" height="20" rx="4" fill="#142c4c" />
+            <text x="153" y="14" text-anchor="middle" fill="#7cc4f8" font-family="'JetBrains Mono', monospace" font-size="9">99.99% Uptime</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Bottom Metrics & FinOps Savings Bar -->
+    <g transform="translate(24, 334)">
+      <rect width="816" height="110" rx="8" fill="#071222" stroke="#162e4e" />
+      <text x="20" y="24" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="bold" letter-spacing="1">PROVEN CLOUD OUTCOMES</text>
+
+      <g transform="translate(20, 42)">
+        <g transform="translate(0, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">41% Cost Reduction</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">FinOps reserved instance audits</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ -$14,200/mo saved</text>
+        </g>
+        <g transform="translate(200, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">99.99% Verified Uptime</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Multi-AZ automated failover</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ 0 unplanned outages</text>
+        </g>
+        <g transform="translate(410, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Terraform 100% IaC</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Immutable cloud declarative code</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ Rebuild cluster in 8 min</text>
+        </g>
+        <g transform="translate(620, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Zero-Downtime Migration</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Live database replication</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ Cutover with 0s lag</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

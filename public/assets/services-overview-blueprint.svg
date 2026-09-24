@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="srvBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050e1b" />
+      <stop offset="50%" stop-color="#09172e" />
+      <stop offset="100%" stop-color="#0d2446" />
+    </linearGradient>
+    <linearGradient id="srvMint" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+    <filter id="srvGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#srvBg)" />
+
+  <circle cx="280" cy="180" r="160" fill="#3fa9f5" opacity="0.14" filter="url(#srvGlow)" />
+  <circle cx="720" cy="340" r="170" fill="#6ee7c4" opacity="0.11" filter="url(#srvGlow)" />
+
+  <g transform="translate(48, 36)">
+    <rect width="864" height="468" rx="14" fill="#081426" stroke="#1d3d6a" stroke-width="1.6" fill-opacity="0.95" />
+
+    <!-- Top Bar -->
+    <g transform="translate(24, 20)">
+      <text y="16" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold" letter-spacing="1.5">FULL SPECTRUM SOFTWARE ENGINEERING DISCIPLINES</text>
+      <text y="42" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">Mobile · Web · Desktop · Multi-Language QA · Cloud · SOC 2 · 24/7 DevOps</text>
+    </g>
+
+    <!-- 6 Interconnected Capability Blocks -->
+    <g transform="translate(24, 76)">
+      <!-- Box 1: Mobile -->
+      <g transform="translate(0, 0)">
+        <rect width="260" height="110" rx="8" fill="#0c1b33" stroke="#1c385c" />
+        <text x="16" y="24" fill="#7cc4f8" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">📱 Mobile Apps</text>
+        <text x="16" y="44" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">Flutter, iOS Swift &amp; Android Kotlin</text>
+        <text x="16" y="62" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9.5">60 FPS · SQLite Offline Sync</text>
+        <rect x="16" y="74" width="130" height="20" rx="4" fill="#122744" />
+        <text x="81" y="88" text-anchor="middle" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="9">25+ Apps Shipped</text>
+      </g>
+
+      <!-- Box 2: Web Applications -->
+      <g transform="translate(276, 0)">
+        <rect width="260" height="110" rx="8" fill="#0c1b33" stroke="#1c385c" />
+        <text x="16" y="24" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">🌐 Web SaaS Platform</text>
+        <text x="16" y="44" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">Next.js 15, Python FastAPI &amp; Node</text>
+        <text x="16" y="62" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="9.5">Edge SSR · Sub-100ms API</text>
+        <rect x="16" y="74" width="130" height="20" rx="4" fill="#122744" />
+        <text x="81" y="88" text-anchor="middle" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="9">Multi-Tenant RBAC</text>
+      </g>
+
+      <!-- Box 3: Desktop Software -->
+      <g transform="translate(552, 0)">
+        <rect width="264" height="110" rx="8" fill="#0c1b33" stroke="#1c385c" />
+        <text x="16" y="24" fill="#f59e0b" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">💻 Desktop Software</text>
+        <text x="16" y="44" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">Tauri Rust, .NET 8 WPF &amp; C++</text>
+        <text x="16" y="62" fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="9.5">&lt; 38MB RAM · Serial COM I/O</text>
+        <rect x="16" y="74" width="130" height="20" rx="4" fill="#122744" />
+        <text x="81" y="88" text-anchor="middle" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="9">Win / macOS / Linux</text>
+      </g>
+
+      <!-- Box 4: Multi-Language QA -->
+      <g transform="translate(0, 126)">
+        <rect width="260" height="110" rx="8" fill="#0c1b33" stroke="#1c385c" />
+        <text x="16" y="24" fill="#a855f7" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">🧪 Automation Testing</text>
+        <text x="16" y="44" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">Python, Java, TypeScript, C#</text>
+        <text x="16" y="62" fill="#a855f7" font-family="'JetBrains Mono', monospace" font-size="9.5">Playwright · Appium · TestNG</text>
+        <rect x="16" y="74" width="130" height="20" rx="4" fill="#122744" />
+        <text x="81" y="88" text-anchor="middle" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="9">100% CI Coverage</text>
+      </g>
+
+      <!-- Box 5: Cloud Architecture -->
+      <g transform="translate(276, 126)">
+        <rect width="260" height="110" rx="8" fill="#0c1b33" stroke="#1c385c" />
+        <text x="16" y="24" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">☁ Cloud &amp; FinOps</text>
+        <text x="16" y="44" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">AWS, GCP, Kubernetes EKS</text>
+        <text x="16" y="62" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9.5">35% Avg Cost Savings · IaC</text>
+        <rect x="16" y="74" width="130" height="20" rx="4" fill="#122744" />
+        <text x="81" y="88" text-anchor="middle" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="9">Terraform Ready</text>
+      </g>
+
+      <!-- Box 6: Security & DevOps -->
+      <g transform="translate(552, 126)">
+        <rect width="264" height="110" rx="8" fill="#0c1b33" stroke="#1c385c" />
+        <text x="16" y="24" fill="#10b981" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">🔒 SOC 2 &amp; 24/7 SRE</text>
+        <text x="16" y="44" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">Zero-Trust IAM, KMS &amp; Telemetry</text>
+        <text x="16" y="62" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="9.5">99.99% SLA Uptime Guarantee</text>
+        <rect x="16" y="74" width="130" height="20" rx="4" fill="#122744" />
+        <text x="81" y="88" text-anchor="middle" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="9">24/7 SRE Escalation</text>
+      </g>
+    </g>
+
+    <!-- Bottom Delivery Guarantees Strip -->
+    <g transform="translate(24, 330)">
+      <rect width="816" height="114" rx="8" fill="#071222" stroke="#152e4e" />
+      <text x="20" y="24" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="bold" letter-spacing="1">ENGAGEMENT ARCHITECTURE</text>
+
+      <g transform="translate(20, 44)">
+        <g transform="translate(0, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Turnkey Full Build</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Architecture to App Store launch</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ 6–12 Week Delivery</text>
+        </g>
+        <g transform="translate(200, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Automation QA Lab</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Multi-language CI regression</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ 3–6 Week Pipeline</text>
+        </g>
+        <g transform="translate(410, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">FinOps Cloud Audit</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">25–40% infrastructure savings</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ 2–4 Week Audit</text>
+        </g>
+        <g transform="translate(620, 0)">
+          <text y="14" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">24/7 Managed SRE</text>
+          <text y="32" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10.5">Guaranteed SLA incident triage</text>
+          <text y="48" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">✓ Dedicated Hotline</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

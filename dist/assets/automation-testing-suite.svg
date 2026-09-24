@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071120" />
+      <stop offset="50%" stop-color="#0a192f" />
+      <stop offset="100%" stop-color="#0d2444" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#152a48" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0c1b33" stop-opacity="0.95" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="mintGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="540" fill="url(#bgGrad)" />
+
+  <!-- Grid Pattern -->
+  <g opacity="0.12" stroke="#3fa9f5" stroke-width="1">
+    <line x1="0" y1="60" x2="960" y2="60" />
+    <line x1="0" y1="120" x2="960" y2="120" />
+    <line x1="0" y1="180" x2="960" y2="180" />
+    <line x1="0" y1="240" x2="960" y2="240" />
+    <line x1="0" y1="300" x2="960" y2="300" />
+    <line x1="0" y1="360" x2="960" y2="360" />
+    <line x1="0" y1="420" x2="960" y2="420" />
+    <line x1="0" y1="480" x2="960" y2="480" />
+    <line x1="80" y1="0" x2="80" y2="540" />
+    <line x1="160" y1="0" x2="160" y2="540" />
+    <line x1="240" y1="0" x2="240" y2="540" />
+    <line x1="320" y1="0" x2="320" y2="540" />
+    <line x1="400" y1="0" x2="400" y2="540" />
+    <line x1="480" y1="0" x2="480" y2="540" />
+    <line x1="560" y1="0" x2="560" y2="540" />
+    <line x1="640" y1="0" x2="640" y2="540" />
+    <line x1="720" y1="0" x2="720" y2="540" />
+    <line x1="800" y1="0" x2="800" y2="540" />
+    <line x1="880" y1="0" x2="880" y2="540" />
+  </g>
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="280" cy="180" r="140" fill="#3fa9f5" opacity="0.15" filter="url(#glow)" />
+  <circle cx="720" cy="360" r="150" fill="#6ee7c4" opacity="0.12" filter="url(#glow)" />
+  <circle cx="850" cy="120" r="100" fill="#a855f7" opacity="0.1" filter="url(#glow)" />
+
+  <!-- Main QA Automation Terminal Window -->
+  <g transform="translate(48, 44)">
+    <rect width="520" height="448" rx="12" fill="url(#glassGrad)" stroke="#1e3a60" stroke-width="1.5" />
+    
+    <!-- Window Header -->
+    <rect width="520" height="38" rx="12" fill="#0c182c" />
+    <rect y="26" width="520" height="12" fill="#0c182c" />
+    <circle cx="20" cy="19" r="5" fill="#ef4444" opacity="0.8" />
+    <circle cx="36" cy="19" r="5" fill="#f59e0b" opacity="0.8" />
+    <circle cx="52" cy="19" r="5" fill="#10b981" opacity="0.8" />
+    <text x="76" y="24" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="500">nimbus-qa-runner :: multi-language-matrix.ts</text>
+    
+    <!-- Language Tabs in Header -->
+    <g transform="translate(330, 8)">
+      <rect width="40" height="22" rx="4" fill="#3fa9f5" fill-opacity="0.2" stroke="#3fa9f5" stroke-width="1" />
+      <text x="20" y="15" text-anchor="middle" fill="#7cc4f8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">Py</text>
+
+      <rect x="46" width="40" height="22" rx="4" fill="#0a192f" stroke="#1e3a60" stroke-width="1" />
+      <text x="66" y="15" text-anchor="middle" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="10">Java</text>
+
+      <rect x="92" width="40" height="22" rx="4" fill="#0a192f" stroke="#1e3a60" stroke-width="1" />
+      <text x="112" y="15" text-anchor="middle" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="10">TS</text>
+
+      <rect x="138" width="40" height="22" rx="4" fill="#0a192f" stroke="#1e3a60" stroke-width="1" />
+      <text x="158" y="15" text-anchor="middle" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="10">C#</text>
+    </g>
+
+    <!-- Code Display -->
+    <g transform="translate(24, 60)" font-family="'JetBrains Mono', monospace" font-size="11.5" line-height="1.5">
+      <text y="0" fill="#6ee7c4">import</text>
+      <text x="50" y="0" fill="#eaf3fc">pytest, playwright.async_api</text>
+
+      <text y="24" fill="#6ee7c4">from</text>
+      <text x="35" y="24" fill="#eaf3fc">nimbus_qa.core</text>
+      <text x="145" y="24" fill="#6ee7c4">import</text>
+      <text x="195" y="24" fill="#3fa9f5">TestMatrix, MultiBrowser</text>
+
+      <text y="54" fill="#93a8c6" opacity="0.6"># 100% Parallel E2E &amp; API Automation Runner</text>
+      
+      <text y="78" fill="#a855f7">@pytest.mark.parallel(workers=16)</text>
+      <text y="98" fill="#6ee7c4">async def</text>
+      <text x="72" y="98" fill="#3fa9f5">test_enterprise_checkout_flow</text>
+      <text x="305" y="98" fill="#eaf3fc">(page, matrix):</text>
+
+      <text x="16" y="122" fill="#eaf3fc">matrix.attach_devices([</text>
+      <text x="195" y="122" fill="#6ee7c4">'iOS', 'Android', 'Web', 'Desktop'</text>
+      <text x="440" y="122" fill="#eaf3fc">])</text>
+
+      <text x="16" y="146" fill="#6ee7c4">await</text>
+      <text x="60" y="146" fill="#eaf3fc">page.goto(matrix.target_url)</text>
+
+      <text x="16" y="170" fill="#6ee7c4">await</text>
+      <text x="60" y="170" fill="#eaf3fc">page.fill(</text>
+      <text x="140" y="170" fill="#6ee7c4">'[data-test=checkout-input]'</text>
+      <text x="350" y="170" fill="#eaf3fc">, payload)</text>
+
+      <text x="16" y="194" fill="#6ee7c4">assert</text>
+      <text x="68" y="194" fill="#eaf3fc">await matrix.verify_latency() &lt;</text>
+      <text x="315" y="194" fill="#f59e0b">120</text>
+      <text x="345" y="194" fill="#93a8c6"># ms SLA</text>
+    </g>
+
+    <!-- Terminal Execution Status Bottom Bar -->
+    <g transform="translate(16, 290)">
+      <rect width="488" height="138" rx="8" fill="#060e1b" stroke="#162942" />
+      <g transform="translate(16, 24)" font-family="'JetBrains Mono', monospace" font-size="11">
+        <text y="0" fill="#6ee7c4" font-weight="bold">✓ PASS</text>
+        <text x="60" y="0" fill="#eaf3fc">suite_mobile_ios_regression.py</text>
+        <text x="380" y="0" fill="#93a8c6">342 tests [1.4s]</text>
+
+        <text y="24" fill="#6ee7c4" font-weight="bold">✓ PASS</text>
+        <text x="60" y="24" fill="#eaf3fc">suite_web_cross_browser_e2e.ts</text>
+        <text x="380" y="24" fill="#93a8c6">819 tests [3.2s]</text>
+
+        <text y="48" fill="#6ee7c4" font-weight="bold">✓ PASS</text>
+        <text x="60" y="48" fill="#eaf3fc">suite_desktop_electron_api.cs</text>
+        <text x="380" y="48" fill="#93a8c6">190 tests [0.9s]</text>
+
+        <text y="72" fill="#6ee7c4" font-weight="bold">✓ PASS</text>
+        <text x="60" y="72" fill="#eaf3fc">suite_api_load_security_soc2.java</text>
+        <text x="380" y="72" fill="#93a8c6">512 tests [2.1s]</text>
+
+        <line x1="0" y1="88" x2="456" y2="88" stroke="#162942" />
+        <text y="102" fill="#6ee7c4" font-weight="bold" filter="url(#mintGlow)">1,863 Tests Passed</text>
+        <text x="160" y="102" fill="#3fa9f5">0 Failed · 100% Pass Rate · CI/CD Ready</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Side Analytics & Matrix Cards -->
+  <!-- Top Right Card: Multi-Language Testing Support -->
+  <g transform="translate(594, 44)">
+    <rect width="318" height="210" rx="12" fill="url(#glassGrad)" stroke="#1e3a60" stroke-width="1.5" />
+    <text x="24" y="34" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold" letter-spacing="1">QA FRAMEWORKS &amp; LANGUAGES</text>
+    <text x="24" y="58" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="17" font-weight="600">Multi-Stack Automation</text>
+
+    <!-- Language Grid -->
+    <g transform="translate(24, 76)">
+      <!-- Python -->
+      <rect width="128" height="48" rx="6" fill="#0c1b33" stroke="#1f385c" />
+      <circle cx="20" cy="24" r="8" fill="#3fa9f5" opacity="0.2" />
+      <text x="20" y="28" text-anchor="middle" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">Py</text>
+      <text x="36" y="20" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Python</text>
+      <text x="36" y="34" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">PyTest / Playwright</text>
+
+      <!-- Java -->
+      <rect x="140" width="128" height="48" rx="6" fill="#0c1b33" stroke="#1f385c" />
+      <circle cx="160" cy="24" r="8" fill="#f59e0b" opacity="0.2" />
+      <text x="160" y="28" text-anchor="middle" fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">Ja</text>
+      <text x="176" y="20" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Java</text>
+      <text x="176" y="34" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">Selenium / TestNG</text>
+
+      <!-- TypeScript -->
+      <rect y="56" width="128" height="48" rx="6" fill="#0c1b33" stroke="#1f385c" />
+      <circle cx="20" cy="80" r="8" fill="#6ee7c4" opacity="0.2" />
+      <text x="20" y="84" text-anchor="middle" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">TS</text>
+      <text x="36" y="76" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11" font-weight="600">TypeScript</text>
+      <text x="36" y="90" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">Cypress / Playwright</text>
+
+      <!-- C# -->
+      <rect x="140" y="56" width="128" height="48" rx="6" fill="#0c1b33" stroke="#1f385c" />
+      <circle cx="160" cy="80" r="8" fill="#a855f7" opacity="0.2" />
+      <text x="160" y="84" text-anchor="middle" fill="#a855f7" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">C#</text>
+      <text x="176" y="76" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="11" font-weight="600">C# / .NET</text>
+      <text x="176" y="90" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">SpecFlow / NUnit</text>
+    </g>
+  </g>
+
+  <!-- Bottom Right Card: Multi-Device Test Matrix -->
+  <g transform="translate(594, 274)">
+    <rect width="318" height="218" rx="12" fill="url(#glassGrad)" stroke="#1e3a60" stroke-width="1.5" />
+    <text x="24" y="32" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold" letter-spacing="1">CONTINUOUS PLATFORM COVERAGE</text>
+    <text x="24" y="54" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="17" font-weight="600">Cross-Platform Matrix</text>
+
+    <g transform="translate(24, 72)">
+      <!-- Platform 1: Mobile iOS & Android -->
+      <g transform="translate(0, 0)">
+        <text y="14" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Mobile (iOS &amp; Android Appium)</text>
+        <rect y="22" width="270" height="8" rx="4" fill="#0c182c" />
+        <rect y="22" width="262" height="8" rx="4" fill="url(#cyanGrad)" />
+        <text x="240" y="14" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">99.8%</text>
+      </g>
+
+      <!-- Platform 2: Modern Web Browsers -->
+      <g transform="translate(0, 42)">
+        <text y="14" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Web (Chrome, Safari, Firefox, Edge)</text>
+        <rect y="22" width="270" height="8" rx="4" fill="#0c182c" />
+        <rect y="22" width="270" height="8" rx="4" fill="url(#cyanGrad)" />
+        <text x="240" y="14" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">100%</text>
+      </g>
+
+      <!-- Platform 3: Desktop Apps (Win / Mac) -->
+      <g transform="translate(0, 84)">
+        <text y="14" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Desktop &amp; APIs (Win/macOS/REST)</text>
+        <rect y="22" width="270" height="8" rx="4" fill="#0c182c" />
+        <rect y="22" width="255" height="8" rx="4" fill="url(#cyanGrad)" />
+        <text x="240" y="14" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">99.4%</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="stratBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050d1a" />
+      <stop offset="50%" stop-color="#091629" />
+      <stop offset="100%" stop-color="#0d2342" />
+    </linearGradient>
+    <linearGradient id="goldG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+    <linearGradient id="cardG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#132742" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0a1626" stop-opacity="0.98" />
+    </linearGradient>
+    <filter id="stratGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#stratBg)" />
+
+  <circle cx="200" cy="180" r="160" fill="#3fa9f5" opacity="0.14" filter="url(#stratGlow)" />
+  <circle cx="780" cy="360" r="180" fill="#6ee7c4" opacity="0.1" filter="url(#stratGlow)" />
+
+  <!-- Main Architecture Container -->
+  <g transform="translate(48, 40)">
+    <rect width="864" height="460" rx="14" fill="url(#cardG)" stroke="#1e3a62" stroke-width="1.6" />
+
+    <!-- Top Architecture Header -->
+    <g transform="translate(24, 20)">
+      <text y="18" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold" letter-spacing="1.5">ENTERPRISE IT CONSULTING &amp; CLOUD ARCHITECTURE</text>
+      <text y="42" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">Digital Transformation &amp; Multi-Cloud Systems Blueprint</text>
+    </g>
+
+    <!-- Strategy Pillars Grid -->
+    <g transform="translate(24, 80)">
+      <!-- Pillar 1: Architecture Audit -->
+      <g transform="translate(0, 0)">
+        <rect width="260" height="150" rx="10" fill="#0b172a" stroke="#1c3658" />
+        <circle cx="32" cy="32" r="14" fill="#3fa9f5" opacity="0.15" />
+        <text x="32" y="37" text-anchor="middle" fill="#3fa9f5" font-size="14" font-weight="bold">01</text>
+        <text x="58" y="36" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">Full Stack Audit</text>
+        
+        <text x="18" y="72" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11.5">Comprehensive bottleneck, cost &amp; security risk ranking.</text>
+        
+        <rect x="18" y="96" width="224" height="34" rx="6" fill="#112540" />
+        <text x="30" y="118" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="11">✓ Executive Health Score</text>
+      </g>
+
+      <!-- Pillar 2: Cloud Modernization -->
+      <g transform="translate(276, 0)">
+        <rect width="260" height="150" rx="10" fill="#0b172a" stroke="#1c3658" />
+        <circle cx="32" cy="32" r="14" fill="#6ee7c4" opacity="0.15" />
+        <text x="32" y="37" text-anchor="middle" fill="#6ee7c4" font-size="14" font-weight="bold">02</text>
+        <text x="58" y="36" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">Cloud Migration</text>
+        
+        <text x="18" y="72" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11.5">Zero-downtime transition to AWS, Azure &amp; GCP multi-region.</text>
+        
+        <rect x="18" y="96" width="224" height="34" rx="6" fill="#112540" />
+        <text x="30" y="118" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="11">✓ Multi-Region Kubernetes</text>
+      </g>
+
+      <!-- Pillar 3: Cost Optimization -->
+      <g transform="translate(552, 0)">
+        <rect width="264" height="150" rx="10" fill="#0b172a" stroke="#1c3658" />
+        <circle cx="32" cy="32" r="14" fill="#a855f7" opacity="0.15" />
+        <text x="32" y="37" text-anchor="middle" fill="#a855f7" font-size="14" font-weight="bold">03</text>
+        <text x="58" y="36" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">Cost FinOps</text>
+        
+        <text x="18" y="72" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="11.5">Cut hosting bills 25–40% with reserved capacity &amp; autoscaling.</text>
+        
+        <rect x="18" y="96" width="228" height="34" rx="6" fill="#112540" />
+        <text x="30" y="118" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="11">✓ 35% Avg Monthly Savings</text>
+      </g>
+    </g>
+
+    <!-- Cloud Topology Network Diagram -->
+    <g transform="translate(24, 248)">
+      <rect width="816" height="186" rx="10" fill="#071324" stroke="#173152" />
+      <text x="20" y="24" fill="#eaf3fc" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Infrastructure as Code (Terraform) Topology Map</text>
+
+      <!-- Nodes -->
+      <!-- Global Edge / Cloudflare -->
+      <g transform="translate(40, 56)">
+        <rect width="130" height="96" rx="8" fill="#0d1e34" stroke="#254d7e" />
+        <text x="65" y="32" text-anchor="middle" fill="#3fa9f5" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">Global Edge</text>
+        <text x="65" y="52" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">Cloudflare WAF</text>
+        <text x="65" y="70" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">DDoS Shield</text>
+        <circle cx="65" cy="84" r="4" fill="#6ee7c4" />
+      </g>
+
+      <!-- Connect line 1 -->
+      <line x1="170" y1="104" x2="220" y2="104" stroke="#3fa9f5" stroke-width="2" stroke-dasharray="4 3" />
+
+      <!-- API Gateway & Load Balancer -->
+      <g transform="translate(220, 56)">
+        <rect width="140" height="96" rx="8" fill="#0d1e34" stroke="#254d7e" />
+        <text x="70" y="32" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">ALB / Ingress</text>
+        <text x="70" y="52" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">SSL Termination</text>
+        <text x="70" y="70" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">Canary Routing</text>
+        <circle cx="70" cy="84" r="4" fill="#6ee7c4" />
+      </g>
+
+      <!-- Connect line 2 -->
+      <line x1="360" y1="104" x2="410" y2="104" stroke="#3fa9f5" stroke-width="2" stroke-dasharray="4 3" />
+
+      <!-- EKS / K8s Cluster -->
+      <g transform="translate(410, 56)">
+        <rect width="170" height="96" rx="8" fill="#0d1e34" stroke="#254d7e" />
+        <text x="85" y="32" text-anchor="middle" fill="#3fa9f5" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">Kubernetes EKS</text>
+        <text x="85" y="52" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">Microservices Pods</text>
+        <text x="85" y="70" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">HPA Auto-scaling</text>
+        <circle cx="85" cy="84" r="4" fill="#6ee7c4" />
+      </g>
+
+      <!-- Connect line 3 -->
+      <line x1="580" y1="104" x2="630" y2="104" stroke="#3fa9f5" stroke-width="2" stroke-dasharray="4 3" />
+
+      <!-- Multi-AZ Database -->
+      <g transform="translate(630, 56)">
+        <rect width="146" height="96" rx="8" fill="#0d1e34" stroke="#254d7e" />
+        <text x="73" y="32" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">Aurora Multi-AZ</text>
+        <text x="73" y="52" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">PostgreSQL Engine</text>
+        <text x="73" y="70" text-anchor="middle" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="9.5">Encrypted KMS</text>
+        <circle cx="73" cy="84" r="4" fill="#6ee7c4" />
+      </g>
+    </g>
+  </g>
+</svg>

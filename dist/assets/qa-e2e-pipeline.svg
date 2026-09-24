@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="qaE2eBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07101f" />
+      <stop offset="50%" stop-color="#0a182e" />
+      <stop offset="100%" stop-color="#050a14" />
+    </linearGradient>
+    <linearGradient id="neonMintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6ee7c4" />
+      <stop offset="100%" stop-color="#3fa9f5" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#qaE2eBg)" />
+
+  <rect x="30" y="24" width="740" height="402" rx="12" fill="#091424" stroke="#1c385c" stroke-width="1.5" />
+  
+  <!-- Header -->
+  <rect x="30" y="24" width="740" height="38" rx="12" fill="#0e213a" />
+  <circle cx="54" cy="43" r="4.5" fill="#ef4444" />
+  <circle cx="70" cy="43" r="4.5" fill="#f59e0b" />
+  <circle cx="86" cy="43" r="4.5" fill="#10b981" />
+  <text x="110" y="47" fill="#cbd5e1" font-family="'Space Grotesk', sans-serif" font-size="11.5" font-weight="600">Omnichannel Test Matrix — Multi-Language CI/CD Pipeline Case Study</text>
+  <rect x="640" y="34" width="115" height="18" rx="4" fill="#0f342c" />
+  <text x="697" y="46" text-anchor="middle" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9.5">12 MIN RUN</text>
+
+  <!-- Left: CI Pipeline Execution Stages -->
+  <g transform="translate(60, 78)">
+    <rect width="280" height="324" rx="8" fill="#050c18" stroke="#162e50" />
+    <text x="16" y="24" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">PARALLEL CI STAGES</text>
+
+    <!-- Stage 1 -->
+    <g transform="translate(16, 40)">
+      <rect width="248" height="44" rx="6" fill="#0c1a2f" stroke="#1a3d6a" />
+      <circle cx="18" cy="22" r="6" fill="#6ee7c4" />
+      <text x="32" y="18" fill="#ffffff" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Stage 1: API Contract Matrix</text>
+      <text x="32" y="32" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="8.5">RestAssured + PyTest · 512 tests (1.8s)</text>
+    </g>
+
+    <!-- Stage 2 -->
+    <g transform="translate(16, 92)">
+      <rect width="248" height="44" rx="6" fill="#0c1a2f" stroke="#1a3d6a" />
+      <circle cx="18" cy="22" r="6" fill="#6ee7c4" />
+      <text x="32" y="18" fill="#ffffff" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Stage 2: Cross-Browser E2E</text>
+      <text x="32" y="32" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="8.5">Playwright TS · 819 tests (3.2s)</text>
+    </g>
+
+    <!-- Stage 3 -->
+    <g transform="translate(16, 144)">
+      <rect width="248" height="44" rx="6" fill="#0c1a2f" stroke="#1a3d6a" />
+      <circle cx="18" cy="22" r="6" fill="#6ee7c4" />
+      <text x="32" y="18" fill="#ffffff" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Stage 3: Mobile Device Farm</text>
+      <text x="32" y="32" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="8.5">Appium iOS / Android · 342 tests (4.1s)</text>
+    </g>
+
+    <!-- Stage 4 -->
+    <g transform="translate(16, 196)">
+      <rect width="248" height="44" rx="6" fill="#0c1a2f" stroke="#1a3d6a" />
+      <circle cx="18" cy="22" r="6" fill="#6ee7c4" />
+      <text x="32" y="18" fill="#ffffff" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Stage 4: SOC 2 Compliance Hash</text>
+      <text x="32" y="32" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="8.5">C# SpecFlow BDD · 190 tests (0.9s)</text>
+    </g>
+
+    <!-- Summary Pill -->
+    <g transform="translate(16, 250)">
+      <rect width="248" height="58" rx="6" fill="#0a221c" stroke="#10b981" />
+      <text x="14" y="24" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">1,863/1,863 PASSED</text>
+      <text x="14" y="44" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="9.5">Regression time: 4 days → 12 min</text>
+    </g>
+  </g>
+
+  <!-- Right: Impact Metrics & Technologies -->
+  <g transform="translate(360, 78)">
+    <!-- Metrics -->
+    <g transform="translate(0, 0)">
+      <rect width="180" height="74" rx="8" fill="#0e213b" stroke="#1c3b64" />
+      <text x="14" y="22" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">Escape Bug Rate</text>
+      <text x="14" y="48" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700">0.00%</text>
+      <text x="14" y="64" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="8.5">0 bugs in 6 months</text>
+
+      <rect x="195" width="195" height="74" rx="8" fill="#0e213b" stroke="#1c3b64" />
+      <text x="209" y="22" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">CI Parallel Workers</text>
+      <text x="209" y="48" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700">12 Pods</text>
+      <text x="209" y="64" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8.5">GitHub Actions CI</text>
+    </g>
+
+    <!-- Narrative Box -->
+    <g transform="translate(0, 88)">
+      <rect width="390" height="150" rx="8" fill="#081426" stroke="#162e50" />
+      <text x="16" y="24" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">ARCHITECTURE OUTCOMES</text>
+      
+      <g transform="translate(16, 42)" font-family="'Inter', sans-serif" font-size="11">
+        <text y="14" fill="#eaf3fc">✓ Replaced brittle manual testing with automated CI gates</text>
+        <text y="38" fill="#eaf3fc">✓ Multi-language frameworks matching backend developers</text>
+        <text y="62" fill="#eaf3fc">✓ Parallel test execution running 1,800+ tests in under 12 min</text>
+        <text y="86" fill="#6ee7c4" font-weight="600">✓ Enabled confident multiple-deploys-per-day velocity</text>
+      </g>
+    </g>
+
+    <!-- Tech Badges -->
+    <g transform="translate(0, 252)">
+      <rect width="105" height="26" rx="4" fill="#132a48" />
+      <text x="52" y="17" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">PyTest (Python)</text>
+
+      <rect x="115" width="105" height="26" rx="4" fill="#132a48" />
+      <text x="167" y="17" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">TestNG (Java)</text>
+
+      <rect x="230" width="115" height="26" rx="4" fill="#132a48" />
+      <text x="287" y="17" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">Playwright (TS)</text>
+
+      <rect x="355" width="35" height="26" rx="4" fill="#132a48" />
+      <text x="372" y="17" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="10">C#</text>
+    </g>
+  </g>
+</svg>

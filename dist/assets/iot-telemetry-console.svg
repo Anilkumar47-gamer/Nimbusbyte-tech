@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="iotBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08101e" />
+      <stop offset="60%" stop-color="#0c182c" />
+      <stop offset="100%" stop-color="#050a14" />
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    <linearGradient id="neonAmber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+    <linearGradient id="neonMint" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#iotBg)" />
+  
+  <!-- CRT Oscilloscope Grid lines -->
+  <g stroke="#162a4a" stroke-width="0.8" opacity="0.7">
+    <line x1="0" y1="50" x2="800" y2="50" stroke-dasharray="2 4" />
+    <line x1="0" y1="100" x2="800" y2="100" stroke-dasharray="2 4" />
+    <line x1="0" y1="150" x2="800" y2="150" stroke-dasharray="2 4" />
+    <line x1="0" y1="200" x2="800" y2="200" stroke-dasharray="2 4" />
+    <line x1="0" y1="250" x2="800" y2="250" stroke-dasharray="2 4" />
+    <line x1="0" y1="300" x2="800" y2="300" stroke-dasharray="2 4" />
+    <line x1="0" y1="350" x2="800" y2="350" stroke-dasharray="2 4" />
+    <line x1="0" y1="400" x2="800" y2="400" stroke-dasharray="2 4" />
+    <line x1="100" y1="0" x2="100" y2="450" stroke-dasharray="2 4" />
+    <line x1="200" y1="0" x2="200" y2="450" stroke-dasharray="2 4" />
+    <line x1="300" y1="0" x2="300" y2="450" stroke-dasharray="2 4" />
+    <line x1="400" y1="0" x2="400" y2="450" stroke-dasharray="2 4" />
+    <line x1="500" y1="0" x2="500" y2="450" stroke-dasharray="2 4" />
+    <line x1="600" y1="0" x2="600" y2="450" stroke-dasharray="2 4" />
+    <line x1="700" y1="0" x2="700" y2="450" stroke-dasharray="2 4" />
+  </g>
+
+  <!-- Desktop App Window Shell -->
+  <rect x="40" y="30" width="720" height="390" rx="10" fill="#0a1426" stroke="#1f3b64" stroke-width="1.8" />
+  <rect x="40" y="30" width="720" height="38" rx="10" fill="#0e1e38" />
+  
+  <!-- Header elements -->
+  <circle cx="65" cy="49" r="4.5" fill="#ef4444" />
+  <circle cx="80" cy="49" r="4.5" fill="#f59e0b" />
+  <circle cx="95" cy="49" r="4.5" fill="#10b981" />
+  <text x="120" y="53" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">NimbusTauri Desktop v3.4 [COM4 @ 115200 BAUD] // 0.8ms I/O</text>
+  <rect x="620" y="40" width="125" height="18" rx="4" fill="#0d2e26" stroke="#10b981" stroke-width="1" />
+  <text x="630" y="52" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9.5">SERIAL BRIDGE: LOCKED</text>
+
+  <!-- Telemetry Graph Center -->
+  <g transform="translate(60, 85)">
+    <!-- Main Oscilloscope Display -->
+    <rect x="0" y="0" width="460" height="200" rx="8" fill="#050c18" stroke="#162e52" stroke-width="1.5" />
+    <text x="16" y="24" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">> REAL-TIME SENSOR BUS TELEMETRY (10k SAMPLES/SEC)</text>
+    
+    <!-- Waveform 1 (Cyan) -->
+    <path d="M 20 120 Q 50 40, 80 120 T 140 120 T 200 60 T 260 160 T 320 80 T 380 140 T 440 90" fill="none" stroke="url(#neonCyan)" stroke-width="2.2" />
+    <!-- Waveform 2 (Mint) -->
+    <path d="M 20 150 Q 60 180, 100 130 T 180 140 T 240 110 T 300 170 T 360 100 T 440 130" fill="none" stroke="url(#neonMint)" stroke-width="1.8" opacity="0.85" />
+    
+    <text x="20" y="185" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9">CH1: 3.32V | CH2: 48.2°C | THRESHOLD: NOMINAL | JITTER: 0.02ms</text>
+  </g>
+
+  <!-- Right Gauge Columns -->
+  <g transform="translate(535, 85)">
+    <rect x="0" y="0" width="205" height="200" rx="8" fill="#09172c" stroke="#1c365d" stroke-width="1" />
+    <text x="14" y="24" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600">Hardware Telemetry</text>
+
+    <!-- Gauge 1 -->
+    <g transform="translate(14, 42)">
+      <text x="0" y="10" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">PROCESS MEMORY (RAM)</text>
+      <rect x="0" y="16" width="175" height="6" rx="3" fill="#13243f" />
+      <rect x="0" y="16" width="42" height="6" rx="3" fill="url(#neonMint)" />
+      <text x="140" y="10" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9.5">24 MB</text>
+    </g>
+
+    <!-- Gauge 2 -->
+    <g transform="translate(14, 82)">
+      <text x="0" y="10" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">USB BUS THROUGHPUT</text>
+      <rect x="0" y="16" width="175" height="6" rx="3" fill="#13243f" />
+      <rect x="0" y="16" width="158" height="6" rx="3" fill="url(#neonCyan)" />
+      <text x="130" y="10" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="9.5">11.8 MB/s</text>
+    </g>
+
+    <!-- Gauge 3 -->
+    <g transform="translate(14, 122)">
+      <text x="0" y="10" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">CORE CPU USAGE</text>
+      <rect x="0" y="16" width="175" height="6" rx="3" fill="#13243f" />
+      <rect x="0" y="16" width="22" height="6" rx="3" fill="url(#neonMint)" />
+      <text x="148" y="10" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9.5">1.4%</text>
+    </g>
+  </g>
+
+  <!-- Bottom Terminal Log Stream -->
+  <g transform="translate(60, 298)">
+    <rect x="0" y="0" width="680" height="105" rx="8" fill="#060e1c" stroke="#183154" stroke-width="1" />
+    <text x="16" y="22" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="10">> [2026-08-31T16:20:01.402Z] Tauri Core Daemon initialized. Direct OS Windows Win32 / macOS Cocoa driver ready.</text>
+    <text x="16" y="42" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10">> [2026-08-31T16:20:01.890Z] Serial packet stream validated. CRC32 checksum match 100% (4,180,290 frames parsed).</text>
+    <text x="16" y="62" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">> [2026-08-31T16:20:02.110Z] Local SQLite database WAL mode active. Background sync service worker standing by.</text>
+    <text x="16" y="84" fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="10">> [2026-08-31T16:20:02.500Z] Delta auto-updater signed with Ed25519 public certificate key verified.</text>
+  </g>
+</svg>

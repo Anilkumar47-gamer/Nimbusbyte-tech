@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="finBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081426" />
+      <stop offset="50%" stop-color="#0c1d38" />
+      <stop offset="100%" stop-color="#050c18" />
+    </linearGradient>
+    <linearGradient id="finCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+    <filter id="finGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#finBg)" />
+
+  <!-- Frame Canvas -->
+  <rect x="30" y="24" width="740" height="402" rx="12" fill="#0a1628" stroke="#1c385c" stroke-width="1.5" />
+  
+  <!-- Header Bar -->
+  <rect x="30" y="24" width="740" height="38" rx="12" fill="#0e213a" />
+  <circle cx="54" cy="43" r="4.5" fill="#ef4444" />
+  <circle cx="70" cy="43" r="4.5" fill="#f59e0b" />
+  <circle cx="86" cy="43" r="4.5" fill="#10b981" />
+  <text x="110" y="47" fill="#cbd5e1" font-family="'Space Grotesk', sans-serif" font-size="11.5" font-weight="600">NimbusPay Mobile — Cross-Platform Flutter / SQLite WealthTech Engine</text>
+  <rect x="650" y="34" width="105" height="18" rx="4" fill="#133156" />
+  <text x="702" y="46" text-anchor="middle" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="9.5">60 FPS SYNC</text>
+
+  <!-- Left: Mobile Device Mockup Inside Card -->
+  <g transform="translate(60, 78)">
+    <rect width="180" height="324" rx="24" fill="#050d18" stroke="#224778" stroke-width="2" />
+    <!-- Dynamic Island -->
+    <rect x="60" y="8" width="60" height="10" rx="5" fill="#02060c" />
+    
+    <!-- Screen -->
+    <rect x="10" y="24" width="160" height="280" rx="16" fill="#09182d" />
+    <text x="22" y="44" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="bold">Portfolio Value</text>
+    <text x="22" y="66" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="700">$248,910.40</text>
+    <text x="22" y="80" fill="#3fa9f5" font-family="'JetBrains Mono', monospace" font-size="8.5">▲ +18.4% · 60 FPS Render</text>
+
+    <!-- Chart -->
+    <path d="M 22 130 Q 45 95, 75 115 T 120 90 T 155 80" fill="none" stroke="url(#finCyan)" stroke-width="2.2" />
+    <path d="M 22 130 Q 45 95, 75 115 T 120 90 T 155 80 L 155 145 L 22 145 Z" fill="url(#finCyan)" opacity="0.12" />
+
+    <!-- Ledger Transaction Items -->
+    <g transform="translate(18, 154)">
+      <rect width="124" height="28" rx="4" fill="#0f223a" />
+      <text x="8" y="14" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="8" font-weight="600">Stock Order AAPL</text>
+      <text x="8" y="23" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="7.5">Filled · 0.04s</text>
+      <text x="116" y="18" text-anchor="end" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold">+$4,200</text>
+    </g>
+
+    <g transform="translate(18, 188)">
+      <rect width="124" height="28" rx="4" fill="#0f223a" />
+      <text x="8" y="14" fill="#eaf3fc" font-family="'Inter', sans-serif" font-size="8" font-weight="600">Index ETF VOO</text>
+      <text x="8" y="23" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="7.5">Filled · 0.04s</text>
+      <text x="116" y="18" text-anchor="end" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold">+$8,900</text>
+    </g>
+
+    <!-- Security Chip -->
+    <rect x="18" y="224" width="124" height="32" rx="6" fill="#061220" stroke="#162e4e" />
+    <text x="26" y="238" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="7.5">🔒 Face ID &amp; Biometrics</text>
+    <text x="26" y="249" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="7">Offline SQLite Cipher Encrypted</text>
+  </g>
+
+  <!-- Right: Technical Architecture Specifications -->
+  <g transform="translate(270, 78)">
+    <!-- Metrics Row -->
+    <g transform="translate(0, 0)">
+      <rect width="150" height="66" rx="8" fill="#0e213b" stroke="#1c3b64" />
+      <text x="14" y="20" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">App Cold Launch</text>
+      <text x="14" y="44" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700">0.4 sec</text>
+      <text x="14" y="58" fill="#93a8c6" font-family="'JetBrains Mono', monospace" font-size="8.5">vs 4.2s legacy</text>
+
+      <rect x="160" width="150" height="66" rx="8" fill="#0e213b" stroke="#1c3b64" />
+      <text x="174" y="20" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">Offline Sync Loss</text>
+      <text x="174" y="44" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700">0.00%</text>
+      <text x="174" y="58" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8.5">SQLite Queue</text>
+
+      <rect x="320" width="160" height="66" rx="8" fill="#0e213b" stroke="#1c3b64" />
+      <text x="334" y="20" fill="#93a8c6" font-family="'Inter', sans-serif" font-size="10">App Store Rating</text>
+      <text x="334" y="44" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700">4.9 ★★★★★</text>
+      <text x="334" y="58" fill="#7cc4f8" font-family="'JetBrains Mono', monospace" font-size="8.5">14,200 Reviews</text>
+    </g>
+
+    <!-- Architecture & Features Box -->
+    <g transform="translate(0, 78)">
+      <rect width="480" height="150" rx="8" fill="#081426" stroke="#162e50" />
+      <text x="16" y="24" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">MOBILE SYSTEM HIGHLIGHTS</text>
+      
+      <g transform="translate(16, 42)" font-family="'Inter', sans-serif" font-size="11">
+        <text y="14" fill="#eaf3fc">✓ Single Flutter codebase running natively on iOS &amp; Android</text>
+        <text y="38" fill="#eaf3fc">✓ Real-time WebSockets streaming 5,000 market ticks per second</text>
+        <text y="62" fill="#eaf3fc">✓ Biometric Keychain token encryption complying with financial laws</text>
+        <text y="86" fill="#6ee7c4" font-weight="600">✓ Fastlane CI/CD pipeline deploying directly to TestFlight &amp; Play Store</text>
+      </g>
+    </g>
+
+    <!-- Tech Chips -->
+    <g transform="translate(0, 240)">
+      <rect width="78" height="24" rx="4" fill="#132a48" />
+      <text x="39" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">Flutter 3</text>
+
+      <rect x="86" width="60" height="24" rx="4" fill="#132a48" />
+      <text x="116" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">Dart</text>
+
+      <rect x="154" width="88" height="24" rx="4" fill="#132a48" />
+      <text x="198" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">WebSockets</text>
+
+      <rect x="250" width="104" height="24" rx="4" fill="#132a48" />
+      <text x="302" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">SQLite Cipher</text>
+
+      <rect x="362" width="118" height="24" rx="4" fill="#132a48" />
+      <text x="421" y="16" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="10">Fastlane CI/CD</text>
+    </g>
+  </g>
+</svg>

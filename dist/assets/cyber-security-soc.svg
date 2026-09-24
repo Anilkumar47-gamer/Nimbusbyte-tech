@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="secBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050e1b" />
+      <stop offset="50%" stop-color="#08172c" />
+      <stop offset="100%" stop-color="#0c2342" />
+    </linearGradient>
+    <linearGradient id="secCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6ee7c4" />
+      <stop offset="50%" stop-color="#3fa9f5" />
+      <stop offset="100%" stop-color="#0e4fa8" />
+    </linearGradient>
+    <filter id="secGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#secBg)" />
+
+  <circle cx="260" cy="180" r="160" fill="#3fa9f5" opacity="0.14" filter="url(#secGlow)" />
+  <circle cx="740" cy="340" r="170" fill="#6ee7c4" opacity="0.11" filter="url(#secGlow)" />
+
+  <g transform="translate(48, 36)">
+    <rect width="864" height="468" rx="14" fill="#081426" stroke="#1d3d6a" stroke-width="1.6" fill-opacity="0.95" />
+
+    <!-- Top Bar -->
+    <g transform="translate(24, 20)">
+      <text y="16" fill="#6ee7c4" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold" letter-spacing="1.5">SERVICE 06 — CYBERSECURITY, SOC &amp; COMPLIANCE</text>
+      <text y="42" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">SOC 2 Type II · Zero-Trust Architecture · Penetration Testing · SIEM</text>
+    </g>
+
+    <!-- Main Content -->
+    <g transform="translate(24, 76)">
+      <!-- Left: Shield & Security Lock Center -->
+      <g transform="translate(0, 0)">
+        <rect width="320" height="348" rx="10" fill="#06101e" stroke="#162e50" />
+        
+        <!-- Shield Graphic -->
+        <g transform="translate(160, 120)">
+          <path d="M 0 -70 L 60 -35 L 60 25 C 60 65, 0 88, 0 88 C 0 88, -60 65, -60 25 L -60 -35 Z" fill="#0a1a32" stroke="url(#secCyan)" stroke-width="2.5" />
+          <circle cx="0" cy="-5" r="18" fill="#132c4e" stroke="#6ee7c4" stroke-width="1.5" />
+          <path d="M -8 -5 L -2 1 L 9 -10" fill="none" stroke="#6ee7c4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <text x="0" y="38" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">SOC 2 TYPE II</text>
+          <text x="0" y="52" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="bold" text-anchor="middle">100% COMPLIANT</text>
+        </g>
+
+        <!-- Threat Monitor Log -->
+        <g transform="translate(16, 230)">
+          <rect width="288" height="100" rx="6" fill="#040a14" stroke="#12253e" />
+          <g transform="translate(12, 22)" font-family="'JetBrains Mono', monospace" font-size="9.5">
+            <text y="0" fill="#6ee7c4">✓ Zero-Trust IAM Policy: Enforced</text>
+            <text y="20" fill="#6ee7c4">✓ KMS Envelope Encryption: Active</text>
+            <text y="40" fill="#3fa9f5">✓ SIEM Real-time Audit Trail: Streaming</text>
+            <text y="60" fill="#93a8c6">0 Vulnerabilities · Auditor Approved</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Right: Security Deliverables and Standards -->
+      <g transform="translate(340, 0)">
+        <rect width="476" height="348" rx="10" fill="#06101e" stroke="#162e50" />
+        
+        <g transform="translate(20, 20)">
+          <text y="14" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">ENTERPRISE HARDENING &amp; COMPLIANCE</text>
+          
+          <g transform="translate(0, 34)" font-family="'Inter', sans-serif" font-size="11">
+            <text y="14" fill="#ffffff" font-weight="600">1. SOC 2 Type I &amp; II Fast-Track</text>
+            <text y="30" fill="#93a8c6">Technical remediation, continuous evidence gathering, and auditor readiness.</text>
+
+            <text y="62" fill="#ffffff" font-weight="600">2. Zero-Trust Access Governance</text>
+            <text y="78" fill="#93a8c6">Least-privilege role boundaries, ephemeral tokens, and HashiCorp Vault secrets.</text>
+
+            <text y="110" fill="#ffffff" font-weight="600">3. Penetration Testing &amp; Ethical Hacking</text>
+            <text y="126" fill="#93a8c6">Comprehensive vulnerability audits across Web SaaS, Mobile apps, APIs, and AWS.</text>
+
+            <text y="158" fill="#ffffff" font-weight="600">4. Automated Incident Response Protocols</text>
+            <text y="174" fill="#93a8c6">Battle-tested runbooks for real-time containment and forensic logging.</text>
+          </g>
+
+          <!-- Badges -->
+          <g transform="translate(0, 240)">
+            <rect width="90" height="24" rx="4" fill="#112744" />
+            <text x="45" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">SOC 2 Ready</text>
+
+            <rect x="98" width="90" height="24" rx="4" fill="#112744" />
+            <text x="143" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">ISO 27001</text>
+
+            <rect x="196" width="90" height="24" rx="4" fill="#112744" />
+            <text x="241" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">HIPAA Compliant</text>
+
+            <rect x="294" width="140" height="24" rx="4" fill="#112744" />
+            <text x="364" y="16" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="10">Vault Secrets</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

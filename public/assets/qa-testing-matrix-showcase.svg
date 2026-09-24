@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="qaSrvBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040e1c" />
+      <stop offset="50%" stop-color="#081830" />
+      <stop offset="100%" stop-color="#0d2448" />
+    </linearGradient>
+    <linearGradient id="qaGradP" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6ee7c4" />
+    </linearGradient>
+    <filter id="qaSrvGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#qaSrvBg)" />
+
+  <circle cx="260" cy="180" r="160" fill="#3fa9f5" opacity="0.14" filter="url(#qaSrvGlow)" />
+  <circle cx="740" cy="340" r="170" fill="#a855f7" opacity="0.12" filter="url(#qaSrvGlow)" />
+
+  <g transform="translate(48, 36)">
+    <rect width="864" height="468" rx="14" fill="#081426" stroke="#1d3d6a" stroke-width="1.6" fill-opacity="0.95" />
+
+    <!-- Top Bar -->
+    <g transform="translate(24, 20)">
+      <text y="16" fill="#a855f7" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold" letter-spacing="1.5">SERVICE 04 — MULTI-LANGUAGE QA &amp; TEST AUTOMATION</text>
+      <text y="42" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">Python PyTest · Java TestNG · TypeScript Playwright · C# SpecFlow</text>
+    </g>
+
+    <!-- Main Content -->
+    <g transform="translate(24, 76)">
+      <!-- Left: QA Terminal Window -->
+      <g transform="translate(0, 0)">
+        <rect width="360" height="348" rx="10" fill="#06101e" stroke="#162e50" />
+        
+        <!-- Window Titlebar -->
+        <rect width="360" height="34" rx="10" fill="#0b1a2e" />
+        <circle cx="18" cy="17" r="4.5" fill="#ef4444" />
+        <circle cx="32" cy="17" r="4.5" fill="#f59e0b" />
+        <circle cx="46" cy="17" r="4.5" fill="#10b981" />
+        <text x="64" y="21" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="10">nimbus-qa-matrix-runner :: multi-lang</text>
+
+        <!-- Test Results Stream -->
+        <g transform="translate(16, 48)" font-family="'JetBrains Mono', monospace" font-size="10">
+          <rect width="326" height="32" rx="4" fill="#0b1c34" />
+          <text x="10" y="20" fill="#6ee7c4">✓ Python PyTest: 480 passed (1.4s)</text>
+
+          <rect y="40" width="326" height="32" rx="4" fill="#0b1c34" />
+          <text x="10" y="20" fill="#6ee7c4">✓ Java TestNG: 320 passed (2.1s)</text>
+
+          <rect y="80" width="326" height="32" rx="4" fill="#0b1c34" />
+          <text x="10" y="20" fill="#6ee7c4">✓ Playwright TS: 640 passed (1.1s)</text>
+
+          <rect y="120" width="326" height="32" rx="4" fill="#0b1c34" />
+          <text x="10" y="20" fill="#6ee7c4">✓ C# SpecFlow: 220 passed (0.9s)</text>
+
+          <rect y="160" width="326" height="32" rx="4" fill="#0b1c34" />
+          <text x="10" y="20" fill="#6ee7c4">✓ Appium Mobile: 180 passed (3.4s)</text>
+        </g>
+
+        <!-- Summary Ticker -->
+        <g transform="translate(16, 252)">
+          <rect width="326" height="78" rx="6" fill="#0c231c" stroke="#10b981" />
+          <text x="12" y="22" fill="#6ee7c4" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">1,840/1,840 TESTS PASSED (100%)</text>
+          <text x="12" y="42" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="9.5">Parallel CI/CD Pipelines with Branch Protection</text>
+          <text x="12" y="60" fill="#7cc4f8" font-family="'JetBrains Mono', monospace" font-size="9">0 Flaky Tests · Zero Production Escape Bugs</text>
+        </g>
+      </g>
+
+      <!-- Right: QA Deliverables -->
+      <g transform="translate(380, 0)">
+        <rect width="436" height="348" rx="10" fill="#06101e" stroke="#162e50" />
+        
+        <g transform="translate(20, 20)">
+          <text y="14" fill="#3fa9f5" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="bold">ENTERPRISE QUALITY ENGINEERING</text>
+          
+          <g transform="translate(0, 34)" font-family="'Inter', sans-serif" font-size="11">
+            <text y="14" fill="#ffffff" font-weight="600">1. Multi-Language Framework Architecture</text>
+            <text y="30" fill="#93a8c6">Tailored to your team's stack in Python, Java, TypeScript, or C#.</text>
+
+            <text y="62" fill="#ffffff" font-weight="600">2. Cross-Platform Omnichannel Coverage</text>
+            <text y="78" fill="#93a8c6">Parallel execution across Chrome, Safari, iOS, Android, and Desktop apps.</text>
+
+            <text y="110" fill="#ffffff" font-weight="600">3. High-Throughput API &amp; Load Testing</text>
+            <text y="126" fill="#93a8c6">Automated REST/GraphQL validation and k6 distributed load profiling.</text>
+
+            <text y="158" fill="#ffffff" font-weight="600">4. CI/CD PR Gates &amp; Video Recordings</text>
+            <text y="174" fill="#93a8c6">Test execution triggered automatically on pull requests with trace artifacts.</text>
+          </g>
+
+          <!-- Badges -->
+          <g transform="translate(0, 240)">
+            <rect width="90" height="24" rx="4" fill="#112744" />
+            <text x="45" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">PyTest</text>
+
+            <rect x="98" width="90" height="24" rx="4" fill="#112744" />
+            <text x="143" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">TestNG</text>
+
+            <rect x="196" width="90" height="24" rx="4" fill="#112744" />
+            <text x="241" y="16" text-anchor="middle" fill="#7cc4f8" font-family="'Inter', sans-serif" font-size="10">Playwright</text>
+
+            <rect x="294" width="120" height="24" rx="4" fill="#112744" />
+            <text x="354" y="16" text-anchor="middle" fill="#6ee7c4" font-family="'Inter', sans-serif" font-size="10">Appium Mobile</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
