@@ -5,23 +5,19 @@ import {
   ArrowRightIcon,
   MailIcon,
   PhoneIcon,
-  LocationIcon,
-  TelemetryIcon
+  LocationIcon
 } from '../components/Icons.jsx';
 
 const quickAnswers = [
-  { question: 'What software platforms and languages do you support?', answer: 'We build native and cross-platform Mobile apps (Flutter, React Native, Swift, Kotlin), modern Web platforms (Next.js, React, Node.js, Python FastAPI), Desktop software (Tauri/Rust, Electron, .NET 8), and multi-language automated QA test suites (Python, Java, TypeScript, C#).' },
-  { question: 'What is your typical project timeline?', answer: 'Focused modules and architecture audits run 2–4 weeks. Complete full-stack Web, Mobile, or Desktop builds typically run 6–12 weeks with two-week demo milestones.' },
-  { question: 'Do you execute mutual NDAs prior to technical discussions?', answer: 'Always. We are happy to execute mutual NDAs before any proprietary codebases, Figma designs, or cloud credentials are shared.' },
-  { question: 'Can you work alongside our existing development team?', answer: 'Yes — we regularly operate as specialized co-engineering squads, handling dedicated mobile, desktop, or QA automation tracks while upskilling your in-house engineers.' },
+  { question: 'What do you develop?', answer: 'We focus on web applications, web services, and desktop applications. The right technology and scope depend on your product requirements.' },
+  { question: 'How long does a project take?', answer: 'Timelines depend on features, integrations, platforms, and project readiness. We agree on scope and milestones after an initial discussion.' },
+  { question: 'Can you work with our existing team?', answer: 'Yes. We can coordinate with your team, work within an existing codebase, or help define a new application from the ground up.' },
+  { question: 'Can we discuss confidentiality?', answer: 'Please let us know if your project requires a confidentiality agreement before sharing sensitive information.' },
 ];
 
 const consultationTypes = [
-  { id: 'mobile', label: 'Mobile App Development', desc: 'iOS, Android & Flutter architecture & builds' },
-  { id: 'web', label: 'Web Application / SaaS', desc: 'Next.js 15, React, Python FastAPI & Cloud' },
-  { id: 'desktop', label: 'Cross-Platform Desktop', desc: 'Tauri (Rust), Electron & .NET 8 apps' },
-  { id: 'qa', label: 'Multi-Language QA Automation', desc: 'Python, Java, TS, C# test pipelines' },
-  { id: 'consulting', label: 'IT & Cloud Architecture', desc: 'System audits, FinOps & Kubernetes' },
+  { id: 'web', label: 'Web Applications & Services', desc: 'Websites, applications, APIs, and integrations' },
+  { id: 'desktop', label: 'Desktop Applications', desc: 'Software for Windows, macOS, and Linux' },
 ];
 
 function ContactPage() {
@@ -34,8 +30,8 @@ function ContactPage() {
     name: '',
     email: '',
     company: '',
-    service: 'Full-Stack Web & Mobile App Development',
-    timeline: '6–10 Weeks',
+    service: 'Web Applications & Services',
+    timeline: '',
     message: '',
   });
 
@@ -46,21 +42,12 @@ function ContactPage() {
 
     if (serviceParam) {
       const lower = serviceParam.toLowerCase();
-      if (lower.includes('mobile')) {
-        setFormState(prev => ({ ...prev, service: 'Mobile Application (iOS / Android / Flutter)' }));
-        setConsultType('mobile');
-      } else if (lower.includes('web')) {
-        setFormState(prev => ({ ...prev, service: 'Full-Stack Web Application (Next.js / Python)' }));
+      if (lower.includes('web')) {
+        setFormState(prev => ({ ...prev, service: 'Web Applications & Services' }));
         setConsultType('web');
       } else if (lower.includes('desktop')) {
-        setFormState(prev => ({ ...prev, service: 'Cross-Platform Desktop App (Tauri / Electron / .NET)' }));
+        setFormState(prev => ({ ...prev, service: 'Desktop Applications' }));
         setConsultType('desktop');
-      } else if (lower.includes('qa') || lower.includes('automation') || lower.includes('test')) {
-        setFormState(prev => ({ ...prev, service: 'Multi-Language QA & Test Automation' }));
-        setConsultType('qa');
-      } else if (lower.includes('cloud') || lower.includes('consulting')) {
-        setFormState(prev => ({ ...prev, service: 'IT Consulting & Cloud Architecture' }));
-        setConsultType('consulting');
       }
     }
 
@@ -90,8 +77,23 @@ function ContactPage() {
       setToast('Please complete all required fields.');
       return;
     }
+
+    const emailBody = [
+      `Name: ${formState.name.trim()}`,
+      `Email: ${formState.email.trim()}`,
+      `Company: ${formState.company.trim() || 'Not provided'}`,
+      `Service: ${formState.service}`,
+      formState.timeline.trim() ? `Target timeline: ${formState.timeline.trim()}` : '',
+      '',
+      'Project details:',
+      formState.message.trim()
+    ].filter(Boolean).join('\n');
+
+    window.location.href = `mailto:support@nimbusbyte.com?subject=${encodeURIComponent(
+      `Project inquiry: ${formState.service}`
+    )}&body=${encodeURIComponent(emailBody)}`;
     setSubmitted(true);
-    setToast("Consultation request received — our senior architects will reply within 24 hours.");
+    setToast('Your email app should open with a draft. Review it and send to complete your inquiry.');
   };
 
   const resetForm = () => {
@@ -100,8 +102,8 @@ function ContactPage() {
       name: '',
       email: '',
       company: '',
-      service: 'Full-Stack Web & Mobile App Development',
-      timeline: '6–10 Weeks',
+      service: 'Web Applications & Services',
+      timeline: '',
       message: ''
     });
   };
@@ -117,8 +119,8 @@ function ContactPage() {
               <span>Contact</span>
             </div>
             <div className="eyebrow">Direct Engineering Consultation</div>
-            <h1>Tell us what you're building. We'll show you how to engineer and test it for scale.</h1>
-            <p className="lead">Every consultation connects you directly with a senior systems architect, mobile lead, or QA specialist — no sales fluff, no junior triage.</p>
+            <h1>Tell us about your web or desktop software project.</h1>
+            <p className="lead">Share your goals, requirements, and any constraints. We’ll follow up to discuss a practical next step.</p>
           </div>
           <div className="hero-visual">
             <img
@@ -142,7 +144,7 @@ function ContactPage() {
         <div className="wrap two-col">
           <div className="reveal">
             <div className="eyebrow">Direct Consultation</div>
-            <h2 style={{ fontSize: 'clamp(24px,3vw,30px)', marginBottom: 20 }}>Book Technical Discovery Call</h2>
+            <h2 style={{ fontSize: 'clamp(24px,3vw,30px)', marginBottom: 20 }}>Project inquiry</h2>
 
             {/* Consultation Type Selector */}
             <div className="consult-type-grid">
@@ -167,12 +169,12 @@ function ContactPage() {
                 <div className="icon-node" style={{ margin: '0 auto 16px' }}>
                   <CheckIcon size={24} className="svg-anim-pulse" />
                 </div>
-                <h3>Consultation Request Confirmed</h3>
+                <h3>Email draft prepared</h3>
                 <p>
-                  Thank you, <strong>{formState.name}</strong>. We have logged your request for <em>{consultationTypes.find(t => t.id === consultType)?.label || formState.service}</em>.
+                  Thank you, <strong>{formState.name}</strong>. Your email application should open with your project details.
                 </p>
                 <p style={{ marginTop: 10, fontSize: 14, color: 'var(--slate)' }}>
-                  A calendar invite and technical preparation checklist will be sent to <strong>{formState.email}</strong> within one business day.
+                  Your inquiry is not sent until you review and send the draft. If no email application opened, contact us at <a href="mailto:support@nimbusbyte.com">support@nimbusbyte.com</a>.
                 </p>
                 <button
                   type="button"
@@ -184,7 +186,7 @@ function ContactPage() {
                 </button>
               </div>
             ) : (
-              <form id="contact-form" noValidate onSubmit={handleSubmit}>
+              <form id="contact-form" onSubmit={handleSubmit}>
                 <div className="two-col" style={{ gap: 20 }}>
                   <div className="form-field">
                     <label htmlFor="name">Full name *</label>
@@ -235,30 +237,25 @@ function ContactPage() {
                       onChange={handleChange}
                       required
                     >
-                      <option>Mobile Application (iOS / Android / Flutter)</option>
-                      <option>Full-Stack Web Application (Next.js / Python)</option>
-                      <option>Cross-Platform Desktop App (Tauri / Electron / .NET)</option>
-                      <option>Multi-Language QA &amp; Test Automation</option>
-                      <option>IT Consulting &amp; Cloud Architecture</option>
-                      <option>Cybersecurity &amp; SOC 2 Compliance</option>
-                      <option>24/7 Managed IT Support</option>
+                      <option>Web Applications &amp; Services</option>
+                      <option>Desktop Applications</option>
                     </select>
                   </div>
                 </div>
                 <div className="form-field">
-                  <label htmlFor="message">Project details, stack &amp; goals *</label>
+                  <label htmlFor="message">Project details and goals *</label>
                   <textarea
                     id="message"
                     name="message"
                     value={formState.message}
                     onChange={handleChange}
                     required
-                    placeholder="Tell us what you're building, target platforms (iOS, Android, Web, Desktop), test automation needs, or cloud goals."
+                    placeholder="What are you looking to build or improve? Include users, key features, integrations, and target platforms."
                   />
                 </div>
-                <p className="form-note">Guaranteed reply under 24 hours. All information is protected under mutual non-disclosure.</p>
+                <p className="form-note">This form opens a prefilled email draft in your email application. It does not send your information automatically.</p>
                 <button type="submit" className="btn btn-primary">
-                  Request Free Technical Consultation <ArrowRightIcon size={14} className="btn-arrow" />
+                  Prepare email inquiry <ArrowRightIcon size={14} className="btn-arrow" />
                 </button>
               </form>
             )}
@@ -281,8 +278,8 @@ function ContactPage() {
                 <PhoneIcon size={20} className="svg-anim-pulse" />
               </div>
               <div>
-                <h4>Direct Engineering Hotline</h4>
-                <p><a href="tel:+919169681462" style={{ color: 'var(--sky-soft)' }}>+91 9169681462 (Mon–Fri, 10am–7pm IST)</a></p>
+                <h4>Phone</h4>
+                <p><a href="tel:+919169681462" style={{ color: 'var(--sky-soft)' }}>+91 9169681462</a></p>
               </div>
             </div>
 
@@ -296,15 +293,6 @@ function ContactPage() {
               </div>
             </div>
 
-            <div className="contact-card">
-              <div className="icon-node">
-                <TelemetryIcon size={20} className="svg-anim-dash" />
-              </div>
-              <div>
-                <h4>Multi-Language QA &amp; Delivery SLA</h4>
-                <p>Under 24 hours on standard inquiries. Dedicated on-call priority triage active 24/7 for retained clients.</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

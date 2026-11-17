@@ -1,349 +1,114 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  MobileIcon,
-  WebIcon,
-  DesktopIcon,
-  QaIcon,
-  CloudIcon,
-  CheckIcon,
   ArrowRightIcon,
-  RocketIcon,
-  TelemetryIcon,
-  SecurityIcon
+  CheckIcon,
+  DesktopIcon,
+  WebIcon
 } from '../components/Icons.jsx';
 
-const disciplines = [
+const services = [
   {
-    id: 'mobile',
-    title: 'Mobile Applications',
-    icon: MobileIcon,
-    tag: 'iOS · ANDROID · FLUTTER',
-    heading: 'High-Performance Mobile Apps Built for Retention & Speed',
-    description: 'From cross-platform Flutter and React Native apps to pure Swift and Kotlin native builds. Engineered with offline-first SQLite caching, biometric security, and fluid 60 FPS interfaces.',
-    image: '/assets/mobile-app-dev.svg',
-    highlights: ['iOS & Android Dual-Release', 'Biometric & FinTech Security', 'Offline-First Data Sync', 'Fastlane Automated CI/CD'],
-    link: '/services#mobile-app'
-  },
-  {
-    id: 'web',
-    title: 'Web Applications',
+    id: 'web-app',
+    title: 'Web Applications & Services',
     icon: WebIcon,
-    tag: 'NEXT.JS · REACT · NODE · PYTHON',
-    heading: 'Enterprise Web SaaS & Scalable Cloud Platforms',
-    description: 'Modern, edge-rendered web applications built with Next.js 15, TypeScript, and microservice backends. Designed to handle massive traffic spikes with sub-second response times.',
-    image: '/assets/web-app-dev.svg',
-    highlights: ['Server-Side Rendered (SSR)', 'Multi-Tenant Architecture', 'Real-Time WebSockets', 'Zero-Downtime Deployments'],
-    link: '/services#web-app'
+    description:
+      'Custom websites, web applications, and API-backed services designed around your users and business requirements.',
+    highlights: ['Responsive user experiences', 'Reliable API integrations', 'Maintainable, secure foundations']
   },
   {
-    id: 'desktop',
-    title: 'Desktop Software',
+    id: 'desktop-app',
+    title: 'Desktop Applications',
     icon: DesktopIcon,
-    tag: 'TAURI · ELECTRON · .NET · C++',
-    heading: 'Cross-Platform Native Desktop Applications',
-    description: 'Blazing fast desktop software for Windows, macOS, and Linux built using Tauri (Rust), Electron, .NET 8, and C++/Qt. Direct hardware communication, serial I/O, and low memory footprints.',
-    image: '/assets/desktop-app-dev.svg',
-    highlights: ['Ultra-Low RAM Footprint (<40MB)', 'Native OS & Hardware I/O', 'Standalone Offline Execution', 'Signed & Notarized Installers'],
-    link: '/services#desktop-app'
-  },
-  {
-    id: 'qa',
-    title: 'Automation Testing',
-    icon: QaIcon,
-    tag: 'PYTHON · JAVA · TYPESCRIPT · C#',
-    heading: 'Multi-Language QA & End-to-End Test Automation',
-    description: 'Eliminate regression bugs with automated test suites written in Python, Java, TypeScript, or C#. Automated coverage for Mobile (Appium), Web (Playwright/Selenium/Cypress), Desktop, and APIs.',
-    image: '/assets/automation-testing-suite.svg',
-    highlights: ['Multi-Language Frameworks', 'Parallel CI/CD Pipelines', 'Omnichannel Cross-Device Grid', 'Load & Security Penetration'],
-    link: '/services#automation-testing'
-  },
-  {
-    id: 'consulting',
-    title: 'IT & Cloud Consulting',
-    icon: CloudIcon,
-    tag: 'AWS · AZURE · GCP · KUBERNETES',
-    heading: 'Enterprise Architecture & Strategic Cloud Infrastructure',
-    description: 'Comprehensive system audits, zero-downtime cloud migrations, and FinOps cost optimization that lower infrastructure bills by 25–40% while raising uptime SLAs.',
-    image: '/assets/cloud-network-architecture.svg',
-    highlights: ['Multi-Cloud & Hybrid Topology', 'Terraform Infrastructure as Code', '25–40% Cost Reductions', 'SOC 2 & ISO 27001 Readiness'],
-    link: '/services#cloud-consulting'
+    description:
+      'Desktop software for Windows, macOS, and Linux, from focused internal tools to cross-platform product experiences.',
+    highlights: ['Platform-appropriate user interfaces', 'Local data and device integrations', 'Packaging and release support']
   }
 ];
 
 function HomePage() {
-  const [activeTab, setActiveTab] = useState('mobile');
-  const currentDiscipline = disciplines.find(d => d.id === activeTab) || disciplines[0];
-
   return (
     <>
       <section className="hero">
         <div className="wrap hero-grid">
           <div>
-            <div className="eyebrow">Software Engineering &amp; IT Consulting Studio</div>
-            <h1>Software engineered to <span className="grad">scale cleanly</span> across all devices.</h1>
-            <p className="lead">NimbusByte builds custom mobile applications, enterprise web platforms, high-performance desktop software, and multi-language QA automation suites backed by senior IT consulting.</p>
+            <div className="eyebrow">Web &amp; Desktop Software Development</div>
+            <h1>
+              Practical software, <span className="grad">built for real work.</span>
+            </h1>
+            <p className="lead">
+              NimbusByte designs and develops web applications, web services, and desktop
+              software with a focus on usability, reliability, and maintainability.
+            </p>
             <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary">Start your project <ArrowRightIcon size={14} className="btn-arrow" /></Link>
-              <Link to="/services" className="btn btn-ghost">Explore all capabilities</Link>
-            </div>
-            <div className="hero-stats">
-              <div className="stat"><b data-count="50">0</b><span>SYSTEMS SHIPPED</span></div>
-              <div className="stat"><b data-count="99.9" data-decimals="1">0</b><span>AVG. UPTIME DELIVERED</span></div>
-              <div className="stat"><b data-count="100" data-suffix="%">0</b><span>AUTOMATED QA COVERAGE</span></div>
+              <Link to="/contact" className="btn btn-primary">
+                Discuss your project <ArrowRightIcon size={14} className="btn-arrow" />
+              </Link>
+              <Link to="/services" className="btn btn-ghost">
+                Explore services
+              </Link>
             </div>
           </div>
           <div className="hero-art" aria-hidden="true">
             <div className="hero-visual">
               <img
                 src="/assets/home-datacenter-hero.svg"
-                alt="Modern mobile, web, and desktop application engineering"
+                alt=""
                 className="hero-main-img"
               />
-              <div className="hero-badge-overlay">
-                <span className="live-pulse"></span>
-                <span>Cross-Platform &amp; QA Automation Ready</span>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <svg className="trace-divider" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,30 L220,30 L260,10 L440,10 L480,30 L720,30 L760,50 L980,50 L1020,30 L1200,30" />
-        <path className="live" d="M0,30 L220,30 L260,10 L440,10 L480,30 L720,30 L760,50 L980,50 L1020,30 L1200,30" />
-        <circle cx="260" cy="10" r="4" />
-        <circle cx="760" cy="50" r="4" className="node-mint" />
-        <circle cx="1020" cy="30" r="4" />
-      </svg>
-
-      {/* Interactive Core Disciplines Showcase */}
-      <section className="section-tight">
+      <section className="section">
         <div className="wrap">
           <div className="section-head center">
-            <div className="eyebrow">Complete Engineering Spectrum</div>
-            <h2>Mobile, Web, Desktop, QA &amp; IT Consulting</h2>
-            <p>Select any engineering discipline to see our technical capabilities, frameworks, and architecture standards.</p>
+            <div className="eyebrow">What we build</div>
+            <h2>Two focused areas of software development</h2>
+            <p>
+              We help teams turn product requirements into dependable web and desktop
+              software, from initial planning through delivery.
+            </p>
           </div>
-
-          {/* Tab Navigation */}
-          <div className="discipline-tab-nav reveal">
-            {disciplines.map(item => {
-              const TabIcon = item.icon;
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  className={`discipline-tab-btn ${activeTab === item.id ? 'active' : ''}`}
-                  onClick={() => setActiveTab(item.id)}
-                >
-                  <TabIcon size={16} />
-                  <span>{item.title}</span>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Active Discipline Feature Panel */}
-          <div className="discipline-showcase-panel reveal">
-            <div>
-              <span className="tag">{currentDiscipline.tag}</span>
-              <h3 style={{ fontSize: 'clamp(22px, 2.5vw, 30px)', marginTop: 12 }}>
-                {currentDiscipline.heading}
-              </h3>
-              <p style={{ color: 'var(--slate)', margin: '16px 0 20px', fontSize: 16 }}>
-                {currentDiscipline.description}
-              </p>
-
-              <div className="deliverables-box" style={{ background: 'var(--navy-800)' }}>
-                <h4>Core Standards:</h4>
+          <div className="grid grid-2">
+            {services.map(({ id, title, icon: Icon, description, highlights }) => (
+              <article className="card reveal" key={id}>
+                <div className="icon-node">
+                  <Icon size={22} />
+                </div>
+                <span className="tag">{title}</span>
+                <h3>{title}</h3>
+                <p>{description}</p>
                 <ul>
-                  {currentDiscipline.highlights.map(hl => (
-                    <li key={hl} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      <CheckIcon size={15} /> {hl}
+                  {highlights.map(item => (
+                    <li key={item} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <CheckIcon size={15} /> {item}
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              <div style={{ marginTop: 24 }}>
-                <Link to={currentDiscipline.link} className="btn btn-primary btn-sm">
-                  View Full {currentDiscipline.title} Specifications <ArrowRightIcon size={14} className="btn-arrow" />
+                <Link to={`/services#${id}`} className="btn btn-ghost" style={{ marginTop: 20 }}>
+                  Learn more <ArrowRightIcon size={12} className="btn-arrow" />
                 </Link>
-              </div>
-            </div>
-
-            <div className="discipline-visual-box">
-              <img
-                src={currentDiscipline.image}
-                alt={currentDiscipline.heading}
-              />
-            </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Multi-Language Automation Testing Lab Spotlight */}
-      <section className="section-tight">
-        <div className="wrap">
-          <div className="feature-media-banner reveal">
-            <div className="feature-media-content">
-              <div className="eyebrow">Enterprise Quality Assurance</div>
-              <h2>Multi-Language Automation Testing at Scale</h2>
-              <p>We build robust, maintainable test automation suites written in Python, Java, TypeScript, or C#. Automated parallel execution for Web (Playwright/Selenium), Mobile (Appium), Desktop (Tauri/WinApp), and high-load APIs.</p>
-              <div className="badge-row" style={{ marginTop: 16 }}>
-                <span className="badge">Python PyTest</span>
-                <span className="badge">Java TestNG</span>
-                <span className="badge">TypeScript Playwright</span>
-                <span className="badge">C# SpecFlow</span>
-                <span className="badge">Appium Mobile</span>
-              </div>
-              <div style={{ marginTop: 24 }}>
-                <Link to="/services#automation-testing" className="btn btn-primary btn-sm">
-                  Explore Automation Test Matrix <ArrowRightIcon size={14} className="btn-arrow" />
-                </Link>
-              </div>
-            </div>
-            <div className="feature-media-visual">
-              <img
-                src="/assets/qa-matrix-spotlight.svg"
-                alt="NimbusByte Multi-Language Automation Testing Matrix Runner"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Professional Senior Team Highlight */}
-      <section className="section-tight">
-        <div className="wrap">
-          <div className="feature-media-banner reveal" style={{ background: 'linear-gradient(135deg, rgba(15, 32, 56, 0.95), rgba(7, 15, 30, 0.98))' }}>
-            <div className="feature-media-visual">
-              <img
-                src="/assets/professional-team-studio.svg"
-                alt="NimbusByte Professional Engineering Team Studio"
-              />
-            </div>
-            <div className="feature-media-content">
-              <div className="eyebrow">Senior Hands Only</div>
-              <h2>A Dedicated Team of Seasoned Engineers &amp; Architects</h2>
-              <p>No junior handoffs or bait-and-switch sales pitches. The senior engineers, mobile specialists, and QA architects who design your project are the ones who write and test your code.</p>
-              <div className="badge-row" style={{ marginTop: 16 }}>
-                <span className="badge">AWS Certified Architects</span>
-                <span className="badge">ISTQB QA Leads</span>
-                <span className="badge">Mobile &amp; Full-Stack Specialists</span>
-              </div>
-              <div style={{ marginTop: 24 }}>
-                <Link to="/about" className="btn btn-ghost btn-sm">
-                  Meet Our Engineering Team <ArrowRightIcon size={14} className="btn-arrow" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust & Principles */}
-      <section className="section-tight">
-        <div className="wrap">
-          <div className="section-head center">
-            <div className="eyebrow">Why clients partner with us</div>
-            <h2>Engineered for reliability, performance, and long-term maintainability.</h2>
-            <p>We eliminate guesswork from software engineering, testing, and cloud infrastructure so your team can deploy rapidly and rest easy.</p>
-          </div>
-          <div className="trust-grid">
-            <div className="trust-card reveal">
-              <div className="icon-node">
-                <RocketIcon size={22} className="svg-anim-float" />
-              </div>
-              <span className="value-num">01 clear planning</span>
-              <h3>We diagnose before we build</h3>
-              <p>Every engagement starts with a thorough architecture assessment, timeline, and fixed scope quote.</p>
-            </div>
-            <div className="trust-card reveal">
-              <div className="icon-node">
-                <QaIcon size={22} className="svg-anim-pulse" />
-              </div>
-              <span className="value-num">02 multi-stack excellence</span>
-              <h3>End-to-end software ownership</h3>
-              <p>Whether Web, Mobile, Desktop or QA Automation, you get senior specialists who write clean, maintainable code.</p>
-            </div>
-            <div className="trust-card reveal">
-              <div className="icon-node">
-                <TelemetryIcon size={22} className="svg-anim-dash" />
-              </div>
-              <span className="value-num">03 long-term support</span>
-              <h3>We stay involved after launch</h3>
-              <p>Continuous monitoring, automated regression suites, and 24/7 SRE on-call support keep your stack healthy.</p>
-            </div>
-          </div>
-          <div className="testimonial-row">
-            <div className="testimonial-card reveal">
-              <p>“NimbusByte transformed our fragmented releases into a reliable, multi-language automated CI/CD pipeline with zero downtime.”</p>
-              <cite>— VP of Engineering, Global SaaS Platform</cite>
-            </div>
-            <div className="mini-cta-card reveal">
-              <h3>Need a practical next step?</h3>
-              <p>Tell us about your upcoming project or current bottlenecks and we’ll recommend the best approach.</p>
-              <Link to="/contact" className="btn btn-primary">Start the conversation <ArrowRightIcon size={14} className="btn-arrow" /></Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Selected Outcomes */}
-      <section className="section-tight">
-        <div className="wrap">
-          <div className="section-head center" style={{ maxWidth: 640 }}>
-            <div className="eyebrow">Selected outcomes</div>
-            <h2>Proven delivery across all platforms.</h2>
-            <p>From cross-platform apps to enterprise automation pipelines and cloud migrations, examine our case studies.</p>
-          </div>
-          <div className="grid grid-3">
-            <div className="card reveal">
-              <div className="icon-node">
-                <MobileIcon size={22} className="svg-anim-pulse" />
-              </div>
-              <span className="tag">MOBILE &amp; FINTECH</span>
-              <h3>Cross-Platform Investment App</h3>
-              <p>Shipped Flutter &amp; React Native app with biometric auth and offline-first ledger syncing.</p>
-              <Link to="/work" className="btn btn-ghost" style={{ marginTop: 18 }}>See case study <ArrowRightIcon size={12} className="btn-arrow" /></Link>
-            </div>
-            <div className="card reveal">
-              <div className="icon-node">
-                <DesktopIcon size={22} className="svg-anim-float" />
-              </div>
-              <span className="tag">DESKTOP SOFTWARE</span>
-              <h3>Hardware Telemetry &amp; IoT Console</h3>
-              <p>High-throughput Tauri &amp; C# desktop app processing 10,000+ sensor metrics per second.</p>
-              <Link to="/work" className="btn btn-ghost" style={{ marginTop: 18 }}>See case study <ArrowRightIcon size={12} className="btn-arrow" /></Link>
-            </div>
-            <div className="card reveal">
-              <div className="icon-node">
-                <QaIcon size={22} className="svg-anim-dash" />
-              </div>
-              <span className="tag">QA AUTOMATION</span>
-              <h3>Multi-Language E2E Pipeline</h3>
-              <p>Replaced flaky manual tests with automated Python &amp; Java suites running across 12 CI workers.</p>
-              <Link to="/work" className="btn btn-ghost" style={{ marginTop: 18 }}>See case study <ArrowRightIcon size={12} className="btn-arrow" /></Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action Band */}
       <section className="section-tight">
         <div className="wrap">
           <div className="band reveal">
             <div className="band-row">
               <div>
-                <h2>Ready to build high-performance software with zero compromises?</h2>
-                <p>Book a direct 30-minute consultation with our senior engineering leads — get clear technical answers and realistic estimates.</p>
+                <h2>Have a web or desktop software project in mind?</h2>
+                <p>
+                  Share the problem you are solving, the people who will use the software,
+                  and any requirements you already have.
+                </p>
               </div>
-              <div className="hero-actions">
-                <Link to="/contact" className="btn" style={{ background: 'var(--navy-900)', color: '#fff' }}>Book the call <ArrowRightIcon size={14} className="btn-arrow" /></Link>
-                <Link to="/work" className="btn btn-ghost">View our work</Link>
-              </div>
+              <Link to="/contact" className="btn btn-primary">
+                Start a conversation <ArrowRightIcon size={14} className="btn-arrow" />
+              </Link>
             </div>
           </div>
         </div>

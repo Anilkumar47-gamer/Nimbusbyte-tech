@@ -141,20 +141,32 @@ function AboutPage() {
           </div>
           <div className="team-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
             <div className="team-card reveal">
-              <div className="team-avatar">AK</div>
+              <div className="team-photo-wrap">
+                <img
+                  src="/assets/anil-kumar.png"
+                  alt="Anil Kumar, Founder and Principal Systems Architect"
+                  className="team-photo"
+                />
+              </div>
               <h3>Anil Kumar</h3>
               <span>Founder &amp; Principal Systems Architect</span>
               <p style={{ color: 'var(--slate)', fontSize: 13, marginTop: 8 }}>
-                10+ years architecting resilient cloud systems, Kubernetes clusters, and enterprise infrastructure for high-growth tech companies.
+                5+ years architecting resilient cloud systems, Kubernetes clusters, and enterprise infrastructure for high-growth tech companies.
               </p>
               <div className="team-cert-row">
-                <span className="team-cert-tag">AWS Architect Pro</span>
+                <span className="team-cert-tag">AWS Architect </span>
                 <span className="team-cert-tag">CKA Kubernetes</span>
               </div>
             </div>
 
             <div className="team-card reveal">
-              <div className="team-avatar">MS</div>
+              <div className="team-photo-wrap">
+                <img
+                  src="/assets/man-singh.png"
+                  alt="Man Singh, Co-Founder and Mobile Engineering Lead"
+                  className="team-photo"
+                />
+              </div>
               <h3>Man Singh</h3>
               <span>Co-Founder &amp; Mobile Engineering Lead</span>
               <p style={{ color: 'var(--slate)', fontSize: 13, marginTop: 8 }}>
@@ -167,9 +179,15 @@ function AboutPage() {
             </div>
 
             <div className="team-card reveal">
-              <div className="team-avatar">AB</div>
+              <div className="team-photo-wrap">
+                <img
+                  src="/assets/anjali-bharti.png"
+                  alt="Anjali Bharti, Head of Operations and HR"
+                  className="team-photo"
+                />
+              </div>
               <h3>Anjali Bharti</h3>
-              <span>Lead &amp; Head of Operations &amp; HR</span>
+              <span>Voice president &amp; Head of Operations &amp; HR</span>
               <p style={{ color: 'var(--slate)', fontSize: 13, marginTop: 8 }}>
                 Orchestrates engineering talent, client delivery alignment, and rigorous operational efficiency across all remote development pods.
               </p>

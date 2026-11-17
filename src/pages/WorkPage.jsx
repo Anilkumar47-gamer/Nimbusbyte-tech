@@ -89,6 +89,63 @@ const caseStudies = [
   },
 ];
 
+const sectorInsights = [
+  {
+    id: 'fintech',
+    sector: 'Fintech',
+    title: 'Designing mobile finance apps for trust and reliability',
+    description: 'Explore how secure authentication, clear transaction feedback, and resilient offline flows help make financial products easier to trust.',
+    image: '/assets/fintech-mobile-app.svg',
+    imageAlt: 'Illustration of a fintech mobile application',
+    imageType: 'illustration',
+  },
+  {
+    id: 'enterprise-saas',
+    sector: 'Enterprise SaaS',
+    title: 'Building SaaS dashboards that turn data into action',
+    description: 'A practical look at tenant-aware data, useful analytics, and responsive interfaces for teams managing complex operations.',
+    image: '/assets/web-app-dev.jpg',
+    imageAlt: 'Web application displayed on a laptop',
+    imageType: 'photo',
+  },
+  {
+    id: 'industrial-iot',
+    sector: 'Industrial IoT',
+    title: 'Making real-time device data useful to operators',
+    description: 'Learn what to consider when designing telemetry dashboards, device integrations, and dependable monitoring workflows.',
+    image: '/assets/iot-telemetry-console.svg',
+    imageAlt: 'Illustration of an industrial IoT telemetry console',
+    imageType: 'illustration',
+  },
+  {
+    id: 'quality-engineering',
+    sector: 'Quality Engineering',
+    title: 'Scaling test automation without slowing delivery',
+    description: 'See how a focused test matrix and clear CI feedback can help teams catch regressions earlier across applications and APIs.',
+    image: '/assets/automation-testing-suite.jpg',
+    imageAlt: 'Automated software testing workspace',
+    imageType: 'photo',
+  },
+  {
+    id: 'cloud-finops',
+    sector: 'Cloud & FinOps',
+    title: 'Connecting cloud resilience with cost visibility',
+    description: 'Consider how right-sized infrastructure, workload monitoring, and recovery planning can support more predictable cloud operations.',
+    image: '/assets/aws-finops-migration.svg',
+    imageAlt: 'Illustration of cloud migration and FinOps infrastructure',
+    imageType: 'illustration',
+  },
+  {
+    id: 'security-compliance',
+    sector: 'Security & Compliance',
+    title: 'Building security evidence into everyday engineering',
+    description: 'Discover ways to make access controls, audit trails, and security checks part of a maintainable delivery process.',
+    image: '/assets/cyber-security-soc.jpg',
+    imageAlt: 'Cybersecurity operations center',
+    imageType: 'photo',
+  },
+];
+
 const categories = ['All', 'Mobile App', 'Web App', 'Desktop App', 'QA Automation', 'Cloud & IT Consulting', 'Security & Compliance'];
 
 function WorkPage() {
@@ -223,6 +280,31 @@ function WorkPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Sector Blog Insights */}
+      <section className="section sector-insights">
+        <div className="wrap">
+          <div className="section-head center">
+            <div className="eyebrow">Sector Blog Insights</div>
+            <h2>Engineering ideas for the industries we serve</h2>
+            <p>Explore practical perspectives on the software, systems, and delivery challenges behind each sector.</p>
+          </div>
+          <div className="grid grid-3">
+            {sectorInsights.map(insight => (
+              <article className="card sector-insight-card reveal" key={insight.id}>
+                <div className={`sector-insight-visual ${insight.imageType}`}>
+                  <img src={insight.image} alt={insight.imageAlt} loading="lazy" />
+                </div>
+                <div className="sector-insight-content">
+                  <span className="tag">{insight.sector}</span>
+                  <h3>{insight.title}</h3>
+                  <p>{insight.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

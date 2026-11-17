@@ -225,6 +225,228 @@ p {
   justify-content: center;
 }
 
+.sector-insights {
+  border-top: 1px solid rgba(110, 231, 196, 0.12);
+  border-bottom: 1px solid rgba(110, 231, 196, 0.12);
+  background: linear-gradient(180deg, rgba(7, 15, 30, 0.32), rgba(7, 15, 30, 0.08));
+}
+
+.sector-insight-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.sector-insight-visual {
+  height: 190px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(110, 231, 196, 0.14);
+  border-radius: var(--radius-sm);
+  background: rgba(7, 15, 30, 0.72);
+}
+
+.sector-insight-visual img {
+  width: 100%;
+  height: 100%;
+}
+
+.sector-insight-visual.illustration img {
+  object-fit: contain;
+  padding: 8px;
+}
+
+.sector-insight-visual.photo img {
+  object-fit: cover;
+  transition: transform 0.4s var(--ease);
+}
+
+.sector-insight-card:hover .sector-insight-visual.photo img {
+  transform: scale(1.04);
+}
+
+.sector-insight-content {
+  padding: 20px 6px 6px;
+}
+
+.sector-insight-content .tag {
+  margin-bottom: 8px;
+}
+
+.sector-insight-content h3 {
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.sector-insight-content p {
+  margin-top: 10px;
+  color: var(--slate);
+  font-size: 14px;
+}
+
+.blog-editor-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  align-items: start;
+  gap: clamp(24px, 5vw, 56px);
+}
+
+.blog-editor-form h2 {
+  margin-bottom: 28px;
+}
+
+.blog-editor-form .form-field {
+  margin-bottom: 18px;
+}
+
+.blog-editor-form .form-field label strong {
+  color: var(--mint);
+}
+
+.blog-editor-form input[type="file"] {
+  padding: 10px;
+}
+
+.blog-content-input {
+  min-height: 240px !important;
+}
+
+.blog-upload-error {
+  margin-top: -10px;
+  margin-bottom: 18px;
+  color: #ff9a9a;
+  font-size: 13px;
+}
+
+.blog-image-preview {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 4px 0 22px;
+  color: var(--slate);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.blog-image-preview img {
+  width: 96px;
+  height: 72px;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--navy-900);
+}
+
+.blog-editor-note {
+  margin-top: 14px;
+  color: var(--slate-dim);
+  font-size: 12px;
+}
+
+.blog-drafts .section-head {
+  margin-bottom: 24px;
+}
+
+.blog-draft-count {
+  display: inline-grid;
+  min-width: 30px;
+  height: 30px;
+  margin-left: 6px;
+  place-items: center;
+  border: 1px solid rgba(110, 231, 196, 0.24);
+  border-radius: 50%;
+  color: var(--mint);
+  font: 500 14px var(--f-mono);
+  vertical-align: middle;
+}
+
+.blog-drafts-empty {
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.blog-drafts-empty .icon-node {
+  margin: 0 auto 18px;
+}
+
+.blog-drafts-empty p,
+.blog-draft-copy > p {
+  color: var(--slate);
+}
+
+.blog-draft-list {
+  display: grid;
+  gap: 18px;
+}
+
+.blog-draft-card {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 20px;
+  padding: 18px;
+}
+
+.blog-draft-cover {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--navy-900);
+}
+
+.blog-draft-copy .tag {
+  margin-bottom: 8px;
+}
+
+.blog-draft-copy h3 {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.blog-draft-copy > p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.blog-draft-copy .blog-draft-date {
+  color: var(--slate-dim);
+  font-size: 12px;
+}
+
+.blog-draft-copy details {
+  margin-top: 14px;
+  color: var(--mint);
+  font-size: 13px;
+}
+
+.blog-draft-copy summary {
+  cursor: pointer;
+}
+
+.blog-draft-copy .blog-draft-content {
+  margin-top: 10px;
+  color: var(--slate);
+  white-space: pre-wrap;
+}
+
+@media (max-width: 900px) {
+  .blog-editor-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-draft-card {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-draft-cover {
+    height: 190px;
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1117,6 +1339,22 @@ p {
   font-size: 18px;
   font-weight: 700;
   color: var(--navy-900);
+}
+.team-photo-wrap {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(110, 231, 196, 0.35);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.25);
+  background: rgba(13, 24, 38, 0.8);
+}
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .team-card h3 {
   font-size: 16px;
@@ -2338,5 +2576,3 @@ p {
     animation: none !important;
   }
 }
-
-
